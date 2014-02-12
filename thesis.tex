@@ -1,0 +1,85 @@
+\documentclass[a4paper, 12pt, ruledheader]{abnt}
+%\documentclass[a4paper, 12pt, ruledheader]{book}  
+
+
+
+    
+\include{usr/packages}     
+\include{usr/newcommands}
+\include{usr/dados}   
+\sloppy 
+  
+\begin{document}   
+%\lstset{basicstyle=\small}    
+%\nocite{*}   
+              
+\include{usr/capa}          
+  
+\newpage   
+%=====================================================================
+% Folha de Rosto
+%=====================================================================
+\setcounter{page}{1}
+ 
+   
+%=====================================================================
+% Páginas iniciais
+%=====================================================================
+
+\pagestyle{plain}
+% \include{usr/aprovacao} 
+%\include{chapters/ficha} 
+\include{usr/dedicatoria}
+ \include{usr/agradecimentos}
+\include{usr/resumo} 
+ 
+%=====================================================================
+% Sumário
+%===================================================================== 
+%\shorttableofcontents{Summary Table of Contents}{1}
+
+\tableofcontents
+\newpage   
+  
+%==========================================================================
+% lista de figuras
+%==========================================================================
+
+\listoffigures
+\newpage  
+  
+    
+%==========================================================================
+% lista de tabelas
+%==========================================================================
+ 
+\listoftables    
+\newpage         
+         
+%==========================================================================
+% Capítulos
+%==========================================================================   
+       
+%% PARTE I - INTRODUÇÃO   
+ 
+\include{chapters/introduction/introduction}
+%\include{chapters/background/background}   
+\include{chapters/state_ofthe_art/state_art}   
+\include{chapters/methodology/methodology}  
+\include{chapters/implementation/enviroment}
+\include{chapters/validation/validation} 
+\include{chapters/conslusion/conclusion}  
+%\include{capitulos/conclusao}       
+%\include{chapters/resumo_portugues/resumo_portugues}   
+
+\bibliography{biblio}    
+\bibliographystyle{plain} 
+%\bibliographystyle{abnt-alf}  
+\include{chapters/state_ofthe_art/appendix_state_of_the_art}
+%\include{chapters/methodology/apendicesA}
+%\include{chapters/methodology/apendicesB}    
+%==========================================================================
+% glossário
+%==========================================================================
+ 
+\end{document}

@@ -1,0 +1,84 @@
+% PEWS OPERATORS FOR SEMANTICS
+% (local) parallel
+\newcommand{\lp}{\ifmmode \,||\,\else $\,||\,$\fi}
+
+\newcommand{\setof}[1]{{\{ #1 \} }}
+\newcommand{\pfrule}[2]{\begin{array}{c} #1 \\ \hline #2 \end{array}}
+
+\newcommand\tup[1]{\langle\,$#1$\,\rangle}
+
+\newcommand{\rulegap}{\qquad}
+
+\newcommand{\transOn}[1]{\stackrel{#1}{\longrightarrow}}
+\newcommand{\nottransOn}[1]{\stackrel{#1}{\not\!\!\!\longrightarrow}}
+\newcommand{\gtransOn}[1]{\stackrel{#1}{\mapsto}}
+\newcommand{\gtrans}{\gtransOn{ }}
+\newcommand{\ltrans}{\gtransOn{\bullet\,}}
+\newcommand{\trans}{\gtransOn{\circ\,}}
+
+\newcommand{\perm}[1]{\stackrel{#1}{\rightsquigarrow}}
+\newcommand{\notperm}[1]{\stackrel{#1}{\not\rightsquigarrow}}
+
+ \newcommand{\pair}[2]{({#1}\,,\,{#2})}
+\newcommand{\zero}[1]{\mathbf{0}_{#1}}
+\newcommand{\one}{\mathbf{1}}
+
+\newcommand{\semrel}[3]{{#1}\ \vdash\ {#2}\ \rhd\ {#3}} %substituindo \Rightarrow por \rhd
+\newcommand{\semrelb}[3]{{#1}\ \vdash\ {#2}\ \myvDash\ {#3}}
+\newcommand{\nullphrase}{\varepsilon}
+\newcommand{\compo}{\cdot}
+\newcommand{\pp}{\ifmmode\mid\!\mid\else $\mid\!\mid$\fi}
+%\newcommand{\U}{{\cal U}}
+
+\def \seqd  {\mathbin{\raise 0.6ex\hbox{\oalign{\hfil$\scriptscriptstyle
+     \mathrm{o}$\hfil\cr\hfil$\scriptscriptstyle\mathrm{9}$\hfil}}}}
+
+\newcommand{\diff}{=/=}
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\rlbl}[1]{\mbox{\tiny (#1)}}
+\newcommand{\finish}{{\hfill$\Box$\vspace{4mm}}}
+
+\newcommand{\first}[1]{{\bf first}\ifmmode ( #1 )\else $( #1 )$\fi}
+\newcommand{\last}[1]{{\bf last}\ifmmode ( #1 )\else $( #1 )$\fi}
+
+
+%Expans√µes
+%\newcommand{\sw}{\emph{software}}
+\newcommand{\cmt}[1]{}
+\newcommand{\WS}{Serviços Web}
+\newcommand{\ws}{serviços web}
+
+
+%%%%%%%%%Ambientes auxiliares%%%%%%%%%%%
+%\newcommand\correcao[1]{#1}
+
+% \newcommand{\correctingText}[1]{
+% 	{\color{red} {#1}}
+% }
+
+%Novo Comando para o final
+\newcommand{\correctingText}[1]{
+	{{#1}}
+}
+
+% \newcommand{\newText}[1]{
+% 	{\color{blue} {#1}}
+% } 
+
+% Novo Comando para o final
+\newcommand{\newText}[1]{
+	{{#1}}
+}
+\newenvironment{comentarios}{\begin{quote}\color{green}}{\end{quote}}
+\newenvironment{revisar}[1]{\color{red}\center{\textit{\textcolor{lightgray}{#1}}}\\}{}
+
+
+\newcounter{regraA}  
+\setcounter{regraA}{1}
+\newcommand{\regA}{(\theregraA) \addtocounter{regraA}{1}}
+\newcounter{regraB}  
+ \setcounter{regraB}{1}
+ \newcommand{\reg}{(\theregraB) \addtocounter{regraB}{1}}
+ 
+  

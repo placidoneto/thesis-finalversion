@@ -1,0 +1,114 @@
+%% Português
+%\usepackage[brazil]{babel}
+%s\usepackage[utf8]{inputenc}
+%\usepackage{lscape} 
+\usepackage{pdflscape}
+%% English
+% \usepackage[latin1]{inputenc}  
+% \usepackage[T1]{fontenc}  
+
+% \usepackage[portuguese]{babel}
+% \usepackage[latin1]{inputenc}
+% \usepackage[T1]{fontenc}
+
+%MultiLanguage -- Esse resolve todos os meus problemas. . .
+%\usepackage[brazil,portuges,english]{babel}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[thmmarks]{ntheorem}
+\usepackage{amssymb}
+
+\theoremstyle{plain}
+\theoremheaderfont{\normalfont\itshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{}
+\theoremindent0cm
+\theoremnumbering{arabic}
+\theoremsymbol{\ensuremath{\Box}}
+\newtheorem*{exampl}{Example:}%[section]
+
+
+\selectlanguage{english}
+%\usepackage[english,]{babel}  
+
+\usepackage{rotating}
+\usepackage{threeparttable} 
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{epigraph}
+%\usepackage[figuresright]{rotating} 
+%Pacote para listagem de código-fonte 
+\usepackage{listings}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+%Pacote para multipla colunas. Necess√°rio para listing.
+\usepackage{multicol} %Usado: padraoEBNF
+%Caracteres especiais. 
+\usepackage{textcomp} %Usado: padraoEBNF 
+%Texto colorido 
+\usepackage{xcolor} %Usado: padraoEBNF    
+%Figuras 
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+ 
+
+%\usepackage[alf, bibjustif, abnt-etal-text=emph, abnt-and-type=e,
+%abnt-etal-cite=2]{abntcite}
+%\usepackage[num]{abntcite}
+
+
+%Ambiente matemático.
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{bbding} 
+\usepackage{subfig}
+\usepackage{graphicx,color}
+\usepackage{threeparttable} 
+%\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+%\usepackage{caption}
+% \lstset{numbers=left,
+% language=python,
+% stepnumber=1,
+% firstnumber=1,
+% numberstyle=\tiny,
+% extendedchars=true,
+% breaklines=true,
+% frame=tb,
+% basicstyle=\tiny, %\footnotesize
+% stringstyle=\ttfamily,
+% showstringspaces=false
+% }
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks=true,
+linkcolor=black,          % color of internal links
+citecolor=black,        % color of links to bibliography
+filecolor=black,      % color of file links
+urlcolor=teal,
+bookmarksnumbered=true,
+unicode=true}
+
+% %utilizado pelo formato de citação Antex
+% \usepackage[alf, bibjustif, abnt-etal-text=emph, abnt-and-type=e, abnt-etal-cite=2]{abntcite}
+% %[num, bibjustif, abnt-etal-text=emph]bibjustif, abnt-etal-cite=2, abnt-and-type=e, abnt-etal-text=emph
+
+\usepackage{epsfig}
+
+%\usepackage{mathenv}
+\usepackage{theorem}
+%\usepackage{isoaccent}
+
+%Necess√°rio para redefini√ß√£o do \cite.
+\usepackage{ifthen}     
+%\usepackage{rotating} 
+
+\usepackage{graphicx,url} 
+%\usepackage{tikz}
+\usepackage{times}
+
+\usepackage{stmaryrd}
+\usepackage{mathabx}
+

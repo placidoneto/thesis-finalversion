@@ -1,0 +1,180 @@
+\appendix
+\chapter{\textit{$\pi$-PEWS} Language}
+\label{append:pews_language}
+
+
+$\pi$-PEWS specifies assertions that are checked during the execution of
+a program. These assertions describe pre- and post-conditions for a given
+operation or compound service. In the case these conditions are not verified,
+the contract defines correcting actions (described as a PEWS path expression).
+%
+%Works try to adapt some tools and
+%approaches aiming add quality constraints, like \textit{Behavioral Specification
+%Language}, such as: Eiffel~\cite{Meyer98a}, JML~\cite{burdy:05}, JCML~\cite{jcml09} and
+%IContract~\cite{LacknerKP02}, \textit{Graph Transformation}
+%\cite{HL05TACoS, LeS92} and \textit{Transaction Specification Definition}
+%\cite{PiresBM02, Hernandez-BaruchPZ07, Haddad08} for service composition.
+%However, none of than proposes a hole application of service composition and
+%behavioral specification definition for web services. 
+%
+The grammar defining the new language is defined as follows:
+A $\pi$-PEWS program is similar to a PEWS program, but with the possibility of adding contract definitions at the end of the program.
+Path expressions, defining the service workflow, are described by the \textit{Service} non-terminal of the grammar below. 
+Since contracts and workflow are separate concerns, the syntax of path expressions remain unchanged, from the original version of the language.
+\begin{small}
+%\hrule
+\begin{tabbing}
+\reg \textit{Program} ::=\=  \ $\ldbrack\ ($``$\mathbf{var}$''$\ \mathbf{id}\ $``$=$''$ \mathit{ArithExp} )^*  \ ($``$\mathbf{service}$''$\ \mathbf{id}\ $``$=$''$ \mathit{Service})^* %$ \\ \> $
+                                               %\qquad 
+                                               \mathit{Service}\ \mathit{Contract}^ *\ \rdbrack$\\[1.5mm] 
+\reg \textit{Service} ::=\=  \ $\ 	\ \ldbrack\  \mathbf{id} \ \rdbrack\ 
+                                              \mid\ \ldbrack\ \mathit{Service}\ $``$.$''$\ \mathit{Service} \ \rdbrack\ 
+                                              \mid\ \ldbrack\ \mathit{Service} $``$+$''$\ \mathit{Service} \ \rdbrack\ 
+                                              \mid\ \ldbrack\  \mathit{Service} $``$\|$''$\ \mathit{Service} \ \rdbrack\ $\\ \>$
+                                              \mid\ \ldbrack\  \mathit{Service}$``$*$''$\ \rdbrack\ 
+                                              \mid\ \ldbrack\ $``$[$''$\ \mathit{BooleanCondition}\ $``$]$''$ \ \mathit{Service}\ \rdbrack\ 
+                                              \mid\ \ldbrack\ $``$\{$''$\ 
+                                              \mathit{Service}\ $``$\}$''$ \
+                                              \rdbrack\ $\\[-3mm]
+\end{tabbing}
+\end{small}
+%\hrule
+%\vspace*{2mm}
+
+The definition of contracts is given below. 
+It includes a name for the contract, as well as its four component sections:
+\begin{trivlist}
+\item[$\bullet$] Target service of the contract: This section specifies the service to which the contract applies. This can be an operation or a compound service (which also defines a scope for the contract).
+\item[$\bullet$]Preconditions and their actions. This section defines the assertions that will be verified before the target service is executed. 
+\item[$\bullet$] Post-conditions and their actions. This section defines the assertions that will be verified at the end of the target service execution. 
+\item[$\bullet$] Time constraints for the services on the contract scope.
+\end{trivlist} 
+
+%\bigskip
+
+%\hrule
+\begin{small}
+\begin{tabbing}
+\reg \textit{Contract} ::= \= $\ldbrack$ ``\textbf{def}'' ``\textbf{Contract}'' 
+ \textit{Id} ``\textbf{\{}'' 
+    \textit{IsAppliedTo}  
+  \textit{Requires*}
+  \textit{Ensures*} %\\
+%\> \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad   
+\textit{(TimeConstraint)?} ``\textbf{\}}'' $\rdbrack$ \\[-3mm]
+\end{tabbing}
+%\hrule
+%\vspace*{2mm}
+\end{small}
+
+The directive ``\textbf{isAppliedTo:}'' defines the target service and scope of the contract. 
+This service is given by the identifier appearing next to the keyword.
+The target service can be a simple operation or a compound service. 
+In the former case, the contract cannot contain any time restriction.
+In the case of a contract defined for a compound service, the operations and services that form the contract can participate of the time constraint expressions defined by the contract. %\nopagebreak\\
+%\hrule
+\begin{small}
+\begin{tabbing}
+ \reg \textit{isAppliedTo} ::= \= $\ldbrack$ ``\textbf{isAppliedTo}''
+  ``\textbf{:}''  \textit{ident} ``\textbf{;}'' $\rdbrack$ \\[-3mm]
+  \end{tabbing}
+%\hrule
+%\vspace*{2mm}
+\end{small}
+
+The ``\textbf{requires}'' and ``\textbf{ensures}'' parts of a contract define the pre-conditions (resp. post-conditions) to be checked for each contract. 
+In the case of pre-conditions, they will be verified before the service is executed.
+Post-conditions will be checked after the execution of the service.
+In both cases, when the assertion fails, the associated action will be executed.
+Actions are defined as services, and written as PEWS path expressions.
+%\\
+%\hrule
+\begin{small} 
+\begin{tabbing}
+\reg \textit{Requires} ::= \= $\ldbrack$ ``\textbf{requires}''
+  \textit{BooleanCondition} \textit{(} ``\textbf{(}'' \textit{onFailureDo} ``\textbf{)}''
+  \textit{)?} ``\textbf{;}'' $\rdbrack$
+  \\[1.5mm]
+   
+   \reg \textit{ensures} ::= \= $\ldbrack$ \textbf{`ensures'}
+  \textit{BooleanCondition} \textit{(} ``\textbf{(}'' \textit{onFailureDo} ``\textbf{)}''
+    \textit{)?} ``\textbf{;}'' $\rdbrack$
+  \\[1.5mm]
+  
+   \reg \textit{onFailureDo} ::= \= $\ldbrack$ \textbf{`onFailureDo'}
+  \textit{Service} $\rdbrack$ \\[-3mm]
+\end{tabbing}
+%\hrule 
+%\vspace*{2mm}
+\end{small}
+
+Time Constraints are defined as relational expressions build from the operators.
+%These constraints will be imposed to the execution of the composition.
+%\hrule
+\begin{small} 
+\begin{tabbing}
+  \reg \textit{timeConstraint} ::= \= $\ldbrack$ \textbf{`timeConstraint'} \textbf{`:'} 
+                                                   ($\ldbrack$  ``\textbf{meet}'' $\rdbrack$ $|$ $\ldbrack$  ``\textbf{start}'' $\rdbrack$ $|$
+                                                    $\ldbrack$  ``\textbf{overlap}'' $\rdbrack$) \\ \>
+%  \textit{timeRelation} 
+  \textbf{`('} 
+  (\textit{opName} $|$ \textit{timeConstraint}) 
+  \textbf{`,'} (\textit{opName} $|$ \textit{timeConstraint}) \textbf{`)'} $\rdbrack$ 
+
+\end{tabbing}
+%\hrule
+%\vspace*{2mm}
+\end{small} 
+
+The model of temporal relations proposed here follows the main ideas presented in
+\cite{Allen83, BeVaC00}. The model is used to impose additional restrictions to
+the order in which operations of a web service are performed at execution time. For example, the
+confirmation of the bank authorization request must arrive at most one minute after the service call.
+ 
+A service composition time relation is represented by the following
+model: Let   $\Omega$ be a set of web services ($\omega_1$, . . .,
+$\omega_n$) to be composed and $\Theta$, a set of temporal relations $r_t$ that can be applied to $\Omega$. 
+Temporal relations are defined by predicates $r_t:\ \Omega$ x $\Omega$, where
+$r_t \in~\{\textbf{\textit{ %none, 
+%before, 
+meet, overlap, start
+%, during, finish, equal
+}}\}. $
+
+For example, the  
+%following expression defines that the operation $\omega_1$ needs to be finished before the operation $\omega_3$ is allowed to start: 
+%\textbf{\textit{before($\omega_1, \omega_3$)}}.  
+%The 
+expression \textbf{\textit{meet($\omega_1, \omega_2$)}}
+states that the execution of operation $\omega_2$ will begin as soon as $\omega_1$ finishes.
+The temporal relations are described below:
+
+
+
+\begin{trivlist}
+
+%_._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._.._
+\item{\bf\em Meet.}
+%_._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._.._
+The restriction specified by \textbf{\textit{meet($\omega_1, \omega_2$)}} specifies that $\omega_2$ will be executed immediately after $\omega_1$ finishes.
+
+%_._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._.._
+\item{\bf\em Overlap.}
+%_._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._.._
+The constraint given by \textbf{\textit{overlap($\omega_1, \omega_2$)}}
+%,  shown in Figure~\ref{graph:overlap}, 
+states that execution of the two services overlap in time. 
+The restriction also states that the service $\omega_1$ initiates before $\omega_2$.
+
+%_._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._.._
+\item{\bf\em Start.}
+%_._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._..__._.._
+The specification of \textbf{\textit{start($\omega_1, \omega_2$)}}
+%, shown in Figure~\ref{graph:start}, 
+states that the two services have their execution in parallel and that they start at the same time. 
+
+\end{trivlist}
+ 
+% Considering the example scenario, the $\pi$-PEWS code generated from the
+% $\pi$-PEWS model is describe as following\ldots 
+

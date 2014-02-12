@@ -1,0 +1,80 @@
+\appendix
+\chapter{\textit{$\pi$SOD-M} Concepts}
+\label{append:concepts}
+
+\begin{itemize}  
+  \item \texttt{Business process -} Represents a set of logically related tasks that
+are carried out to achieve a given business result.
+  \item \texttt{End consumer -} Represents an entity that needs and consumes a
+  business services. End consumer are those who pay (either with money or using
+  any other valuable object) to obtain a service that they use themselves.
+  \item \texttt{Business service -} Represents a result of a business process
+  (or part of it) providing value for an end consumer, created because the
+  interaction end consumer/service provider permits fulfillment of an end
+  consumer\'s specific need.
+  \item \texttt{Business task -} Represents a business function performed by a
+  business collaborator as a part of a business process.
+  \item \texttt{Business collaborator -} Represents an entity that collaborates
+  in the business processes of an organization, performing certain tasks needed
+  to provide a business service.
+  \item \texttt{Use case -} Represents a set of actions performed by the system
+  to carry out part of a business service.
+  \item \texttt{Composite use case -} Represents a set of actions performed by
+  the system to carry out part of a business service, which can be broken down
+  into different use cases, which may in turn be basic or composite.
+  \item \texttt{Service composition process -} Represents a set of logically
+  related activities necessary for carrying out a business service.
+  \item \texttt{Service activity -} Represents a behaviour (set of individual
+  actions) forming part of the execution flow of a business service.
+  \item \texttt{Action -} Represents a fundamental behaviour unit that is part
+  of a service activity and describes some transformation or processing in the
+  system being modelled.
+  \item \texttt{Non-Functional (NF) Attribute -} An attribute that describes
+the quality or characteristics of a functional requirement. For example
+\textit{confidentiality} and \textit{privacy} is an example for a non-functional
+attribute for the functional requirement \textit{user registration}.
+  \item \texttt{Non-Functional (NF) Requirement -} A group of semantically
+correlated non-functional attributes (NFA). For example, \textit{security} is
+an NF Requirement that comprises attributes such as \textit{confidentiality}
+and \textit{integrity}. 
+  \item \texttt{Constraint -} A constraint prevents the system
+  from achieving more of its goal. With the definition of constraints, the
+  system  can be more robust, and unexpected problems can be solved before it
+  happens. For example, in a banking system, the customer can only withdraw
+  money if you have balance in the account.
+    \item \texttt{Constraint Type -} Represents the types of restrictions
+  constraints expressed in the meta-model are business and data (*value) constraints. When
+  modeling a system requirement the analyst can identify if there are restrictions on
+  business, or data, or both.  
+  \item \texttt{Contract -} Is the formalization of obligations (requires) and
+  benefits (ensures) of a function, service activity or component.
+  The following questions can be used to define contracts: \textit{What does it
+  expect? What does it guarantee?} Contract are crucial to software correctness that they should be part of the design process. A
+  interface is a kind of contract.
+  \item \texttt{Assertion -} Represents a predicate, or a state of the
+  application before it runs (its preconditions), or the state when it is
+  finished running (postconditions);  
+  \item \texttt{Exceptional Behaviour -} Are alternative execution paths if
+  any condition or restriction is not respected. For example, if a User's password
+  is not correct after three attempts, the User account is locked for security.  
+  \item \texttt{Policy -} A policy is a set of rules applied to a particular
+  scope. This scope can be defined as an action, an activity, a function or a
+  workflow. A policy is a composition of contracts applied to a non-functional
+  application requirement. For example, a security policy of a system constraint
+  includes authentication, access, data privacy, and so on.
+ \item \texttt{Use Case -} Represents a behavior that can be executed
+in order to realize (parts of) the \textit{Functional Requirement}.
+  \item \texttt{Composite Use Case -} Represents a set of actions performed by
+  the system to carry out part of a business service, which can be broken down
+  into different use cases, which may in turn be basic or composite.
+  \item \texttt{Requirement -} Represents a super type for functional and
+  non-functional requirements. Thus, the use cases can be related to both types
+  of requirements. 
+  \item \texttt{Rule -} Represents information about an event, condition, and
+  action where the event part represents the moment in which a constraint can be
+  evaluated according to a condition represented by the condition part and the
+  action to be executed for reinforcing it represented by the action part.
+  \item \texttt{Variable -} Represents a symbolic name given to some known
+  information. A variable are related with a Policy. A Policy can have one or
+  many variables. Each Variable has a name and a type.
+\end{itemize}    

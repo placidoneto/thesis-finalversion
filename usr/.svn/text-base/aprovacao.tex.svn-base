@@ -1,0 +1,152 @@
+%=====================================================================
+% Folha de Aprova��o
+%=====================================================================
+
+
+\begin{center}
+ 
+
+  {
+    \fontsize{14}{16}
+    \selectfont
+
+    \textsc{\titulo}
+
+
+  }
+
+    \vfill
+
+    {
+      \fontsize{12}{14}
+      \selectfont
+
+      \autor
+
+    }
+
+
+
+    \vfill
+
+\end{center}
+
+    {
+      \fontsize{12}{14}
+      \selectfont
+
+      \noindent Esta Tese de Doutorado foi avaliada e
+      considerada \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ pelo Programa de
+      P\'os-gradua\c c\~ao de Sistemas e Computa\c c\~ao\ do Departamento de
+      Inform\'atica e Matem\'atica Aplicada\ da Universidade Federal do Rio Grande do Norte.
+
+    }
+
+\begin{center}
+
+    \vfill
+
+ 
+    {
+      \fontsize{11}{13}
+      \selectfont
+
+%      \begin{singlespace}
+    \noindent
+    \rule{75mm}{0.2mm}\\
+    Prof. Dr. Martin Alejandro Musicante\\
+    Orientador\\
+
+    }
+    
+        \vfill
+
+ 
+    {
+      \fontsize{11}{13}
+      \selectfont
+
+
+    \noindent
+    \rule{75mm}{0.2mm}\\
+    Prof. Dra. Genoveva Vargas-Solar\\
+    Co-Orientadora
+ %     \end{singlespace}
+
+    }
+
+
+    \vfill
+
+    {
+      \fontsize{11}{13}
+      \selectfont
+
+%       \begin{singlespace}
+    \noindent
+    \rule{75mm}{0.2mm}\\
+   Prof. Dr. David Boris Paul Deh\'arbe\\
+    Coordenador do Programa
+%       \end{singlespace}
+
+    }
+
+ 
+    \vfill
+
+\end{center}
+
+\newpage
+
+{ 
+  \fontsize{12}{14}
+  \selectfont
+
+  \noindent Banca Examinadora:
+
+  \begin{center}
+
+    {
+      \fontsize{11}{13}
+      \selectfont
+
+%       \begin{singlespace}
+
+    \rule{75mm}{0.2mm}\\
+    Prof. Dr. Martin Alejandro Musicante\\
+    Universidade Federal do Rio Grande do Norte\\
+    [1.3cm]
+     
+    \rule{75mm}{0.2mm}\\
+    Profa. Dra. Genoveva Vargas-Solar\\
+    Centre National de la Recherche Scientifique (CNRS/Fran\c ca)\\
+    [1.3cm]
+
+   \rule{75mm}{0.2mm}\\
+    Prof. Dr. Nelson Souto Rosa\\
+      Universidade Federal de Pernambuco\\
+    [1.3cm] 
+
+
+    
+     \rule{75mm}{0.2mm}\\
+    Profa. Dra. S\'ilvia Regina Virg\'ilio\\
+     Universidade Federal do Paran\'a\\
+    [1.3cm]
+    
+      
+    \rule{75mm}{0.2mm}\\
+    Prof. Dra. M\'arcia Jacyntha Nunes Rodrigues Lucena\\
+     Universidade Federal do Rio Grande do Norte\\
+    [1.3cm]
+
+   \rule{75mm}{0.2mm}\\
+    Prof. Dra. M\'aria Valeria de Castro\\
+     Universidad Rey Juan Carlos (Espanha)\\
+    [1.3cm] 
+%       \end{singlespace}
+
+    }
+  \end{center}
+
+}

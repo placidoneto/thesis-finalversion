@@ -1,0 +1,241 @@
+\appendix
+\chapter{Systematic literature review}
+\label{append:systematic_literature_review}
+ 
+
+
+% The process of leading with a systematic literature review (SLR) must be precisely defined and
+% documented.
+
+We have taken into account the guidelines given by \cite{Kitchenham08} for
+ developing the SLR presented in this paper. The SLR is carried out by
+ effectuating the following activities: \textit{(i) question formulation; (ii)
+ source selection; (iii) selection process; (iv) information extraction;} and
+ \textit{(v) results}.
+
+% \begin{enumerate}
+%   \item Question formulation;
+%   \item Source selection;
+%   \item Selection process;
+%   \item Information extraction;
+%   \item Results.
+% \end{enumerate}
+
+% The following sections give a more detailed explanation of how each of
+% these tasks were performed.  
+
+\subsection{Research question formulation}
+\label{subsec:question}
+
+We defined 7 research questions to
+guide the SLR based on the guidelines presented in
+\cite{Kitchenham08,BiolchiniMNCT07}. These guidelines were defined through the
+following research questions (\textit{$RQ_x$}), and their classification
+criteria for the possible answers space. The questions are closely related to
+the development of service-oriented applications with a focus on the NFR. They are presented below:
+  
+\begin{itemize} 
+%   \item \textbf{\texttt{$RQ_1$:}} What is the domain or scope
+%   of the ``\textit{non-functional requirements}'' / ``\textit{non-functional
+%   properties}'' used in the work? 
+%   \begin{itemize}
+% 	  \item \textit{domain or scope name}
+% 	\end{itemize}  
+  \item \textbf{\texttt{$RQ_1$:}} How NFR are modeled in existing methodologies
+  for developing reliable web services?
+  \begin{itemize}
+	  \item \textit{definition concepts}
+	\end{itemize}  
+%  \item \textbf{\texttt{$RQ_2$:}} What is the classification used
+%  for the ``\textit{non-functional requirements}'' / ``\textit{non-functional
+%   properties}'' in the work? 
+%  	\begin{itemize}
+% 	  \item \textit{security / availability / portability / \ldots / reliability /
+% 	  performance}
+% 	\end{itemize}
+ \item \textbf{\texttt{$RQ_2$:}} Which are the NFR that are more frequently
+ considered in methodologies developing web services?
+ 	\begin{itemize}
+	  \item \textit{security / availability / portability / \ldots / reliability /
+	  performance}
+	\end{itemize}
+	
+
+  \item \textbf{\texttt{$RQ_3$:}} What is the software
+  development approach used in the paper?
+	\begin{itemize}
+	  \item \textit{Model driven approach (*MDD) / Ontology (*Ont) / Formal method
+	  (*FM) / Artificial intelligence (*AI) / Business Process Modeling (*BP)
+	  Traditional (*TDT)}
+	\end{itemize} 
+  \item \textbf{\texttt{$RQ_4$:}} What is the discipline (application domain)
+  of the ``\textit{non-functional requirements}'' / ``\textit{non-functional
+  properties}'' used in the work?
+  \begin{itemize}
+	  \item \textit{Software architecture / QoS model / Language definition /
+	  Methodology / etc}
+	\end{itemize}	
+%   \item \textbf{\texttt{$RQ_4$:}} Is there any hierarchy between the
+%   non-functional requirements described?
+%   \begin{itemize}
+% 	  \item \textit{how many levels - 0, 1, 2, \ldots, n.}
+% 	\end{itemize}  
+%  Is any model or meta-model presented
+%   for description and analysis of non-functional requirements?
+  \item \textbf{\texttt{$RQ_5$:}} Does the paper proposes a (meta)model
+  describing and analyzing NFR? Is there any relationship between
+  the non-functional requirements (meta)model proposed and business services? 
+\begin{itemize}
+	  \item \textit{yes / no} -- \textit{yes / no}
+	\end{itemize}  
+  \item \textbf{\texttt{$RQ_6$:}} Do the non-functional aspects are treated in
+  an independent way or do they include the service compositions modeling?
+\begin{itemize}
+	  \item \textit{single / composition}
+	\end{itemize}
+\item \textbf{\texttt{$RQ_7$:}} Which is the publication year of the paper?
+	\begin{itemize}
+	  \item \textit{Year of publication}
+	\end{itemize}	   
+%   \item \textbf{\texttt{$RQ_5(old)$:}} Is there any relationship between
+%   non-functional requirements and business services? 
+%   \begin{itemize}
+% 	  \item \textit{yes / no}
+% 	\end{itemize}  
+    
+\end{itemize}
+ 
+These issues will be the criteria of reference for the analysis of selected
+papers.
+  
+\subsection{Source selection}
+\label{subsec:souce_selection}
+
+%  The sources identified for use in the search for primary studies
+% were those recommended by \cite{Kitchenham08}.
+We selected the sources proposed by \cite{Kitchenham08} for searching primary
+studies. These sources contain the works published in journals, conferences and
+workshops which are of recognized quality within the research community. The
+search engines are: \textit{(i) IEEE Computer; (ii) ACM Digital Library;} and
+\textit{(iii) Science Direct}. In the selected sources, we used the following search
+query criteria:
+
+\begin{center}
+\texttt{(((``non functional properties'') OR (``non functional requirements''))
+AND ``web service'' AND ``composition''))}
+\end{center}
+
+We excluded DBLP and CiteSeer because they were indexed by other sources. Google
+Scholar was also used for searching sources, however the results were
+nonstandard considering the other cited sources. Thus the results from Google
+Scholar were not considered in this analysis. 
+
+After selecting the papers in these three sources, the analysis was performed in
+two stages, that will be explained in the next section.
+ 
+\subsection{Selection process and information extraction}
+\label{subsec:selection_process}
+  
+After define my sources' selection, we describe the
+process used to identify those works that provided direct evidence
+with regard to the research questions. Deciding for the inclusion and exclusion
+criteria for filtering the corpus papers selection, we selected those related to
+non-functional requirements/properties, and quality for web service based applications.
+Initially, the selection criteria were interpreted liberally and clear
+exclusions were only made with regard to title, abstract and introduction.
+
+Based on the guidelines mentioned in \cite{Kitchenham08}, we established a
+multi-step process made up of three steps with different selection
+criteria:
+   
+\begin{itemize}
+  \item Step 1 - the search string must be run on the selected
+search engine. An initial set of studies was obtained by filtering
+of title, abstract, and if necessary, introduction. All the studies were
+selected according to the inclusion and exclusion criteria. Studies which
+were not clearly related to any aspect of the research questions
+were excluded.
+\item Step 2, the exclusion criteria were based on the following
+practical issues: short papers, non-English papers, non-
+International Conference papers and non-International Workshop
+papers. Specifically in the case of ACM library, we considered only the
+transaction journal papers.
+\item Step 3, the papers selection process was based on detailed
+research questions.
+\end{itemize}  
+
+The information for each step was collected considering the 3 searchers
+and the the query presented previously. the results of each step were:
+\textit{(i)} for each source a list of all the studies that
+fulfilled the query; \textit{(ii)} a list
+of studies for each source which contained all the works that did not fulfill the
+second stage inclusion criteria; and
+\textit{(iii)} the last step produced a list of works for each source which
+contained all the studies that fulfilled the second step (table
+\ref{tab:result01}).
+
+ 
+\begin{table}
+\begin{tabular}{l|c|c|c|c}
+  \hline
+  \hline
+   & IEEE Explorer & ACM Library & Science Direct & Total \\
+  \hline
+  \hline
+  Total results & 65 & 271 (75 \footnote{We considered only 75 transactions
+  journal paper}) & 166 & 502 (306 \footnote{considering the 75 ACM
+  transactions journal paper}) \\ 
+  \hline
+  Step one - results selected & 19 & 10 & 20  & 49 \\
+  Step one - results selected (\%) & 29.23\% & 13.33\% & 12\% &
+  16\% \\ 
+  \hline 
+  Step two - results selected & 7 & 3 & 9 & 19\\
+  Step two - results selected (\%)  & 10.76\% & 4\% & 5.42\% & 6.20\%\\ 
+  \hline
+  \hline
+\end{tabular}
+\caption{Summary of the studies selected at each step.}
+\label{tab:result01}
+\end{table} 
+
+ 
+The extraction of information was based on the research questions (section
+\ref{subsec:question}), and each paper extraction question included the following items: \textit{(i)}
+where the paper was found; \textit{(ii)} identification of the title and main
+subjects; \textit{(iii)} summary of the paper; \textit{(iv)} inclusion and exclusion
+criteria; \textit{(v)} paper's objective and result; and \textit{(vi)}
+paper's subjective results.
+
+The systematic literature review took place between December 2011 and January
+2012 and we did not filter papers within a specific year interval. Although the
+studies which were concretely analyzed were published between 2005 and 2011.
+Table \ref{tab:result01} shows a summary of the studies selected in each stage
+of the selection procedure for each source. The ``Total results'' were obtained
+by running the search string on the selected sources. The next four rows show
+the results obtained after applying stages one (2 first rows) and two (2 last
+rows) of the studies selection procedure. 
+
+In the first step, respecting the filters described, the 65 articles collected
+from IEEE, only 29.23\% of them were in accordance with the criteria 
+described early, representing 19 articles. In ACM Library, from 75 papers
+collected, only 13.33\% passed in the first stage filter, representing 10 articles. In Science Direct
+had the lowest percentage, totaling 20 of the 166 articles collected by the
+query, thus representing 12\% of the total. Despite being the lowest relative
+value, the Science Direct had the largest absolute result, with 20 papers
+in the first step. In the second stage, the percentage dropped further, and the 
+papers relevant and with accordance to the criteria have been collected as the final
+result. The results were respectively, 10.76\%, 4\% and 5.42\% of total papers
+from the IEEE, ACM and Science Direct. The highest percentage was among the
+ papers from  IEEE, while the largest number of papers, in absolute terms,
+ was collected from Science Direct. The approaches resulting from this last
+ stage were studied in depth and information concerning the detailed research
+ questions and other fields of the extraction forms was extracted from each
+ paper we selected. 49 works were selected in the first stage, and, only 19
+ works in the second stage. It represents  6.20\% of the total amount of papers.
+
+% 
+% The next section (section \ref{sec:results_systematic_literature_review})
+% presents the results and an analysis of the relevant articles collected after
+% the second stage.
+%           

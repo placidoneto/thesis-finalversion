@@ -1,0 +1,123 @@
+10
+
+dir
+174
+https://pisodm.googlecode.com/svn/trunk/PhDThesis-English/src/chapters
+https://pisodm.googlecode.com/svn
+
+
+
+2012-09-05T23:44:34.287909Z
+174
+placido.neto
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720a73e2-dbb9-6175-4f9a-4431b3882a40
+
+background
+dir
+
+conslusion
+dir
+
+ficha.aux
+file
+275
+
+
+
+2013-02-06T02:03:03.000000Z
+a893e7f552f19306c0499d2d1b66b8e9
+2013-02-06T02:08:45.709821Z
+275
+placido.neto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1073
+
+ficha.pdf
+file
+275
+
+
+
+2013-02-06T01:57:17.000000Z
+0f49a557b985dd50ba4fbb666ae6231f
+2013-02-06T02:08:45.709821Z
+275
+placido.neto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+41455
+
+figs
+dir
+
+implementation
+dir
+
+introduction
+dir
+
+methodology
+dir
+
+resumo_portugues
+dir
+
+state_ofthe_art
+dir
+
+validation
+dir
+

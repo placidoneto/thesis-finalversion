@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="88" version="1.1" width="380" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="70" cy="52" fill="#000000" rx="56.0" ry="22.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="70" cy="52" fill="#ffffff" rx="55.0" ry="21.0" stroke="#ffffff" stroke-width="1"/>
+<text font-family="Lucida Grande" font-size="13" x="65" y="53">
+A</text>
+<ellipse cx="310" cy="52" fill="#000000" rx="56.0" ry="22.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="310" cy="52" fill="#ffffff" rx="55.0" ry="21.0" stroke="#ffffff" stroke-width="1"/>
+<text font-family="Lucida Grande" font-size="13" x="306" y="53">
+B</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="126" x2="131" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="136" x2="141" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="146" x2="151" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="156" x2="161" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="166" x2="171" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="176" x2="181" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="186" x2="191" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="196" x2="201" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="206" x2="211" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="216" x2="221" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="226" x2="231" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="236" x2="241" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="246" x2="251" y1="52" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="242" x2="254" y1="59" y2="52"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="242" x2="254" y1="45" y2="52"/>
+<text font-family="Lucida Grande" font-size="13" x="149" y="28">
+&lt;&lt;extend&gt;&gt;</text>
+</svg>

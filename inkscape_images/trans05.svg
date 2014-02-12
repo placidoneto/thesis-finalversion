@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="351" version="1.1" width="949" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="67" x="89" y="26"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="67" x="89" y="26"/>
+<text font-family="Lucida Grande" font-size="13" x="94" y="40">
+Use Case</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="67" x="89" y="50"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="67" x="89" y="71"/>
+<rect fill="#ffffff" height="67" stroke="#ffffff" stroke-width="1" width="66" x="90" y="270"/>
+<rect fill="none" height="67" stroke="#000000" stroke-width="1" width="66" x="90" y="270"/>
+<text font-family="Lucida Grande" font-size="13" x="100" y="284">
+Include</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="90" y="294"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="90" y="315"/>
+<polyline fill="none" points="106,270 106,93" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="113" x2="106" y1="105" y2="93"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="99" x2="106" y1="105" y2="93"/>
+<text font-family="Lucida Grande" font-size="13" x="78" y="253">
+0..*</text>
+<text font-family="Lucida Grande" font-size="13" x="85" y="120">
+1</text>
+<polyline fill="none" points="138,93 138,270" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="138,93 143,103 138,113 133,103" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="138,93 143,103 138,113 133,103" stroke="#000000" stroke-width="1"/>
+<text font-family="Lucida Grande" font-size="13" x="153" y="125">
+1</text>
+<text font-family="Lucida Grande" font-size="13" x="144" y="253">
+0..*</text>
+<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="66" x="538" y="22"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="66" x="538" y="22"/>
+<text font-family="Lucida Grande" font-size="13" x="550" y="36">
+Action</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="538" y="46"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="538" y="67"/>
+<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="115" x="506" y="166"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="115" x="506" y="166"/>
+<text font-family="Lucida Grande" font-size="13" x="511" y="180">
+Executable Node</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="115" x="506" y="190"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="115" x="506" y="211"/>
+<polyline fill="none" points="570,89 570,166" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="570,166 563,154 577,154" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="570,166 563,154 577,154" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="95" x="762" y="14"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="95" x="762" y="14"/>
+<text font-family="Lucida Grande" font-size="13" x="767" y="28">
+Activity Node</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="95" x="762" y="38"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="95" x="762" y="59"/>
+<polyline fill="none" points="620,198 682,198 682,54 762,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="762,54 750,61 750,47" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="762,54 750,61 750,47" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffffff" height="67" stroke="#ffffff" stroke-width="1" width="91" x="770" y="262"/>
+<rect fill="none" height="67" stroke="#000000" stroke-width="1" width="91" x="770" y="262"/>
+<text font-family="Lucida Grande" font-size="13" x="775" y="276">
+Activity Edge</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="91" x="770" y="286"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="91" x="770" y="307"/>
+<polyline fill="none" points="843,81 843,262" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="836" x2="843" y1="250" y2="262"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="850" x2="843" y1="250" y2="262"/>
+<text font-family="Lucida Grande" font-size="13" x="846" y="176">
+outcoming</text>
+<text font-family="Lucida Grande" font-size="13" x="856" y="107">
+1</text>
+<text font-family="Lucida Grande" font-size="13" x="849" y="245">
+1..*</text>
+<polyline fill="none" points="794,81 794,262" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="787" x2="794" y1="250" y2="262"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="801" x2="794" y1="250" y2="262"/>
+<text font-family="Lucida Grande" font-size="13" x="727" y="138">
+incoming</text>
+<text font-family="Lucida Grande" font-size="13" x="772" y="109">
+1</text>
+<text font-family="Lucida Grande" font-size="13" x="766" y="245">
+1..*</text>
+<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="90" x="522" y="262"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="90" x="522" y="262"/>
+<text font-family="Lucida Grande" font-size="13" x="527" y="276">
+Control Flow</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="90" x="522" y="286"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="90" x="522" y="307"/>
+<polyline fill="none" points="611,290 770,290" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="770,290 758,297 758,283" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="770,290 758,297 758,283" stroke="#000000" stroke-width="1"/>
+</svg>

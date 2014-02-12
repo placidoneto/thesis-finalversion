@@ -1,0 +1,380 @@
+\chapter{Introduction}
+\label{chapter:introduction} 
+
+\epigraph{``\textit{The greatest enemy of knowledge is not ignorance, it is the illusion of
+knowledge.}''}{Stephen Hawking}
+ 
+\bigskip
+\bigskip
+ 
+A web service is a logically atomic component that provides operations through a
+standardized interface and is accessible on the Internet. The most important
+features of a web services platform is the use of the Internet
+high-level protocols for making software components interact among each other.
+Web services use three major standard technologies, namely: a communication
+protocol (SOAP - \textit{Simple Object Access Protocol)} \cite{soap}), an interface
+description language for describing services (WSDL - \textit{Web Service
+Definition Language} \cite{wsdl}) and a specification for publishing and finding
+services (UDDI - \textit{Universal Description, Discovery and Integration}
+\cite{uddi}). These technologies are organized within a reference architecture
+that defines how they are used for using services as components that can
+exchange messages for implementing 	specific application logics.
+
+
+% This architectural model defines the software components as a collection of
+% processing units that communicate by means of message passing.
+
+Furthermore, it is possible to create new services (\textit{i.e., composite
+services}) by composing existing ones. Service composition is defined by a
+process consisting of activities implemented by other Web services.
+
+% The activity of building new services from
+% existing services is known as \textit{service composition}. Composition defines an implementation process where the result is a new service
+% whose activities are processed by components of other web services.
+   
+
+Some composition processes require to define more complex
+interactions among services. For this, it is necessary an adequate description
+of the interface that can describe composite services. Since WSDL descriptions
+specify only static aspects, some proposals extend WSDL adding behavioral
+characteristics, such as \textit{PEWS \cite{BaCAM05}, BPEL4WS \cite{bpel03},
+XLANG \cite{xlang}, WSCI \cite{wsci}} e \textit{OWL-S \cite{owl04}}. 
+
+% Other works propose quality models,
+% \textit{frameworks} and APIs to support the development of service-based
+% applications, integrating languages and development environments.
+
+
+% The features of services can be described in different ways. Some
+% research initiatives define description languages for services, because
+
+
+% The infrastructure of web services is limited to a simple collection of
+% operations that can be easily accessed from web messaging, thus this paradigm
+% favors the writing process, making it transparent to the user of the services to
+% implement them.
+
+
+
+% The use of many different platforms and APIs for the development of
+% Web applications raises the need for an infrastructure that
+% allows an organized execution of the analysis activities, design and
+% implementation of this kind of software, enabling the creation of secure,
+% reliable and quality applications. In the most cases, the developing application
+% process which make use of web services is done in a \textit{ad hoc} way, without follow
+% methods that will ensure the requirements that the application needs. 
+
+% The purpose of a new method for reliable applications is
+% to improve its development, enabling the use of different
+% models and APIs in order to increase productivity and reuse of components.   
+
+Current standards in service composition implement functional, non-functional
+constraints and communication aspects by combining different languages and
+protocols. For example, to add a transactional behaviour to a
+service composition requires the implemention of code using the WS-Coordination,
+WS-Transaction, WS-BussinessActivity and WS-AtomicTransaction standards. The
+selection of the adequate protocols for adding a specific non-functional constraint to a
+service composition (e.g., security, transactional behaviour and adaptability)
+is completety left to the programmer. As a consequence, the development of an
+application based on a service composition is a complex and a time-consuming
+task. This is opposed to the philosophy of service-based software engineering
+that aims at facilitating the integration of distributed applications. 
+
+% Among the software engineering  proposals for system design, a way to
+% designing application is using MDA (Model Driven Architecture). In
+% the specific case of service-based application development, it is not different.
+% It is possible to use MDA to describe services and their compositions.  
+
+In general, software engineering techniques have been conceived for supporting
+the development of applications, and service-based applications should not be
+the exception. The evolotion of the software engineering field has led to the
+proposal of the MDA (Model Driven Architecture) approach. MDA~\cite{miller} is
+an important approach for the alignment between high-level information
+modelling, non-functional requirements and service-based development, because it
+provides a conceptual structure that extends from the models used by system
+analysts to different models used by software developers.
+
+% MDA also provides, through transformation of models, where the specified
+% elements in a diagram may be converted, automatically, in other elements of more detailed diagrams which are
+% derived from it.
+
+MDA allows the specification of a system as an abstract model,
+which may be realized as a concrete implementation (program) for a particular
+service platform (e.g. WSDL, BPEL or PEWS). Using a MDA
+specification it is possible to generate the
+source code for implementing the software system from an abstract model. The MDA
+methods provide a skeleton of the program source code, implemented as a
+source code template where predefined tokens are then replaced with code. MDA
+methods separate design from architecture. The design addresses the functional
+requirements while architecture provides the non-functional requirements like
+scalability, reliability and performance are realized.    
+
+% Considering MDA development, intermediate models that are used to produce the
+% final realization are also considered final products of the development process.
+% These models are carefully  defined so as to remain stable in face of changes in
+% platform technologies, and are therefore called platform-independent models
+% (PIMs) \cite{miller}.
+
+
+  
+\section{Motivation and Problem Statment}
+
+Software construction is moving towards the use of methodologies for controlling
+the software development process and facilitating the specification of
+functional and non-functional requirements (NFRs), and its maintenance and
+evolution for integrating new functionalities. 
+There exist several methodologies, methods and new
+approaches~\cite{CastroMV11,PapazoglouH06,sommerville08,Gervais02,somf,MilanovicM06}
+for software engineering, improving software development and modeling non-functional
+requirements. These methods can help to ensure the coherence between
+functional and non-functional properties necessary to the system, particularly
+when information systems include complex business processes calling web services
+or legacy applications exported as services. The challenge is to ensure
+reliability properties for the complete application. There are still a number of
+problems to be solved in the development of systems, specially for service-based
+development, \textit{e.g.}, automatic composition, NFRs specification and
+modelling, or specific development methodologies for service-based
+applications.
+
+Service oriented computing is at the origin of an evolution in the field of software development. 
+An important challenge of service oriented development is to ensure the
+alignment between IT systems and the business logic. Thus, organizations are 
+exploring new mechanisms to bridge the gap between the developed systems and
+business needs \cite{bell}. The literature stresses the need for methodologies
+and techniques for service oriented analysis and design, claiming that they are
+the cornerstone  in the development of meaningful service-based applications
+\cite{5}.  In this context, some authors argue that the convergence of
+model-driven software development, service orientation and better techniques for
+documenting and improving business processes are the key to make real the idea
+of rapid, accurate development of software that serves, rather than dictates,
+software users' goals \cite{watson}. 
+
+% 
+% The infrastructure of Web services is limited to a simple collection of
+% operations that can be easily accessed from web messaging, thus this paradigm
+% favors the writing process, making it transparent to the user of the services to
+% implement them.
+
+Service oriented development methodologies providing models, best practices, and
+reference architectures to build service based applications mainly address 
+functional aspects \cite{1,2,decastro1,PapazoglouH06}. Non-functional aspects
+concerning service and application's ``semantics'', often expressed as
+requirements and constraints in general purpose methodologies, are not fully
+considered or they are added once the application has been implemented in order
+to ensure some level of reliability (e.g., data privacy, exception handling,
+atomicity, data persistence). This leads to service based applications that are
+partially specified and that are thereby partially compliant with application
+requirements.        
+
+
+The use of many different platforms and APIs for the development of
+Web applications raises the need for an infrastructure that
+allows an organized execution of the analysis activities, design and
+implementation, enabling the design, implementation and development
+of reliable applications. 
+
+% In the most cases, the developing application
+% process which make use of web services is done in a \textit{ad hoc} way, without follow
+% methods that will ensure the requirements that the application needs.
+
+As services are independent components, ensuring non-functional properties is a
+challenge. Different
+studies~\cite{Babamir2010,AgarwalLS09,CholletL09,GutierrezRF10,XiaoCZBOLH08,JeongCL09,TsadimasNA12} try to associate non-functional requirements to services using different approaches. 
+Associating non-functional requirements to services
+compositions can help to ensure that the resulting application is compliant to
+the user requirements and also with the characteristics of the services it uses.
+ 
+Our approach combines service-based development, non-functional aspects and
+model driven architecture (MDA) so that reliable service-based systems may be
+developed by reducing time delays and increasing results, such as complience and
+quality.
+% 
+% in a platform independent
+% manner and generated from high level models. The purpose of a new method for
+% developemtn of reliable applications is to improve its development, enabling the use of different
+% models and APIs in order to increase productivity and reuse of components.  
+
+ 
+
+\section{Objectives and Main Results}
+
+
+% The objective of this work is to model non-functional
+% constraints and associate them to service-based applications
+% early during the service composition modeling phase. Therefore
+% we present $\pi$SOD-M, a model-driven method for building reliable services'
+% based information systems (SIS).
+ 
+% Our work (i) proposes to extend the SOD-M \cite{valeriaThesis} method
+% with the notion of A-Policy \cite{Espinosa-OviedoVZC09,Espinosa-Oviedo2011a} for
+% representing non-functional constraints associated to services' based applications;
+% (ii) defines the $\pi$PEWS meta-model \cite{BaCAM05,Placido2010LTPD} providing
+% guidelines for expressing the composition and the A-policies;
+% and finally, (iii) defines model to model transformation rules
+% for generating  reliable services' composition starting from the use case model
+% to services' composition model; and, model to text transformations for generating
+% the corresponding implementation. As will be shown within
+% our environment implementing these meta models and rules,
+% one may represent both systems' cross-cutting aspects (e.g.,
+% exception handling for describing what to do when a service
+% is not available, recovery, persistence aspects) and constraints
+% associated to services, that must be respected for using them
+% (e.g., the fact that a service requires an authentication protocol 
+% for executing a method). 
+
+The main goal of this thesis is to provide a methodology for developing
+reliable web service applications. Addressing the (i)
+modelling of functional requirements that can be implemented by service
+compositions and (ii) non-functional requirements expressed as constraints
+associated to services and policies to ensure the enforcement of business rules
+that define the semantics of the application.
+ 
+%Considering the problems presented in the previous section 
+Our work proposes the MDA based methodology $\pi$SOD-M
+(\textit{Policy based Software Oriented Development Methodology}) that
+(i) extends the SOD-M \cite{decastro1} method with the notion of {\em Policy}
+\cite{Espinosa-Oviedo2011a} for representing non-functional constraints associated to service based applications; (ii)
+defines the \textit{$\pi$-PEWS}  meta-model \cite{Placido2010LTPD} providing
+guidelines for expressing the composition and the Policies; and finally,
+ (iii) defines model to model transformation rules for generating the
+ \textit{$\pi$-PEWS} model of a reliable service composition starting from the extended service composition model; and, model to text transformations for generating
+ the corresponding implementation. 
+ 
+ This work proposes also an environment that provides tools for using the
+ methodology and implementing reliable services based applications. By defining
+ the $\pi$SOD-M model a programer can design and implement cross-cutting aspects
+ (e.g., exception handling for describing what to do when a service is not
+ available, recovery, persistence aspects) and constraints associated to
+ services, that must be respected for using them (e.g., the fact that a service
+ requires an authentication protocol for executing a method).
+%  This approach facilitates the development of service-oriented applications as
+%  well as their implementation using current technologies, e.g. web services.
+
+ 
+
+%  focuses on two specific points in the
+% software engineering context, they are: (i) non-functional requirements modeling for reliable web service applications and
+% (ii) improving software process development for web services applications. 
+
+The main contributions of our work are:
+ 
+\begin{itemize}
+  \item  \textbf{Classification of non-functional requirements for web services:}
+  This classification is based on an analysis of
+  the key features in the development of service-based applications. Associating
+  non-functional requirements to a service composition partially ensures that
+  the resulting application will comply to the user requirements as well as
+  with the characteristics of services user for implementing it.
+  
+  \item \textbf{The definition of non-functional requirements meta-models:}
+  $\pi$SOD-M defines non-functional requirements meta-models for representing concepts
+  associated to services properties and constraints, and business rules and thereby providing a framework for modelling reliable
+  service-based applications.
+%   The methodology $\pi$SOD-M's main feature is the modeling and application
+%   development with a focus on non-functional requirements. The whole structure
+%   of the methodology focuses on concepts and definition of non-functional requirements.
+%   A non-functional requirement (NFR) specifies criteria about the operation of a
+%   system. 
+  
+%   The NFRs should be contrasted with functional requirements that define
+%   specific behavior or functions of a system.
+  \item \textbf{MDA based methodology for modelling and implementing reliable
+  service-based applications:} $\pi$SOD-M defines a set of concepts organized
+  according to three points of view: (\textit{i})  \textit{policy view}, focusing on the non-functional requirements expressed by policies,
+(\textit{ii}) \textit{business view}, focusing on the features and the
+requirements of the business, and (\textit{iii}) the \textit{system
+view}, concentrating on the functionalities and processes that need to be implemented
+in order to satisfy the business requirements. The modelling process of
+$\pi$SOD-M includes models that are in correspondence with the three
+different abstraction levels considered by MDA (CIM, PIM and PSM).
+%   \item \textbf{MDA based approach:} The method follows an MDA-based approach, proposing a set of
+% models extending from the PIM level to the PSM levels. For the CIM level,
+% we consider a business and requirements specification document, and important
+% data for modeling the application. As the method is an extension of SOD-M \cite{CastroMV11}, the
+% value and business models are still considered, without, however, be extended with
+% the concepts of non-functional requirements. Thus, by means of mapping rules,
+% $\pi$SOD-M provides the benefits of the alignment of high-level business processes with the
+% technologies currently available for deploying the service-oriented paradigm.
+% $\pi$SOD-M considers the development of applications with focus on
+% non-functional requirements from the early stages of development.
+% \item \textbf{UML as modeling language:} $\pi$SOD-M UML profile includes all
+%   the modeling needed at PIM level for the development of systems from a
+%   service-oriented perspective. We also extend the original UML profile that can
+%   be used for modeling non-functional characteristics through stereotypes.  
+    \item \textbf{$\pi$SOD-M environment:} We the $\pi$SOD-M environment
+    implemented as Eclipse plugins that enables the use of the proposed
+    methodology for specifying functional and non-functional requirements of a
+    reliable service-based application and for semi-automatizing the
+    transformation processes from CIM to PIM and PIM to PSM levels, and then
+    generating executable code.
+  
+%   trusted
+%   applications for services. To associate non-functional requirement to service composition helps to
+%   ensure that the resulting application is compliant to the user requirements
+%   and also with the characteristics of the services it uses and that they are
+%   reliable. Ensure non-functional properties is a challenge in developing
+%   application and adapt quality properties in the web service development
+%   context can improve software reuse.
+\end{itemize}
+  
+
+%\section{Contributions}
+
+%\section{What This Thesis is Not About}
+
+\section{Document Organization}
+
+The remainder of this document is organized as follows:
+
+\begin{itemize}
+  \item Chapter \ref{chap:state_art} presents a systematic review of approaches
+  associating non-functional properties to services and service-based
+  applications. It introduces the main concepts used for describing and modeling
+  non-functional requirements in the different phases of service-based
+  methodologies;
+  
+%   presents the main concepts of the non-functional requirements and
+%   service-based methodology areas. We present a systematic review of the related
+%   works;
+  
+  \item Chapter \ref{chapter:methodology} introduces the $\pi$SOD-M
+  methodology proposed in this thesis, used for building reliable
+  service-based applications. The chapter describes the main phases of the
+  methodology which is based on an MDA approach, and the meta-models associated
+  to the CIM, PIM and PSM levels. Developing a service-based system consists ins instantiating such meta-models and
+  transforming them along the different levels. This chapter also describes the
+  transformation rules among the meta-models of the $\pi$SOD-M methodology, that
+  includes model-to-model and model-to-text transformations.
+  
+%   is proposed the $\pi$SOD-M
+%   methodology, an approach for building reliable service based applications;
+  \item  Chapter \ref{chap:environment} describes the $\pi$SOD-M
+  environment for developing service-based systems using this methodology. The
+  chapter describes the architecture of the environment, its main
+  components and functions and the tools for implementing it;
+  
+  \item Chapter \ref{chapter:validation} describes the experimental scenarios
+  that we conducted for validate the $\pi$SOD-M methodology. The chapter
+  introduces three scenarios with different levels of complexity, some focusing
+  on complex application logics and few non-functional requirements, and others
+  having in contrast simple application logics, but complex non-functional
+  requirements. The $\pi$SOD-M methodology is systematically used for developing
+  the case studies. Then, a discussion is conducted for presenting lessons
+  learned and for comparing this methodology with a methodology of reference.
+
+  \item Chapter \ref{chap:conclusion} concludes this document. It enumerates
+  the main results of this work underlining the main contributions and then it
+  discusses future perspectives.
+  
+  \item Some details about our work are described in the appendices:
+  \begin{itemize}
+    \item Appendix \ref{append:analysis} describes the method used for source
+    selection and analysis of related works with non-functional requirements for
+    service-based applications;
+    \item Appendix \ref{app:nfr-concepts} presents a list of service-based
+    non-functional requirement concepts and definitions proposed in this thesis;
+    \item Appendix \ref{append:pews_language} presents the \textit{$\pi$-PEWS}
+    language used in this work.
+  \end{itemize}
+\end{itemize}
+

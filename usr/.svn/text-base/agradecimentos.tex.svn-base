@@ -1,0 +1,99 @@
+%=====================================================================
+% Folha de Agradecimentos
+%=====================================================================
+
+\vspace*{1cm}
+
+%\begin{flushright}
+	
+%     \parbox{14.5cm}{
+	
+	\begin{center}
+	{
+      	  \fontsize{14}{16}
+      	  \selectfont
+      	  \bfseries
+      
+      	  \textsc{Acknowledgements}
+
+    	}	
+	\end{center}
+  
+	\vspace{0.7cm}
+		
+	{
+	  \fontsize{12}{14}
+	  \selectfont
+
+	When I started my Ph.D. studies back in 2008, I couldn't imagine how to 
+	write a thesis. For me it seemed to be an impossible endeavor. However, thanks
+	to the will of God I finished the text of this thesis. So, I want to express my
+	gratitude to God for this gift, because without him it would not be possible.  
+	
+% 	It is the great
+% 	support from many people that contributed to making it possible.
+	 
+	Now I have the opportunity to thank many people who helped me in some
+	way, so, I can't forget anyone of them. I will try to do that. During my Ph.D.
+	I had really nice and lovely people around me, and I thank for the ``gifts''
+	(mainly that ones you feel) and unforgetable moments were passed near them. I
+	found new friends and rediscovered old ones. These things, only a God that
+	loves you can provide.    
+	
+	I'm grateful to my supervisor Prof. Martin Musicante, not only for the ongoing
+	support but also for believing in me during this time and for the opportunities
+	he provided for my growth as a researcher. I deeply thank my co-supervisor
+	Prof. Genoveva Vargas-Solar for the time and effort spent on my thesis and for the feedback
+	and support when I was in Mexico and France, and even by many emails and
+	meetings by conference when I came back to Brazil. I also would like to thank
+	Prof. Valeria de Castro for the patience and suggestions given for my
+	work and for the friendship during the short time we had contact. I hope to
+	cooperate with everyone for a long time, because I know that many fruits can be harvested yet.
+	
+	I also would like to thank the committee members (Prof. Nelson Souto Rosa
+	(UFPE), Prof. Silvia Virg\'ilio (UFPR), Prof. M\'arcia Lucena (UFRN) and
+	Prof. Valeria de Casto (URJC)) who agreed to read, analyze and comment this
+	thesis. Thank you very much for your contributions!
+	
+	I was pleased to be part of the HADAS team for 9 months and meet people
+	who I will always remember with nostalgia and affection, in particular Juan
+	Carlos, Mohamad Othman, Epal Orleans, Carlos Manuel (Manolo), Lourdez
+	Martinez, Christiane Kamdem, Leon Fopa and Javier Espinosa. Thanks for the
+	friendship. I hope to have the opportunity to meet everyone again in some
+	place of the world.
+	
+	I am also grateful to Diego Caminha. A friend who I have great respect
+	and affection and who now I consider like a brother. Thanks for had received me
+	in France. I'm happy to have you as a friend and I miss our conversations and
+	the  good moments we spent. God bless you.  
+	
+	I am deeply grateful to Marinas Praia Sul Presbyterian Church (IPMPS) members
+	for their support, prayers and love of each one. They are always by my
+	side, I thank the church members and its amiable council. Likewise, I
+	thank my father-in-law Luiz Machado, my mother-in-law Maria de Lourdez, my sister-in-law Ana Tereza and my brother-in-law Heliomar
+	Dias, for being always ready to help with your prayers and actions. 
+
+	My family has been my greatest supporter over the last 29 years. My mother Ana
+	Sueli is the better and coolest mother I can imagine and I am deeply grateful
+	for everything she did for me. I hope be like her as a father. I also thank my
+	father Francisco Ednaldo and my sister Tatyanny Nascimento that always took
+	care and pray for me. Thanks for being there!
+	
+	Last but not least, I am very happy to have my own little family that strongly
+	supported me in my Ph.D. studies. My beloved wife Ana Fl\'avia always
+	supporting me, even during the countless weekends in the office, and the 9
+	months I spent in Grenoble for the Ph.D. stage. I am very thankful for her
+	love, help and support in many dificult times. My son Lucas Kauai has been the
+	sunshine in my life for the last 2 years. I am not able to measure the love I
+	feel for them, not only for what they have done for me, but for what they are
+	and represent in my life. I love you two with all my heart.
+	
+	Thank you so much!  
+	
+ 
+
+	 
+	}
+     %}
+%\end{flushright}
+

@@ -1,0 +1,144 @@
+%=====================================================================
+% Resumo e Abstract
+%=====================================================================
+
+\vspace*{\fill}
+
+\vfill
+ 
+\begin{center}
+{
+  \fontsize{24}{26}
+  \selectfont
+  \bfseries
+
+  \textit{Resumo}
+
+}
+\end{center}
+
+  
+\vfill
+
+{
+  \fontsize{12}{14}
+  \selectfont
+
+Esta tese apresenta $\pi$SOD-M (Policy-based Service Oriented Development
+Methodology), uma metodologia para a modelagem de aplica\c c\~oes orientadas a
+servi\c cos a qual usa \textit{Pol\'iticas} de qualidade. O trabalho prop\~oe
+um m\'etodo orientado a modelos para desenvolvimento de aplica\c c\~oes
+confi\'aveis. $\pi$SOD-M consiste de: (i) um conjunto de meta-modelos para
+representa\c c\~ao de requisitos n\~ao-funcionais associados a servi\c cos nos
+diferentes n\'iveis de modelagem, a partir de um modelo de caso de uso at\'e um
+modelo de composi\c c\~ao de servi\c co, (ii) um meta-modelo de plataforma
+espec\'ifica que representa a especifica\c c\~ao das composi\c coes e as
+pol\'iticas, (iii) regras de transforma\c c\~ao \textit{model-to-model} e
+\textit{model-to-text} para semi-automatizar a implementa\c c\~ao de composi\c
+coes de servi\c cos confi\'aveis, e (iv) um ambiente que implementa estes meta-modelos e regras, representando assim aspectos transversais e limita\c c\~oes associadas a servi\c
+cos, que devem ser respeitados. Esta tese tamb\'em apresenta uma classifica\c
+c\~ao e nomenclatura de requisitos n\~ao-funcionais para o desenvolvimento de
+aplica\c c\~oes orientadas a servi\c cos. Nossa abordagem visa agregar valor ao
+desenvolvimento de aplica\c c\~oes orientadas a servi\c cos que t\^em
+necessidades de garantias de requisitos de qualidade. Este trabalho utiliza
+conceitos das \'areas de desenvolvimento orientado a servi\c cos, design de
+requisitos n\~ao-funcionais e desenvolvimento dirigido a modelos para propor uma
+solu\c c\~ao que minimiza o problema de modelagem de servi\c cos web confi\'aveis.
+   
+    
+   
+}
+
+
+\vfill
+
+
+{
+  \fontsize{12}{15}
+  \selectfont
+
+
+%    \noindent Orientador: \orientador\\
+    \noindent {\bf \'Area de Concentra\c c\~ao}: \area\\
+    \noindent {\bf Palavras-chave}: \palavras\\
+%    \noindent N�mero de P�ginas: \pageref{frontpages} + \pageref{final}
+
+
+}
+ 
+
+\vspace*{\fill}
+
+
+\clearpage
+
+%=====================================================================
+
+\vspace*{\fill}
+
+%\selectlanguage{english}
+
+\vfill
+
+\begin{center}
+
+{
+  \fontsize{24}{26}
+  \selectfont
+  \bfseries
+
+  \textit{Abstract}
+
+}
+
+\end{center}
+
+
+
+\vfill
+
+{
+  \fontsize{12}{14}
+  \selectfont
+
+  
+This thesis presents \textit{$\pi$SOD-M} (\textit{Policy-based Service Oriented
+Development Methodology}), a methodology for modeling reliable service-based
+applications using \textit{policies}. It proposes a
+ model driven method with: (i) a set of meta-models for
+ representing non-functional constraints associated to service-based
+ applications, starting from an use case model until a
+ service composition model; (ii) a platform providing
+ guidelines for expressing the composition and the policies; (iii)
+ model-to-model and model-to-text transformation rules for semi-automatizing the
+ implementation of reliable service-based applications; and (iv) an
+ environment that implements these meta-models and rules, and enables the
+ application of $\pi$SOD-M. This thesis also presents a classification
+ and nomenclature for non-functional requirements for developing
+ service-oriented applications. Our approach is intended to add value to the
+ development of service-oriented applications that have quality requirements
+ needs. This work uses concepts from the service-oriented development,
+ non-functional requirements design and model-driven delevopment areas to
+ propose a solution that minimizes the problem of reliable service modeling.
+ Some examples are developed as proof of concepts.
+ 
+ }
+ 
+\vfill
+
+{
+  \fontsize{12}{15}
+  \selectfont
+
+
+%    \noindent Advisor: \orientador\\
+    \noindent {\bf Area of Concentration}: \areaEMingles\\
+    \noindent {\bf Key words}: \palavrasEMingles\\
+%    \noindent Number of Pages: \pageref{frontpages} + \pageref{final}
+ 
+
+}
+
+\vspace*{\fill}
+\selectlanguage{brazil}
+

@@ -1,0 +1,845 @@
+@TechReport{oasis06,
+  author = 	 {C. Matthew MacKenzie and Ken Laskey and Francis McCabe and Peter Brown Rebekah Metz},
+  title = 	 {Reference {M}odel for {S}ervice {O}riented {A}rchitecture 1.0},
+  institution =  {OASIS Committee Specification},
+  year = 	 {2006},
+  OPTkey = 	 {},  
+  OPTtype = 	 {}, 
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  month = 	 {August},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+} 
+
+@article{Peltz03,
+  author    = {Chris Peltz},
+  title     = {Web {S}ervices {O}rchestration and {C}horeography},
+  journal   = {IEEE Computer},
+  volume    = {36},
+  number    = {10},
+  year      = {2003},
+  pages     = {46-52}, 
+  ee        = {http://csdl.computer.org/comp/mags/co/2003/10/rx046abs.htm},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}   
+
+@book{Rosen08,
+ author = {Rosen, Michael and Lublinsky, Boris and Smith, Kevin T. and Balcer, Marc J.},
+ title = {Applied {SOA}: {S}ervice-{O}riented {A}rchitecture and {D}esign {S}trategies},
+ year = {2008},
+ isbn = {0470223650, 9780470223659},
+ publisher = {Wiley Publishing},
+ }
+ 
+ @inproceedings{Papazoglou03,
+  author    = {Mike P. Papazoglou},
+  title     = {Service-{O}riented {C}omputing: {C}oncepts, {C}haracteristics and
+               {D}irections},
+  booktitle = {WISE},
+  year      = {2003},
+  pages     = {3-12},
+  ee        = {http://csdl.computer.org/comp/proceedings/wise/2003/1999/00/19990003abs.htm},
+  crossref  = {DBLP:conf/wise/2003},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@book{Thomas05,
+ author = {Erl, Thomas},
+ title = {Service-{O}riented {A}rchitecture: {C}oncepts, {T}echnology, and {D}esign},
+ year = {2005},
+ isbn = {0131858580},
+ publisher = {Prentice Hall PTR},
+ address = {Upper Saddle River, NJ, USA},
+ }
+ 
+ @Book{booch07,
+  author = 	 {Grady Booch},
+  ALTeditor = 	 {Editor},
+  title = 	 {Object-{O}riented {A}nalysis and {D}esign with {A}pplications},
+  publisher = 	 {Addison-Wesley},
+  year = 	 {2007},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  number = 	 {51-52},
+  series = 	 {ISBN 0-201-89551-X},
+  OPTaddress = 	 {},
+  OPTedition = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@article{StippB93,
+  author    = {Lori Stipp and
+               Grady Booch},
+  title     = {Introduction to {O}bject-{O}riented {D}esign},
+  journal   = {OOPS Messenger},
+  volume    = {4},
+  number    = {2},
+  year      = {1993},
+  pages     = {222},
+  ee        = {http://doi.acm.org/10.1145/157710.157777},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@TechReport{soap,
+  author = 	 {Don Box and David Ehnebuske and Gopal Kakivaya and Andrew Layman and Noah Mendelsohn and
+Henrik Frystyk Nielsen and Satish Thatte and Dave Winer},
+  title = 	 {Simple Object Access Protocol
+(SOAP)},
+  institution =  {World Wide Web Consortium},
+  year = 	 {2000},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@TechReport{wsdl, 
+  author = 	 {Erik Christensen and Francisco Curbera and Greg Meredith and Sanjiva Weerawarana},
+  title = 	 {Web Services Description Language (WSDL) 1.1},
+  institution =  {World Wide Web Consortium},
+  year = 	 {2001},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  note = 	 {Disponível em http://www.w3.org/TR/wsdl},
+  OPTannote = 	 {}
+}
+
+
+%%%% Estado da Arte - Abordagens
+@INPROCEEDINGS{HL05TACoS,
+  AUTHOR = {R. Heckel and M. Lohmann},
+  TITLE = {Towards Contract-based Testing of Web Services.},
+  BOOKTITLE = { Proceedings of the International Workshop on Test and Analysis of
+	Component Based Systems (TACoS 2004)},
+  YEAR = {2005},
+  EDITOR = {Mauro Pezz\'e},
+  VOLUME = {116},
+  PAGES = {145-156},
+  EE = {http://dx.doi.org/10.1016/j.entcs.2004.02.073},
+  JOURNAL = {Electr. Notes Theor. Comput. Sci.},
+  PARTNER = {ULEICES},
+  URL = {http://www.cs.le.ac.uk/people/rh122/papers/2005/HL05TACoS.pdf}
+}
+
+@inproceedings{Meyer98a,
+  author    = {Bertrand Meyer},
+  title     = {Design by Contract: The Eiffel Method},
+  booktitle = {TOOLS (26)},
+  year      = {1998},
+  pages     = {446},
+  ee        = {http://doi.ieeecomputersociety.org/10.1109/TOOLS.1998.711043},
+  crossref  = {DBLP:conf/tools/26-1998},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@ARTICLE{burdy:05,
+  author = {L. Burdy and Y. Cheon and D. R. Cok and M. D. Ernst
+	and J. R. Kiniry and G. T. Leavens and K. R. M. Leino
+	and E. Poll},
+  title = {An overview of {JML} tools and applications},
+  journal = {Int. J. Softw. Tools Technol. Transf.},
+  year = {2005},
+  volume = {7},
+  pages = {212--232},
+  number = {3},
+  abstract = {The Java Modeling Language (JML) can be used to specify the detailed
+	design of Java classes and interfaces by adding annotations to Java
+	source files. The aim of JML is to provide a specification language
+	that is easy to use for Java programmers and that is supported by
+	a wide range of tools for specification typechecking, runtime debugging,
+	static analysis, and verification.This paper gives an overview of
+	the main ideas behind JML, details about JML's wide range of tools,
+	and a glimpse into existing applications of JML.},
+  address = {Berlin, Heidelberg},
+  doi = {10.1007/s10009-004-0167-4},
+  doi-url = {http://dx.doi.org/10.1007/s10009-004-0167-4},
+  publisher = {Springer-Verlag}
+}
+
+@article{jcml09,
+ author = {da Costa, Umberto Souza and Moreira, Anamaria Martins and Musicante, Martin A. and Neto, Pl\'{a}cido A.  Souza},
+ title = {Specification and Runtime Verification of Java Card Programs},
+ journal = {Electron. Notes Theor. Comput. Sci.},
+ volume = {240},
+ year = {2009},
+ issn = {1571-0661},
+ pages = {61--78},
+ doi = {http://dx.doi.org/10.1016/j.entcs.2009.05.045},
+ publisher = {Elsevier Science Publishers B. V.}, 
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ }
+ 
+  @article{LacknerKP02,
+  author    = {Martin Lackner and
+               Andreas Krall and
+               Franz Puntigam},
+  title     = {Supporting Design by Contract in Java},
+  journal   = {Journal of Object Technology},
+  volume    = {1},
+  number    = {3},
+  year      = {2002},
+  pages     = {57-76},
+  ee        = {http://www.jot.fm/issues/issue_2002_08/article4},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{Haddad08,
+ author = {Haddad, Joyce El and Manouvrier, Maude and Ramirez, Guillermo and Rukoz, Marta},
+ title = {QoS-Driven Selection of Web Services for Transactional Composition},
+ booktitle = {ICWS '08: Proceedings of the 2008 IEEE International Conference on Web Services},
+ year = {2008},
+ isbn = {978-0-7695-3310-0},
+ pages = {653--660},
+ doi = {http://dx.doi.org/10.1109/ICWS.2008.116},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ }
+ 
+ @inproceedings{Hernandez-BaruchPZ07,
+  author    = {Victor Hernandez-Baruch and
+               Alberto Portilla and
+               Jos{\'e}-Luis Zechinelli-Martini},
+  title     = {ROSE: A transactional services coordination engine},
+  booktitle = {ENC},
+  year      = {2007},
+  pages     = {123-130},
+  ee        = {http://dx.doi.org/10.1109/ENC.2007.18},
+  crossref  = {DBLP:conf/enc/2007},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@TechReport{bonita10,
+  author = 	 {Miguel Valdes Faura and Rodrigue Le Gall},
+  title = 	 {Bonita Open Solution 5.0.1},
+  institution =  {OW2 Consortium},
+  year = 	 {2010},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  address = 	 {http://forge.objectweb.org/projects/bonita},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@misc{specBPEL03,
+    author =	{T. Andrews and F. Curbera and  H. Dholakia and  Y. Goland and  J. Klein and  F. Leymann and  K. Liu and  D. Roller and  D. Smith and  S. Thatte and  I. Trickovic and  and S. Weerawarana},
+    title = 	{Specification: Business Process Execution Language for Web Services, Version 1.1. 2003.},
+    howpublished  = {Available at http://www-106.ibm.com/developerworks/library/ws-bpel/.},
+    year = "2003",
+}
+
+
+@TechReport{bpel05,
+  author = 	 {Assaf Arkin and Sid Askary and Ben Bloch and Francisco Curbera and Yaron Goland and Neelakantan Kartha and Neelakantan Kartha and Vinkesh Mehtaand and Satish Thatte and Prasad Yendluri and Alex Yiu and Alexandre Alves}, 
+  title = 	 {Web {S}ervices {B}usiness {P}rocess {E}xecution {L}anguage 2.0},
+  institution =  {OASIS - http://www.oasis-open.org/apps/org/workgroup/wsbpel/},
+  year = 	 {2005},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@TechReport{oasis06,
+  author = 	 {C. Matthew MacKenzie and Ken Laskey and Francis McCabe and Peter F. Brown Rebekah Metz},
+  title = 	 {Reference {M}odel for {S}ervice {O}riented {A}rchitecture 1.0},
+  institution =  {OASIS Committee Specification},
+  year = 	 {2006},
+  OPTkey = 	 {},  
+  OPTtype = 	 {}, 
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  month = 	 {August},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+} 
+
+@inproceedings{PiresBM02,  
+  author    = {Paulo F. Pires and
+               Mario R. F. Benevides and
+               Marta Mattoso},
+  title     = {Building Reliable Web Services Compositions},
+  booktitle = {Web, Web-Services, and Database Systems},
+  year      = {2002},
+  pages     = {59-72},
+  ee        = {http://link.springer.de/link/service/series/0558/bibs/2593/25930059.htm},
+  crossref  = {DBLP:conf/jit/2002},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@MISC{Dedecker2001,
+    author = {Jessie Dedecker and Promotor Prof and Dr. Theo D'hondt},
+    title = {A Finite State Machine Approach to Real-Time Scheduler Generation for Embedded Systems},
+    year = {2001}
+}
+
+@inproceedings{webmov2010,
+  author    = {Ana R. Cavalli and
+               Tien-Dung Cao and
+               Wissam Mallouli and
+               Eliane Martins and
+               Andrey Sadovykh and
+               S{\'e}bastien Salva and
+               Fatiha Za\"{\i}di},
+  title     = {WebMov: A Dedicated Framework for the Modelling and Testing
+               of Web Services Composition},
+  booktitle = {ICWS},
+  year      = {2010},
+  pages     = {377-384},
+  ee        = {http://doi.ieeecomputersociety.org/10.1109/ICWS.2010.24},
+  crossref  = {DBLP:conf/icws/2010},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@BOOK{Sommerville2008,
+  AUTHOR = {Ian Sommerville},
+  TITLE = {Software Engineering},
+  PUBLISHER = {Addison-Wesley},
+  OPTADDRESS = {Harlow, UK},
+  YEAR = 2008,
+  VOLUME = {},
+  SERIES = {International Computer Sciences Series},
+  EDITION = {8th},
+  NOTE = {}
+}
+
+@BOOK{Tanenbaum2003,
+  author =       {Andrew S. Tanenbaum},
+  title =        {Redes de Computadores},
+  publisher =    {Elsevier},
+  address =      {Rio de Janeiro},
+  year =         {2003},
+  edition =      {trad. 4 ed.},
+}
+
+@BOOK{Couloris2007,
+  author =       {George Couloris and Jean Dollimore and Tim Kindberg},
+  title =        {Sistemas Distribuídos: Conceitos e Projeto},
+  publisher =    {Bookman},
+  address =      {Porto Alegre, Rio Grande do Sul},
+  year =         {2007},
+  edition =      {trad. 4 ed.}
+}
+
+  
+@inproceedings{DhyaneshVR03,
+  author    = {N. Dhyanesh and
+               G. C. Vineel and
+               S. V. Raghavan},
+  title     = {DEVISE: A Methodology for Building Web Services Based Infrastructure
+               for Collaborative Enterprises},
+  booktitle = {WETICE},
+  year      = {2003},
+  pages     = {12-},
+  ee        = {http://csdl.computer.org/comp/proceedings/wetice/2003/1963/00/19630012abs.htm},
+  crossref  = {DBLP:conf/wetice/2003},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@proceedings{wetice2003,
+  title     = {12th IEEE International Workshops on Enabling Technologies
+               (WETICE 2003), Infrastructure for Collaborative Enterprises,
+               9-11 June 2003, Linz, Austria},
+  booktitle = {WETICE},
+  publisher = {IEEE Computer Society},
+  year      = {2003},
+  isbn      = {0-7695-1963-6}, 
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{Wirth71,
+  author    = {Niklaus Wirth},
+  title     = {Program Development by Stepwise Refinement},
+  journal   = {Commun. ACM},
+  volume    = {14},
+  number    = {4},
+  year      = {1971},
+  pages     = {221-227},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{StevensMC74,
+  author    = {Wayne P. Stevens and
+               Glenford J. Myers and
+               Larry L. Constantine},
+  title     = {Structured Design},
+  journal   = {IBM Systems Journal},
+  volume    = {13},
+  number    = {2},
+  year      = {1974},
+  pages     = {115-139},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{MusicanteP06,
+  author    = {Martin A. Musicante and
+               Edinardo Potrich},
+  title     = {Expressing Workflow Patterns for Web Services: The Case
+               of PEWS},  
+  journal   = {J. UCS},
+  volume    = {12},
+  number    = {7},   
+  year      = {2006},  
+  pages     = {903-921}, 
+  ee        = {http://www.jucs.org/jucs_12_7/expressing_workflow_patterns_for},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+} 
+
+@inproceedings{BaAM06,   
+  author    = {Cheikh Ba and
+               Mirian Halfeld-Ferrari and
+               Martin A. Musicante},
+  title     = {Composing Web Services with PEWS: A Trace-Theoretical Approach},
+  booktitle = {ECOWS},
+  year      = {2006},
+  pages     = {65-74},
+  ee        = {http://doi.ieeecomputersociety.org/10.1109/ECOWS.2006.12},
+  crossref  = {DBLP:conf/ecows/2006},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{BaF08,
+  author    = {Cheikh Ba and
+               M\'{\i}rian Halfeld Ferrari},
+  title     = {Dependence graphs for verifications of web service compositions
+               with PEWS},
+  booktitle = {SAC},
+  year      = {2008},
+  pages     = {2387-2391},
+  ee        = {http://doi.acm.org/10.1145/1363686.1364253},
+  crossref  = {DBLP:conf/sac/2008},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+ 
+@article{BaCAM05,
+  author    = {Cheikh Ba and
+               Marcos Aur{\'e}lio Carrero and
+               Mirian Halfeld-Ferrari and
+               Martin A. Musicante},
+  title     = {{PEWS}: {A} {N}ew {L}anguage for {B}uilding {W}eb {S}ervice {I}nterfaces},
+  journal   = {J. UCS},
+  volume    = {11},
+  number    = {7},
+  year      = {2005},
+  pages     = {1215-1233},
+  ee        = {http://www.jucs.org/jucs_11_7/pews_a_new_language},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{AalstHKB03,
+  author    = {Wil M. P. van der Aalst and
+               Arthur H. M. ter Hofstede and
+               Bartek Kiepuszewski and
+               Alistair P. Barros},
+  title     = {Workflow Patterns},
+  journal   = {Distributed and Parallel Databases},
+  volume    = {14},
+  number    = {1},
+  year      = {2003},
+  pages     = {5-51},
+  ee        = {http://dx.doi.org/10.1023/A:1022883727209},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+ 
+@Misc{JavaCC,
+  key =  	"JavaCC",
+  note = 	"http://www.experimentalstuff.com/Technologies/JavaCC/",
+  title =	"Java Compiler Compiler",
+  URL =  	"http://www.experimentalstuff.com/Technologies/JavaCC/",
+} 	
+
+  author    = {Cheikh Ba and
+               M\'{\i}rian Halfeld Ferrari},
+  title     = {Dependence graphs for verifications of web service compositions
+               with PEWS},
+  booktitle = {SAC},
+  year      = {2008},
+  pages     = {2387-2391},
+  ee        = {http://doi.acm.org/10.1145/1363686.1364253},
+  crossref  = {DBLP:conf/sac/2008},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+ 
+@inproceedings{MusicantePC08,
+  author    = {Martin A. Musicante and
+               Edinardo Potrich and
+               Marcos Aur{\'e}lio Carrero},
+  title     = {A programming environment for web services},
+  booktitle = {SAC},
+  year      = {2008},
+  pages     = {2363-2367},
+  ee        = {http://doi.acm.org/10.1145/1363686.1364249},
+  crossref  = {DBLP:conf/sac/2008},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{And79,
+  author    = {Sten Andler},
+  title     = {Predicate {P}ath {E}xpressions},
+  booktitle = {Sixth Annual ACM Symposium on Principles of Programming Languages (6th POPL'79)},
+  year      = {1979},
+  pages     = {226-236},
+  ee        = {db/conf/popl/Andler79.html},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}   
+
+@Book{booch07,
+  author = 	 {Grady Booch},
+  ALTeditor = 	 {Editor},
+  title = 	 {Object-Oriented Analysis and Design with Applications},
+  publisher = 	 {Addison-Wesley},
+  year = 	 {2007},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  number = 	 {51-52},
+  series = 	 {ISBN 0-201-89551-X},
+  OPTaddress = 	 {},
+  OPTedition = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+@article{StippB93,
+  author    = {Lori Stipp and
+               Grady Booch},
+  title     = {Introduction to object-oriented design (abstract)},
+  journal   = {OOPS Messenger},
+  volume    = {4},
+  number    = {2},
+  year      = {1993},
+  pages     = {222},
+  ee        = {http://doi.acm.org/10.1145/157710.157777},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@misc{bpel03,
+	author =	"Tony Andrews and Francisco Curbera and Hitesh Dholakia and Yaron Goland and Johannes Klein and Frank Leymann and Kevin Liu and Didier Roller and Doug Smith and Satish Thatte and Ivana Trickovic and Sanjiva Weeranwarana",    
+	title =		"Bussiness Process Execution Language for Web Services", 
+	howpublished =	"Available at {http://www-128.ibm.com/developerworks/library/specification/ws-bpel/}",
+	year= 		"2003",
+}
+
+
+
+
+@misc{bpml02,
+	author =	"Intalio and BPMI.org.",
+	title =		"Bussiness Process Modeling Language", 
+	howpublished =	"Available at {http://www.bpmi.org/bpmi-downloads/BPML-SPEC-1.0.zip}",
+	year= 		"2002",
+}
+
+
+@Misc{choreoWG,
+  author = 	 {Daniel Austin and Abbie Barbir and Ed Peters and Steve Ross-Talbot},
+  title = 	 {Web Services Choreography Requirements},
+  month = 	 {March},
+  year = 	 {2004},
+  note = 	 {W3C Working Draft},
+  howpublished = {Available at {http://www.w3.org/TR/2004/WD-ws-chor-reqs-20040311/}},
+  OPTannote = 	 {}
+}
+
+  
+@TechReport{owl04,
+  author = 	 {Sean Bechhofer and Frank van Harmelen and Jim Hendler and Ian Horrocks and Deborah L. McGuinness and Peter F. Patel-Schneider and Lynn Andrea Stein},
+  title = 	 {OWL Web Ontology Language},
+  institution =  {W3C - http://www.w3.org/TR/owl-ref/},
+  year = 	 {2004},
+  OPTkey = 	 {},
+  OPTtype = 	 {}, 
+  OPTnumber = 	 {},
+  OPTaddress = 	 {}, 
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@inproceedings{Yang02,
+  author    = {Jian Yang and
+               Mike P. Papazoglou},
+  title     = {Web Component: A Substrate for Web Service Reuse and Composition},
+  booktitle = {CAiSE},
+  year      = {2002},
+  pages     = {21-36},
+  ee        = {http://link.springer.de/link/service/series/0558/bibs/2348/23480021.htm},
+  crossref  = {DBLP:conf/caise/2002},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{Milanovic04,
+author = {Nikola Milanovic and Miroslaw Malek},
+title = {Current Solutions for Web Service Composition},
+journal ={IEEE Internet Computing},
+volume = {8},
+issn = {1089-7801},
+year = {2004},
+pages = {51-59},
+doi = {http://doi.ieeecomputersociety.org/10.1109/MIC.2004.58},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+}
+
+@inproceedings{KnublauchFNM04, 
+  author    = {Holger Knublauch and
+               Ray W. Fergerson and 
+               Natalya Fridman Noy and
+               Mark A. Musen},
+  title     = {The Prot{\'e}g{\'e} OWL Plugin: An Open Development
+               Environment for Semantic Web Applications},
+  booktitle = {International Semantic Web Conference},
+  year      = {2004},
+  pages     = {229-243},
+  ee        = {http://springerlink.metapress.com/openurl.asp?genre=article{\&}issn=0302-9743{\&}volume=3298{\&}spage=229},
+  crossref  = {DBLP:conf/semweb/2004},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@TechReport{oleg2008,
+  author = 	 {Oleg Beletski},
+  title = 	 {End {U}ser {M}ashup {P}rogramming {E}nvironments},
+  institution =  {Helsinki University of Technology},
+  year = 	 {2008},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {}, 
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},  
+  OPTnote = 	 {}, 
+  OPTannote = 	 {}
+}
+
+@TechReport{marril2006,
+  author = 	 {Duane Merrill},
+  title = 	 {Mashups: The {N}ew {B}reed of {W}eb {A}pp},
+  institution =  {IBM},
+  year = 	 {2006},
+  url = 	 {http://www.ibm.com/developerworks/xml/library/x-mashups.html},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@inproceedings{Tang2008,
+ author = {Tang, Haiming and Zhong, Farong and Yang, Chang},
+ title = {A Tree-Based Method of Web Service Composition},
+ booktitle = {Proceedings of the 2008 IEEE International Conference on Web Services},
+ year = {2008},
+ isbn = {978-0-7695-3310-0},
+ pages = {768--770},
+ numpages = {3},
+ url = {http://portal.acm.org/citation.cfm?id=1474549.1474830},
+ doi = {10.1109/ICWS.2008.32},
+ acmid = {1474830},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {web service, service composition},
+}
+
+
+@inproceedings{ElmeleegyIAG08,
+  author    = {Hazem Elmeleegy and
+               Anca Ivan and
+               Rama Akkiraju and
+               Richard Goodwin},
+  title     = {Mashup Advisor: A Recommendation Tool for Mashup Development},
+  booktitle = {ICWS},
+  year      = {2008},
+  pages     = {337-344},
+  ee        = {http://dx.doi.org/10.1109/ICWS.2008.128},
+  crossref  = {DBLP:conf/icws/2008},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@Misc{mashupCenter2010,
+  OPTkey = 	 {},
+  author = 	 {IBM},
+  title = 	 {IBM Mashup Center},
+  howpublished = {http://www-01.ibm.com/software/info/mashup-center/},
+  OPTmonth = 	 {},
+  year = 	 {2009},
+  note = 	 {Acessado em Novembro de 2010},
+  OPTannote = 	 {}
+}
+
+@TechReport{uddi,
+  author = 	 {Ariba Inc. and IBM Corp. and and Microsoft Corp},
+  title = 	 {Universal Description, Discovery, and Integration (UDDI)},
+  institution =  {UDDI.org}, 
+  year = 	 {2000},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@TechReport{wsci,
+  author = 	 {Assaf Arkin and Sid Askary and Scott Fordin and Wolfgang Jekeli and Kohsuke Kawaguchi and David
+Orchard and Stefano Pogliani and Karsten Riemer and Susan Struble and Pal Takacsi-Nagy and Ivana
+Trickovic and Sinisa Zimek},
+  title = 	 {Web service choreography interface},
+  institution =  {World Wide Web Consortium},
+  year = 	 {2002},
+  OPTkey = 	 {}, 
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@TechReport{xlang,
+  author = 	 {S. Thatte},
+  title = 	 {XLANG: Web Services for Business Process Design},
+  OPTinstitution =  {Institution},
+  year = 	 {2001},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+ 
+@book{sommerville03,
+  author = 	 {Ian Sommerville},
+  ALTeditor = 	 {Roger Trimer},
+  title = 	 {Software Engineering 6th Edition},
+  publisher = 	 {Addison Wesley},
+  year = 	 {2003},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTedition = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@PhdThesis{ba2008,
+  author = 	 {Cheikh Ba},
+  title = 	 {Composition de Services Web Avec PEWS: Approche par la Thèorie des Traces. },
+  school = 	 {Université François Rabelais de Tours},
+  year = 	 {2008},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {}, 
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@article{ChengGCM09,
+  author    = {Bo Cheng and
+               Jie Guo and
+               Junliang Chen and
+               Xiangwu Meng},
+  title     = {The communication model for real-time web service in telecom
+               domain},
+  journal   = {Int. J. Communication Systems},
+  volume    = {22},
+  number    = {6},
+  year      = {2009},
+  pages     = {773-787},
+  ee        = {http://dx.doi.org/10.1002/dac.990},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{Espinosa-OviedoVZC09,
+  author    = {Javier-Alfonso Espinosa-Oviedo and
+               Genoveva Vargas-Solar and
+               Jos{\'e}-Luis Zechinelli-Martini and
+               Christine Collet},
+  title     = {Non-functional properties and services coordination using
+               contracts},
+  booktitle = {IDEAS},
+  year      = {2009},
+  pages     = {307-310},
+  ee        = {http://doi.acm.org/10.1145/1620432.1620467},
+  crossref  = {DBLP:conf/ideas/2009},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{PortillaHE08,
+  author    = {Alberto Portilla and
+               Tan Hanh and
+               Javier-Alfonso Espinosa-Oviedo},
+  title     = {Building reliable mobile services based applications},
+  booktitle = {ICDE Workshops},
+  year      = {2008},
+  pages     = {121-128},
+  ee        = {http://dx.doi.org/10.1109/ICDEW.2008.4498303},
+  crossref  = {DBLP:conf/icde/2008w},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{Zechinelli-Martini00,
+  author    = {Jos{\'e}-Luis Zechinelli-Martini},
+  title     = {Integrating and Managing Multimedia Presentations by a Web-based
+               Object Server},
+  booktitle = {EDBT PhD Workshop},
+  year      = {2000},
+  ee        = {http://www.edbt2000.uni-konstanz.de/phd-workshop/papers/Zechinelli.ps},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{MorseBPMTM04,
+  author    = {Katherine L. Morse and
+               Ryan Brunton and
+               J. Mark Pullen and
+               Priscilla M. McAndrews and
+               Andreas Tolk and
+               James Muguira},
+  title     = {An Architecture for Web-Services Based Interest Management
+               in Real Time Distributed Simulation},
+  booktitle = {DS-RT},
+  year      = {2004},
+  pages     = {108-115},
+  ee        = {http://csdl.computer.org/comp/proceedings/ds-rt/2004/2232/00/22320108abs.htm},
+  crossref  = {DBLP:conf/dsrt/2004},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{KoutsoukosKANS06,
+  author    = {Xenofon D. Koutsoukos and
+               Manish Kushwaha and
+               Isaac Amundson and
+               Sandeep Neema and
+               Janos Sztipanovits},
+  title     = {OASiS: A Service-Oriented Architecture for Ambient-Aware
+               Sensor Networks},
+  booktitle = {Monterey Workshop},
+  year      = {2006},
+  pages     = {125-149},
+  ee        = {http://dx.doi.org/10.1007/978-3-540-77419-8_8},
+  crossref  = {DBLP:conf/monterey/2006},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}

@@ -1,0 +1,161 @@
+\chapter{Introdução}
+\label{cap:introduction}  
+ 
+Serviço Web é um paradigma que visa a implementação de arquiteturas de
+componentes através da web. Um serviço web é um componente logicamente atômico
+que oferece operações através de uma interface padronizada. A particularidade
+de uma plataforma para serviços web está no fato de utilizar protocolos de alto
+nível na internet como infraestrutura para a comunicação entre seus componentes
+lógicos. Serviços web usam uma estrutura baseada em três tecnologias
+ importantes, sendo elas: um protocolo de comunicação (SOAP - \textit{Simple Object Access Protocol)}
+ \cite{soap}), uma linguagem de descrição de interface de serviços (WSDL -
+ \textit{Web Service Definition Language} \cite{wsdl}) e uma especificação para
+ publicação e localização de serviços (UDDI - \textit{Universal Description,
+ Discovery and Integration} \cite{uddi}). Este modelo de arquitetura dos
+ Serviços Web define os componentes de software como uma coleção de unidades de
+ processamento que se comunicam através de troca de mensagens.
+   
+ É possível criar serviços
+  novos a partir de outros já existentes, adicionando valor às composições.
+  Assim, a composição define um processo de execução onde o resultado é a
+  criação de um novo serviço, cujas atividades são processadas pelos
+  componentes de outros serviços web.
+
+A infraestrutura dos serviços web limita-se a uma simples coleção de operações
+que podem ser facilmente acessadas pela web através de troca de mensagens,
+dessa forma, este paradigma favorece o processo de composição, tornando
+transparente ao usuário dos serviços a execução dos mesmos. No entanto, alguns
+processos de composição exigem interações mais complexa dos
+serviços. De fato, para que uma execução mais complexa seja possível, é
+necessária uma descrição adequada da interface que expressa os serviços
+compostos.
+ 
+Várias iniciativas de pesquisa tentam definir linguagens de descrição
+comportamental dos serviços, haja visto que a descrição realizada em WSDL leva
+em consideração apenas aspectos estáticos. Estas
+características dinâmicas relacionadas ao comportamento dos serviços em um
+determinado contexto podem ser descritas de várias maneiras,
+dependendo apenas da tecnologia utilizada. As novas propostas estendem, muitas
+vezes, a especificação WSDL adicionando características comportamentais. Dentre
+as linguagens para descrever comportamento dos serviços e suas composições
+temos: \textit{PEWS \cite{BaCAM05}, BPEL4WS \cite{bpel03}, XLANG \cite{xlang},
+WSCI \cite{wsci}} e \textit{OWL-S \cite{owl04}}. Além de linguagens para
+expressar aspectos comportamentais, varias pesquisas propõem modelos de
+qualidade, \textit{frameworks} e APIs para auxiliar o desenvolvimento de
+aplicações. Dessa forma é possível integrar linguagens e ambientes de desenvolvimento.
+     
+O uso de diversos modelos, plataformas e APIs para o desenvolvimento de
+aplicações para Web traz à tona a necessidade de uma infraestrutura que
+permita uma execução organizada das atividades de análise, projeto e implementação do software, utilizando padrões de
+implementação, possibilitando assim a criação de aplicações seguras, confiáveis
+e de qualidade. O processo de desenvolvimento de aplicações, que fazem uso de
+serviços web, é feito de maneira \textit{ad-hoc}, sem a preocupação de seguir
+disciplinas e atividades que venham a garantir os requisitos que a aplicação
+necessita. O objetivo de tal infraestrutura consiste em facilitar o
+desenvolvimento das aplicações, possibilitando o uso de diferentes modelos e
+APIs de forma a aumentar a produtividade e reuso de componentes.
+
+\section{Motivação}
+\label{sec:Intro-motivation}
+
+Algumas metodologias de desenvolvimento de software têm sido propostas ao longo
+dos anos. Essencialmente, todas elas tentam definir um \textit{roadmap} que guie
+o desenvolvimento, identificando quem está fazendo \textit{o quê, onde, por que, como} e
+\textit{quando}. Um processo de software é definido com um conjunto de atividades interdependentes que visam desenvolver, manter e
+gerenciar sistemas de software \cite{sommerville03}. Estas atividades podem ser
+compostas de outras atividades e são executadas por atores que desempenham um papel no processo (programador,
+gerente, cliente, etc.). Como resultado das atividades, são produzidos artefatos
+(código, documentação, modelos) que servem de entrada para outras atividades para
+produzir novos artefatos. Sem um processo de software, o risco de falha do projeto se
+torna muito alto, em especial para as aplicações web modernas cuja complexidade não
+pára de crescer.
+ 
+Neste contexto, aplicações web evoluíram rapidamente de simples web
+sites para verdadeiros sistemas
+de informação complexos, repletos de transações, voltados para
+a implementação de processos de negócio. Diante disso,
+a necessidade de uma metodologia de desenvolvimento que ajude a gerenciar o
+ciclo de vida de tais aplicações surge naturalmente.
+
+Em muitos casos, as equipes de desenvolvimento, devido às restrições
+de tempo, adotam soluções \textit{ad-hoc} para construir tais aplicações. Neste
+cenário, o sucesso do desenvolvimento depende muito da habilidade e conhecimento
+da equipe.
+
+O uso de \textit{frameworks} e modelos de desenvolvimento auxilia o processo de
+concepção e elaboração de sistemas web complexos, fazendo com que serviços web
+sejam reusados e características comportamentais e de qualidade sejam inseridas
+e agregem valor ao sistema desenvolvido. No entanto apenas o uso destes
+\textit{frameworks} ou arquiteturas não garante o sucesso do desenvolvimento e
+muito menos a confiabilidade, robustez e qualidade do produto gerado. 
+
+Diante deste contexto, nos sentimos motivados a propor elementos de base na
+construção de uma metodologia de desenvolvimento para aplicações web. Uma
+metodologia que agrege conteúdo de trabalhos propostos, como componentes de
+validação da composição de serviços, ou modelos de qualidade ou ainda de
+restrições de tempo, ajudará a garantir uma maior robustez e qualidade as
+aplicações web desenvolvidas.
+ 
+ 
+\section{Objetivos}
+\label{sec:Intro-objectives}
+  
+Considerando os problemas supra mencionados, o problema geral tratado neste
+trabalho é o desenvolvimento \textit{ad-hoc} de aplicações web e o uso
+de um ambiente de desenvolvimento integrado que dê suporte a uma metodologia de desenvolvimento. A proposta de
+uma ferramenta para descrever interfaces de serviços dinâmicos pode ser usada
+em um ambiente de projeto para composição de serviços web. Esta seção apresenta
+os principais objetivos e contribuições da presente proposta de tese.
+
+\textbf{Extensão da Linguagem PEWS.}
+
+Propomos uma extensão da linguagem de descrição de interfaces
+comportamentais, chamada PEWS \cite{BaCAM05} (\textit{Predicate Path Expressions for
+Web Services}), que usa expressões similares às expressões regulares, assim
+como predicados para especificar o comportamento dos serviços web. Esta
+proposta descreve uma representação simples para descrever restrições de
+contrato e relações de execução dos serviços usando propriedades temporais.
+PEWS passará a utilizar tipos de dados, haja vista que em sua versão atual
+não tem essa capacidade. Com PEWS será possível
+descrever composições de serviços com restrições de contrato.
+ 
+\textbf{\textit{Framework} de Desenvolvimento para PEWS.}
+
+Propomos uma estrutura de desenvolvimento para que as especificações PEWS
+possam ser processadas, e a partir das cláusulas de contratos e de composição
+os serviços, estas composições possam ser executadas de acordo com o que foi
+definido nos contratos. O \textit{framework} utilizará componentes para
+validação de composição \cite{ba2008}, coordenação de composição, e geração de
+componentes que expressam toda o esquema de composição que foi definido na
+linguagem.  Este framework utilizará o \textit{back-end} de PEWS para processar
+toda a estrutura de composição e seus respectivos contratos.
+
+\textbf{Metodologia de Desenvolvimento.}
+  
+Propomos também uma metodologia de desenvolvimento para aplicações web.
+Chamamos esta metodologia de \textit{DM4PEWS - Development Methodology for
+PEWS}. Identificamos, após análise de trabalhos de pesquisa \cite{ChengGCM09, Espinosa-OviedoVZC09, MorseBPMTM04, KoutsoukosKANS06}, que
+seria necessário, aliado ao uso de um framework, o desenvolvimento de uma
+metodologia que garanta uma sequência organizada de execução que possa produzir
+sistemas consistentes e confiáveis. \textit{DM4PEWS} terá por objetivo a
+execução organizada de cada atividade e tarefa definida nas fases de desenvolvimento de software (Concepção, Elaboração,
+Construcção e Transição), aplicando as melhores práticas para a implementação
+dos serviços web.
+
+\section{Agenda}
+\label{sec:Intro-outline}
+
+Esta proposta está organizada como segue. O capítulo
+\ref{chapter:basicConcepts} apresenta os conceitos básicos e relevantes (SOA,
+Serviços Web, PEWS e Mashup) para o desenvolvimento da metodologia proposta e o
+seu framework. O capítulo \ref{cap:Proposal} apresenta a proposta de tese.
+Nesse capítulo apresentamos uma visão geral da metodologia \textit{DM4PEWS},
+sua estrutura em fases, disciplinas e atividades. Apresentamos também o
+framework a ser desenvolvido para dar suporte a implementação de aplicações
+web. Ainda nesse capítulo descrevemos os modelos de contrato e de tempo para
+PEWS, assim como a extensão da linguagem. No capítulo \ref{chapter:relatedWorks}
+mostramos alguns trabalhos relacionados, características de alguns modelos e
+arquiteturas presentes na literatura. Por fim, o Capítulo
+\ref{chapter:Cronograma} descute os próximos passos do nosso trabalho e
+o cronograma de atividades até a defesa da tese.
+

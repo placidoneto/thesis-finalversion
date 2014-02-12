@@ -1,0 +1,24 @@
+%=====================================================================
+% Dedicatória
+%=====================================================================
+
+\vspace*{\fill}
+
+\begin{flushright}
+
+      \parbox{8cm}{
+
+    {
+      \fontsize{12}{14} 
+      \selectfont 
+
+
+      \textit{I dedicate this work to my beloved wife Ana Fl\'avia and to my son
+      Lucas Kauai, my daily sunshine.}
+
+    } 
+      }
+\end{flushright}
+
+\vspace*{7cm}
+

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="265"
+   version="1.1"
+   width="670"
+   id="svg5119"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="trans09.pdf">
+  <metadata
+     id="metadata5197">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5195">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3949"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="980"
+     id="namedview5193"
+     showgrid="false"
+     inkscape:zoom="1.6626866"
+     inkscape:cx="310.94255"
+     inkscape:cy="156.55745"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5119" />
+  <rect
+     fill="#ffffff"
+     height="68"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="148"
+     x="14"
+     y="166"
+     id="rect5121" />
+  <rect
+     fill="none"
+     height="68"
+     stroke="#000000"
+     stroke-width="1"
+     width="148"
+     x="14"
+     y="166"
+     id="rect5123" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="19"
+     y="180"
+     id="text5125">
+Exceptional Behaviour</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="148"
+     x="14"
+     y="190"
+     id="rect5127" />
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="148"
+     x="14"
+     y="211"
+     id="rect5129" />
+  <rect
+     fill="#ffffff"
+     height="68"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="66"
+     x="54"
+     y="14"
+     id="rect5131" />
+  <rect
+     fill="none"
+     height="68"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="54"
+     y="14"
+     id="rect5133" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="60"
+     y="28"
+     id="text5135">
+Contract</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="54"
+     y="38"
+     id="rect5137" />
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="54"
+     y="59"
+     id="rect5139" />
+  <rect
+     fill="#ffffff"
+     height="68"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="14"
+     id="rect5141" />
+  <rect
+     fill="none"
+     height="68"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="14"
+     id="rect5143" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="452"
+     y="28"
+     id="text5145">
+Policy</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="38"
+     id="rect5147" />
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="59"
+     id="rect5149" />
+  <polyline
+     fill="none"
+     points="86,81 86,166"
+     stroke="#000000"
+     stroke-width="1"
+     id="polyline5151" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="99"
+     y="101"
+     id="text5153">
+1</text>
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="93"
+     y="160"
+     id="text5155">
+0..*</text>
+  <rect
+     fill="#ffffff"
+     height="68"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="166"
+     id="rect5157" />
+  <rect
+     fill="none"
+     height="68"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="166"
+     id="rect5159" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="450"
+     y="180"
+     id="text5161">
+Action</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="190"
+     id="rect5163" />
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="66"
+     x="438"
+     y="211"
+     id="rect5165" />
+  <rect
+     fill="#ffffff"
+     height="68"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="106"
+     x="550"
+     y="102"
+     id="rect5167" />
+  <rect
+     fill="none"
+     height="68"
+     stroke="#000000"
+     stroke-width="1"
+     width="106"
+     x="550"
+     y="102"
+     id="rect5169" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="555"
+     y="116"
+     id="text5171">
+Service Activity</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="106"
+     x="550"
+     y="126"
+     id="rect5173" />
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="106"
+     x="550"
+     y="147"
+     id="rect5175" />
+  <polyline
+     fill="none"
+     points="606,169 606,214 503,214"
+     stroke="#000000"
+     stroke-width="1"
+     id="polyline5177" />
+  <polygon
+     fill="#ffffff"
+     points="606,169 611,179 606,189 601,179"
+     stroke="#ffffff"
+     stroke-width="1"
+     id="polygon5179" />
+  <polygon
+     fill="none"
+     points="606,169 611,179 606,189 601,179"
+     stroke="#000000"
+     stroke-width="1"
+     id="polygon5181" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="619"
+     y="196"
+     id="text5183">
+1</text>
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="515"
+     y="209"
+     id="text5185">
+1..*</text>
+  <polyline
+     fill="none"
+     points="503,54 606,54 606,102"
+     stroke="#000000"
+     stroke-width="1"
+     id="polyline5187" />
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="507"
+     y="49"
+     id="text5189">
+0..*</text>
+  <text
+     font-family="Lucida Grande"
+     font-size="13"
+     x="619"
+     y="85"
+     id="text5191">
+1</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;marker-end:url(#Arrow2Mend)"
+     d="m 171.43603,199.69104 c 251.90601,-0.58312 251.90601,-0.58312 251.90601,-0.58312"
+     id="path5239"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0"
+     d="M 125.36989,50.996519 C 225.08268,17.175805 299.7215,48.08094 299.7215,48.08094"
+     id="path5933"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0"
+     d="m 125.953,59.743255 c 91.54918,26.823325 172.01915,0 172.01915,0"
+     id="path5935"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;marker-end:url(#Arrow2Mend)"
+     d="M 125.953,54.495213 C 295.63969,53.328982 295.63969,53.328982 295.63969,53.328982"
+     id="path5937"
+     inkscape:connector-curvature="0" />
+  <path
+     sodipodi:type="arc"
+     style="fill:#000000;fill-opacity:0.95406357;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0"
+     id="path5941"
+     sodipodi:cx="302.05396"
+     sodipodi:cy="53.912098"
+     sodipodi:rx="3.4986944"
+     sodipodi:ry="2.9155788"
+     d="m 305.55265,53.912098 a 3.4986944,2.9155788 0 1 1 -6.99739,0 3.4986944,2.9155788 0 1 1 6.99739,0 z" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6671"
+     d="m 312.36858,53.328979 c 115.05527,-1.16623 115.05527,-1.16623 115.05527,-1.16623"
+     style="fill:none;stroke:#000000;stroke-width:0.82343507;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.47030525, 0.82343508;stroke-dashoffset:0;marker-end:url(#Arrow2Mend)" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot6673"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     transform="translate(-33.078995,13.231598)"><flowRegion
+       id="flowRegion6675"><rect
+         id="rect6677"
+         width="190.05386"
+         height="74.578102"
+         x="149.15619"
+         y="77.351883" /></flowRegion><flowPara
+       id="flowPara6679">  +ctract: a</flowPara><flowPara
+       id="flowPara6681">     - exptBehaviour: call(act1)</flowPara><flowPara
+       id="flowPara6683">  +ctract: b</flowPara><flowPara
+       id="flowPara6685">     - exptBehaviour: call(act2)</flowPara></flowRoot>  <flowRoot
+     transform="translate(199.0754,-22.854578)"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     id="flowRoot6687"
+     xml:space="preserve"><flowRegion
+       id="flowRegion6689"><rect
+         y="77.351883"
+         x="149.15619"
+         height="114.2729"
+         width="190.05386"
+         id="rect6691" /></flowRegion><flowPara
+       id="flowPara6693"> +servAct: A </flowPara><flowPara
+       id="flowPara6707">   +policy: ab</flowPara><flowPara
+       id="flowPara6697">      + rule: a1</flowPara><flowPara
+       id="flowPara6703">           - action : act1</flowPara><flowPara
+       id="flowPara6699">       + rule: a2</flowPara><flowPara
+       id="flowPara6705">           - action : act2</flowPara></flowRoot></svg>

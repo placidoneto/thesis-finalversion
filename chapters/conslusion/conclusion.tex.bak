@@ -1,0 +1,202 @@
+\chapter{Conclusions}
+\label{chap:conclusion}
+ 
+Today, access to software, hardware and network resources is done more and more
+through services. From this point of view, building applications consists in 
+composing services according to a set given requirements. In order
+to ensure a desired level of quality, applications must comply to specified
+requirements and reliability properties. Ensuring these properties for
+applications composed by heterogeneous services provided under different
+conditions is not an easy task and imposes challenges for systems developers.
+
+
+% Reliability
+% is defined by different non-functional properties like data privacy, usability
+% and robustness.
+
+% Many recent technological advances have made the web service based development
+% one performed daily activities of the people. However, it is essential to
+% produce reliable service applications and provide what the information the user
+% really wants, in order to facilitate and increase the use of this type of
+% application. Nowadays, most electronic equipment has web access and use
+% different types of services available for entertainment, information or personal
+% needs. This kind application development must meet a set of requirements that
+% imposes new challenges for developers. An example is the guarantee of data privacy, both
+% input and output, beyond ensuring service performance, usability and robustness.
+% Applications need to access information on the web in order to satisfy the user.
+% The provision of quality requirements for services has a difficult modeling and
+% implementation. Mainly because the services are independent and are not designed
+% with a focus on non-functional properties. In this work, we emphasize that it is
+% essential model  quality properties from the initial levels of development, so
+% that important information can be refined throughout the process. All this
+% results in a more reliable specification for the applications that are being
+% developed.       
+
+Non-functional requirements are related to business rules
+associated to the general semantics of the application.
+In the case of service-based applications, they also 
+concern the compliance constraints imposed by the services. Having such
+business rules associated to the compound service can help to ensure that the
+resulting application fulfills requirements of the user.
+%and it considers the characteristics of the services it uses.
+% Programming non-functional properties is not an easy
+% task, so we defined a set of predefined policy types with the associated use
+% rules for guiding the programmer when she associates them to a concrete application. 
+
+% Policy type that can also serve as patterns for programming
+% or specializing the way non-functional constraints are programmed. We implemented the
+% meta-models on the Eclipse platform and we validated the approach using some
+% case studies.
+
+The main goal of this work is to provide tools for helping the development of
+reliable service-based applications. Our work targets the specification and
+programming web application, including non-functional aspects (i.e.,
+atomicity, security, exception handling, persistence). In contrast to approaches
+such as WS-* \cite{}, our work specifies \textit{policies} for service
+compositions in an orthogonal way, \textit{i.e} separating the specification of
+non-functional requirements from the main functionalities of the application.
+The use of the WS-* standards suppose that non-functional requirements are
+implemented according to the knowledge that a programmer has of a specific
+application requirements, without deriving them in a methodological
+way, thus leading to \textit{ad-hoc} solutions that can be difficult to reuse.
+In our approach, once defined policies for a given application, they can be
+reused and/or specialized for another application with similar requirements.
+
+% This chapter is organized as follows. Section
+% \ref{sec:contributions} presents the main contributions of this thesis.  Section
+% \ref{sec:limitations} describes some limitations of the methodology, and finally
+% in section \ref{sec:futureworks} we describe some possible future works from
+% this thesis, however, the list that will be presented is not exhaustive.
+ 
+\section{Main Contributions}
+\label{sec:contributions}
+
+
+This thesis presented a methodology for specifying and designing
+reliable service-based applications. Our proposal deals with functional and
+non-functional requirements separately. We model and associate policies that
+represent both systems' cross-cutting aspects and constraints
+stemming from the component services.
+% We extended the SOD-M method for representing both the application logic and its
+% associated non-functional constraints and then generating its executable
+% code.
+
+
+% The main contribution of this work was a methodology for developing
+% service-oriented applications reliable, called $\pi$SOD-M. 
+
+$\pi$SOD-M is proposed for the development of service-oriented
+applications, helping to ensure quality requirements. This work also proposes
+a categorization of concepts for the modeling and refinement of non-functional
+properties, \textit{e.g.} \textit{constraint, contract, assertion, policy,
+rules, non-functional requirement} and \textit{non-functional attribute}.
+ 
+We validate the methodology by means of three case studies, showing that the
+development process based on $\pi$SOD-M produces satisfactory results with
+respect to the modeling and refinement of quality requirements. We can conclude
+that grouping contracts with non-functional properties into a single policy,
+produces a more effective result in the generation of the specification, and
+therefore in the verification of these properties.       
+
+Another contribution of our proposal is the integration of the methodology
+concepts in a MDA-based development. $\pi$SOD-M is a method that proposes
+meta-models at different levels (CIM, PIM and PSM) and extending the PSM
+meta-models. $\pi$SOD-M is aimed at the design and development of
+reusable service-based applications. 
+
+A set of transformations at the diffent levels are also proposed in our
+methodology. These transformations refine the models from an abstract
+representation of requirements into programming code.  
+
+We extended the PEWS language \cite{Placido2010LTPD} (into $\pi$-PEWS) to add
+contracts specification and temporal modeling restrictions for services. 
+
+We provide a platform to give support to our methodology. The $\pi$SOD-M
+environment is implemented by a set of Eclipse plugins. All the transformation
+defined in our methodology are supported by the implementation. Our tool
+performs static verification in order to check the existance of the functions of
+the services of the composition \cite{holos2012}.
+
+
+
+
+% \section{Limitations}
+% \label{sec:limitations}
+% 
+% Given the scope of the $\pi$SOD-M methodology, there are factors that can be
+% improved. The methodology still needs to be more thoroughly validated, in order
+% to perform a more quantitative analysis of the results drizzled over the
+% specification of the application. As the $\pi$-PEWS execution environment
+% (back-end) is being developed, this qualitative assessment needs to be
+% performed as soon as we have a stable execution environment. 
+% 
+% Another limitation of our proposal is the semi-automated model-to-model
+% transformation. Ideally, all the  model-to-model transformations were completely
+% automated, however, there is information that need further detailed in each
+%  application development iteration. With this, each transformation
+%  requires that the designer add, improve or detail information that was generated
+% as a result of the transformation. Thus preparing for the next transformation.
+% This also must occur to the model-to-text transformation, if necessary.
+% Furthermore, it is important to reduce the loss of data between transformations.       
+% 
+% Another factor that could be improved is the tool supports
+% $\pi$-SOD-M. The current version of the development environment does not
+% present a visual UML modeling, but traditional MDA application development.  
+% 
+% All these limitations can be part of the set of threads that can be detailed and
+% implemented in future work. Despite these current limitations, the methodology
+% can be used properly.
+
+
+
+\section{Future Work}
+\label{sec:futureworks}
+ 
+% This thesis proposes a comprehensive methodology that can offer a range of
+% possibilities for extension in future works. There are works that are already
+% being developed and other ones that could be developed, but have not yet
+% started. We will highlight each of them, following.
+
+This thesis proposes a comprehensive methodology that can offer a range of
+possibilities for extension in future work. Future work is organized into
+\textit{validation}, \textit{development} and \textit{research tasks}:
+
+\begin{itemize}
+  \item Validation:
+\begin{itemize}
+  \item Validate $\pi$SOD-M to perform a more quantitative analysis;
+
+  \item Compare the generated code and implementation specifications with
+  different languages;
+
+  \item Describe software product lines related with reliable services
+  applications that could be generated from the use of $\pi$SOD-M;
+
+  \item Analyze the variability of non-functional requirements
+  proposed by $\pi$SOD-M.
+\end{itemize}
+  \item Development:
+\begin{itemize}
+   \item Develop the $\pi$-PEWS environment (back-end) and then run validation
+  experiments again;
+
+  \item Improve development environment that support the methodology, with
+  visual tools and with execution environment, running in different platforms.
+
+\end{itemize}
+
+  \item Research tasks:
+\begin{itemize}
+
+  \item Define meta-models at the PSM level for generating code in other
+  languages;
+  \item Formalize the transformation rules at different levels of the
+  methodology;
+
+  \item Define of meta-models in the CIM level to represent business and
+  system requirements, despite the original proposal offer \textit{e-value} and
+  \textit{BPMN} models. It would be important to do a more thorough search in
+  regarding these requirements to represent the independent level computing.
+ 
+\end{itemize}
+\end{itemize}

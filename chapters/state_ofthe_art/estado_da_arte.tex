@@ -1,0 +1,1836 @@
+ \chapter{Trabalhos Relacionados}
+ \label{chapter:estado_da_arte}
+
+Este capítulo apresenta os trabalhos, conceitos, e notações relevantes e
+relacionados a este tese.
+
+Devido à grande atenção que o desenvolvimento de linguagens, frameworks e
+modelos para aplicações web tem recebido nos últimos anos, vários estudos têm sido
+realizados, resultando em um grande número de plataformas que tentam facilitar o
+desenvolvimento destas aplicações, especialmente a definição de novas
+linguagens para descrição e composição de serviços. Em geral, o foco dos
+trabalhos têm sido resolver problemas como transações e qualidade
+de serviços provendo segurança e confiabilidade. Algumas propostas, muitas
+vezes, tentam resolver problemas relacionados com composição de
+serviços ou equivalência semântica usando ontologias. Cada proposta descreve uma
+fase ou atividade especifica no contexto de desenvolvimento de aplicações
+distribuídas.
+
+Neste capítulo apresentamos uma análise dos trabalho sobre composições de
+serviços, metodologias para serviços web e diferentes abordagens para o
+desenvolvimento, implantação e uso de serviços. Esta análise será
+apresentada em 3 partes (que será descrita nas seções \ref{sec:linguagens}, \ref{sec:metodologias} e \ref{sec:metodologias}), com o
+objetivo de melhor classificar os trabalhos sobre desenvolvimento de aplicação
+com serviços web. Estas seções abordam os seguintes temas: \textit{linguagens
+para composição de serviços (seção \ref{sec:linguagens})}, \textit{metodologias
+para desenvolvimento de aplicações que usam serviços web (seção
+\ref{sec:metodologias})} e \textit{arquiteturas, ferramentas e abordagens para
+serviços web (seção \ref{sec:abordagens})}. Esta última são incluem os trabalho
+que não são classificados como linguagens e metodologias para desenvolvimento de
+serviços.
+ 
+
+ 
+%% 
+%%  LINGUAGENS PARA COMPOSIÇÃO DE SERVIÇOS
+%% 
+\section{Linguagens para Especificação de Composição de Serviços Web}
+\label{sec:linguagens}
+
+
+Com o aumento do uso de serviços web no contexto de SOA \cite{Rosen08} e outros
+frameworks baseados em serviços, o desenvolvimento de aplicações baseadas em
+serviços vem crescendo a cada dia. Aliado a isso, surgem linguagem que tentem
+expressar os serviços, suas interfaces e relações. No entanto, a complexidade da
+interação entre vários prestadores de serviços e consumidores de serviços
+leva a uma questão de quem é o responsável quando algo acontece de errado. Isso
+significa que, tem que haver uma forma de acordo sobre os detalhes de um
+serviço. Tem que haver um contrato \cite{Meyer98a,Mey88}, ou uma política que
+possa resolver o problema .
+
+
+Diferentes abordagens \cite{Peltz03}
+também tentam minimizar a dificuldade na composição de serviços, objetivando
+automatizar a geração de aplicações baseadas na Web. Algumas abordagens particulares estão focadas na aplicação e
+uso de serviços para composição. Existem também muitas notações, linguagens e
+até mesmo padrões para especificar contratos de serviços e técnicas. É possível agrupá-los em
+três categorias: \textit{(i)} linguagens para serviços web,
+\textit{(ii)} linguagens para descrição semântica de serviços web e
+\textit{(iii)} linguagens de descrição de workflow de serviços de negócio
+(\textit{business service}). Por exemplo, Web Service Definition Language (WSDL)
+é membro da primeira categoria, pois tem uma gramática XML que descreve os serviços web através de descrições de suas interfaces. Também na
+primeira categoria estão WS-BPEL \cite{bpel03,VA05}, que abrange a orquestração
+de serviços, e WS-CDL \cite{wscdl,Yeu06}, que especifica  coreografia de
+interação de serviços. OWL-S que descreve aspectos semânticos dos serviços, pertence à segunda
+categoria, enquanto que BPSS (\textit{Business Process Specification
+Schema}) descreve contratos de serviços de negócio, pertence à terceira
+categoria.  
+  
+Existem também alguns trabalhos sobre especificação de serviços web,
+composição, mapeamento entre linguagens e contratos. No entanto, a maioria
+deles compara ou aborda pares de linguagens sem considerar alguns aspectos. Por
+exemplo, \cite{Mendling05,Yeu06} apresentam especificações WS-CDL(\textit{ Web Service
+Choreography Description Language}) para que o código WSBPEL (\textit{Web
+Business Services Process Execution Language}) seja gerado. Ele explora um
+mapeamento entre as duas linguagens. Este trabalho trata da geração de WSBPEL a
+partir de WS-CDL abrangendo assim os aspectos comportamentais dos contratos dos
+serviços. Essa abordagem proporciona agrega volor a uma especificação BPEL, pois
+esta, sozinha não consegue descrever a coreografia entre os serviços e muito
+menos restrições entre os serviços.
+
+Alguns trabalhos específico descrevem comparações entre linguagens para
+especificação de serviços. Por exemplo, \cite{OkikaR08} apresenta uma
+classificação entre linguagens para especificação de contratos SOA, 
+mostrando também que alguns trabalhos pesquisas apresentam apenas as distinções
+entre linguagens, como por exemplos XLANG \cite{xlang01}, BPELWS
+\cite{WADH02}, ebXML \cite{ebXML01}, descrevendo aspectos de qualidade e
+segurança destas lingagens. Na maioria das vezes não faz nenhuma análise mais técnica, dos
+aspectos que cada linguagem quer abordar.
+
+Diferentes abordagens \cite{Peltz03} tentam minimizar a dificuldade na
+composição de serviços, tentando automatizar a geração de aplicações
+baseadas na Web. Algumas abordagens particulares estão focadas na aplicação e
+uso de serviços para composição, são elas: \textit{(i)} \textit{BPEL, PEWS e
+WSCL} como linguagens de definição de interfaces de composição; \textit{(ii)}
+\textit{OWL-S}, para representação semântica das propriedades de serviços, e
+\textit{(iii)} \textit{Web Components}, dentre outras.
+   
+\textbf{BPEL} - \textit{Business Process Execution Language}~\cite{bpel05}, é
+uma linguagem baseada em XML usada para definir processos de negócio com
+serviços web. BPEL é baseada na tecnologia de serviços web no sentido de que
+cada processo de negócio envolvido pode ser implementado como um serviço.
+Processos escritos em BPEL podem orquestrar integrações entre serviços usando
+documentos XML. Estes processos podem também ser executados em qualquer
+plataforma ou produto que compile especificações BPEL.
+ 
+\textbf{PEWS} - \textit{Path Expressions for Web
+Services}~\cite{BaCAM05,BaF08},  é uma linguagem para a definição de
+composição de serviços web. PEWS utiliza \textit{predicate path expressions} e é usada para
+ajudar na descrição da composição dos serviços a partir da especificação de seu
+comportamento. O objetivo de PEWS é ser uma linguagem de
+programação/especificação pela qual o desenvolvedor pode combinar as operações
+que implementam cada operação de serviço, visando atingir uma semântica desejada.
+
+\textbf{OWL-S} - \textit{Web Ontology Language}~\cite{owl04}, é uma linguagem de
+marcação para publicar e compartilhar ontologias. OWL-S é
+desenvolvida como uma extensão de vocabulário RDF (\textit{Resource Description
+Framework}) e é derivada da linguagem \textit{DAML+OIL Web Ontology}, permitindo
+a descoberta automática de serviços, invocação, composição, inter-operação e
+monitoramento de execução. OWL-S foi concebida para satisfazer a necessidade de
+uma linguagem  de ontologia para web, sendo assim parte das recomendações
+relacionadas a Web Semântica da W3C.
+  
+\textbf{Web Component} \cite{Yang02} empacota serviços simples e
+complexos, apresentando suas interfaces e operações de uma maneira consistente e uniforme
+na forma de definição de classe. \textbf{Web Components} são internamente sintetizados a partir de serviços web reutilizados. Estes são
+publicados normalmente como serviços web, ficando a composição dos serviços
+abstratos para o usuário, podendo assim serem utilizados por qualquer aplicativo
+baseado na web. \textbf{Web Components} são serviços representados como
+componentes, com a finalidade de dar um suporte maior no desenvolvimento de
+software. O objetivo principal de componentes web é encapsular informações da
+lógica de composição dentro da definição de classe.  
+
+Em relação à conectividade de serviços, todas as abordagens oferecem esta
+propriedade. No entanto, para verificação de corretude dos serviços, BPEL e OWL-S não fornecem uma definição formal para verificar
+a corretude de fluxos em BPEL e OWL-S. \textit{Web component} oferece uma
+maneira simples de checar a compatibilidade e conformidade dos serviços a
+partir da sua interface. Em relação às propriedades não-funcionais, apenas OWL-S
+permite que os usuários definam algumas dessas propriedades, como por exemplo, a
+qualidade de serviço. O editor Protégé-OWL \cite{KnublauchFNM04} é uma
+ferramenta que permite aos usuários descreverem e salvarem ontologias OWL e RDF,
+editar e visualizar classes, definir características e definir propriedades não-funcionais para as classes/serviços. 
+
+As linguagens de composição têm por objetivo automatizar a composição, tentando
+propor um desenvolvimento mais rápido das aplicações e uma reutilização segura,
+facilitando a interação de conjuntos de serviços complexos pelo usuário. 
+
+Nas seções seguintes vamos descrever de maneira um pouco mais detalhadas algumas
+propriedades das linguagens para especificação e composição de serviços. Por
+fim, serão descritas as suas similaridades e diferenças. Para uma melhor análise
+das linguagens, estas serão descritas e comparadas a partir de algumas questões,
+são elas:
+
+\begin{enumerate}
+	\item A linguagem tem uma representação XML? 
+	\item É possível especificar composição entre serviços?
+	\item Existe ferramenta de suporte?
+	\item Tem uma boa documentação?
+	\item É possível especificar restrições não funcionais?
+	\item É possível especificar a semântica dos serviços? 
+\end{enumerate} 
+ 
+%*********************************************************************************************************
+\subsection{BPEL - \textit{Business Process Execution Language}
+\cite{bpel05}}
+%*********************************************************************************************************
+ 
+BPEL ~\cite{specBPEL03} define o
+comportamento de processos de negócios implementados pelos serviços.
+BPEL é um  ~\cite{bpel05, oasis06} padrão para descrever interações entre
+serviços que estão disponíveis na Web. BPEL também pode ser descrita como uma
+linguagem de orquestração que especifica um processo executável que envolve
+trocas de mensagens com outros sistemas. Essas trocas de mensagens são
+controladas pelo orquestrador. Um orquestrador coordena a execução dos serviços
+a partir de uma descrição prévia.
+
+Usando BPEL é possível especificar um modelo de interação de serviços
+para descrever transações de negócios. BPEL também dá suporte aos processos de
+negócios usando uma linguagem baseada em XML e dá suporte importante para
+Arquiteturas Orientadas a Serviço (SOA) e sua linguagem pode oferecer um caminho
+interessante para assegurar um bom desenvolvimento de composição de serviço.
+
+Existem algumas ferramentas que suportam BPEL em seu desenvolvimento e geram uma
+extensão WSDL para composição de serviços. Existe uma ferramenta bastante
+utilizada que é o Plugin do Eclipse para BPEL, onde a representação gráfica de
+uma especificação BPEL é semelhante a um diagrama de atividades UML, tornando
+possível uma fácil compreensão da composição em um processo de desenvolvimento
+de negócios. A lógica de orquestração é definida como um conjunto de atividades
+de coordenação do fluxo de mensagens através da integração de serviços no âmbito
+dos processo de negócio. 
+ 
+A figura \ref{fig:exampleInBPEL} mostra a descrição de uma especificação em BPEL. O
+código de workflow da figura ~\ref{fig:exampleInBPEL} é representado em
+BPEL, usando as tags de seqüência (`` \texttt{<bpel:sequence>}'') e paralelo
+(`` \texttt{<bpel:flow>} '') . 
+
+
+%%% CODE
+ \begin{figure}
+ \lstinputlisting{codigo/bookstore.bpel}
+\caption{Exemplo de uma Especificação BPEL.} 
+\label{fig:exampleInBPEL} 
+ \end{figure}
+
+O código apresentado na figura \ref{fig:exampleInBPEL} pode ser facilmente
+gerado a partir de qualquer ferramenta de modelagem BPEL. A partir de descrição
+de um processo a partir de um diagrama BPEL o código XML é gerado.
+
+Em relação as questões levantadas no início da seção \ref{sec:linguagens}, BPEL
+pode sim ser representado por XML, o que torna mais fácil a sua manipulação. É possível
+também especificar composições de serviços com BPEL através da construção
+\texttt{flow}, onde são descritas a composição de alguns serviços. BPEL tem
+suporte de ferramenta e apresenta uma boa documentação da sua linguagem. No
+entando, não apresenta uma forma para especificar restrições não funcionais dos
+serviços e suas composições, dá mesma forma não define cláusulas para descrição
+semântica de serviços. Para que isso aconteça BPEL é usado em cooperação com
+outras linguagem para que seja possível oferecer tanto propriedades não
+funcionais, quanto descrição semântica para os processos descritos.
+
+%*********************************************************************************************************
+\subsection{WSLA, WS-Policy, WS-Security, WS-Trust \cite{Keller03thewsla,ws-ra}}
+\label{sec:wsla}
+%*********************************************************************************************************
+
+A especificação e implementação de propriedades não funcionais em sistemas é um
+problema bem conhecido. Em geral, as soluções de middleware são usadas para
+resolver este problema, definindo infra-estruturas e bibliotecas de
+programação que dê suporte a definição das propriedades não funcionais.
+Apresentamos nessa seção algumas especificações para a aplicação de propriedades
+não funcionais em serviços web.
+
+WSLA (\textit{Web Service Level Agreement})~\cite{Keller03thewsla} fornece uma
+estrutura de contratos (\textit{SLA}) para serviços web. Na verdade, o termo SLA é
+frequentemente usado para se referir ao tempo de execução ou performace do
+serviço. Um contrato de nível de serviço é um acordo entre duas
+partes, onde uma é o cliente e o outro é o prestador do serviço. WSLA fornece
+também uma arquitetura runtime e uma linguagem para especificação de
+propriedades \textit{SLA}. 
+ 
+Usando WSLA é possível gerenciar \cite{DanDKKKKLPSY04} propriedades durante a
+cooperação entre serviços, para verificar se as restrições estão sendo obedecidas durante a
+cooperação dos serviços. \textit{SLA} tem foi objeto de intensa pesquisa durante
+alguns anos, até alcançar um nível de maturidade. 
+
+Os serviços WSLA destinam-se a interagir de várias maneiras, no entanto, é
+possível que, na maioria das vezes, os serviços pertençam ao mesmo domínio e não
+em outro domínio. SLAs podem ser definidos em diferentes níveis, podendo ser:
+\textit{com foco no cliente, com foco no serviço, com foco na coorperação} e
+\textit{SLA com vários níveis}.
+
+Um \textit{SLA} registra um acordo comum entre serviços, prioridades,
+responsabilidadese garantias. \textit{SLA} pode especificar também níveis de
+disponibilidade, facilidade de manutenção, desempenho, funcionamento, ou outros
+atributos do serviço. Como isso, usando WSLA é possível especificar propriedades
+não funcionais na utilização e principalmente na cooperação entre serviços. 
+
+Os padrões e especificações WS-* \cite{ws-ra,Davis06}, como \textit{WS-Policy,
+WS-Security} e \textit{WS-Trust} também definem um conjunto de padrões para
+especificações de propriedades não funcionais para serviços web. São padrões recomentados pela
+W3C. Com estes padrões é possível estender descrições WSDL e inserir cláusulas
+para descrever políticas entre serviços, restrições de segurança e
+confiabilidade. Apesar de ser um padrão e recomendação W3C,
+estas especificações são de difícil compreenssão e aplicação em sistemas reais. O
+projetista ou desenvolvedor teria que dispor de tempo para aplicar tais padrões
+no desenvolvimento de sistemas. Além disso, os frameworks devem ser configurados
+para que possam interpretar tais restrições.
+
+A existência de várias formas de especificação de requisitos não funiconais
+torna difícil manter e entender serviços compostos a partir destes padrões,
+sobretudo quando as aplicações são: \textit{(i)} compostas de muitos (centenas)
+serviços; e \textit{(ii)} definidas a partir de diferentes requisitos não
+funcionais. No primeiro caso, não é fácil gerenciar muitas dependências de
+métodos; e no segundo caso, o programador deve implementar as composições com
+base em todas as propriedades não funcionais e em seguida, usar um ambiente
+runtime para executar tais composições.
+
+Em relação as questões levantadas no início da seção \ref{sec:linguagens}, os
+padrões apresentados podem ser representado por XML, o que torna mais fácil a
+sua manipulação, no entanto é necessário uma ferramenta para o seu
+desenvolvimento e execução. A interpretação de tais cláusulas por serem humanos
+é bastante difícil. Tais padrões não prevêem especificação composições de
+serviços pelo fato de serem usados para descrição de requisitos de qualidade. Os
+padrões tem suporte de ferramentas, no entanto não apresentam uma boa
+documentação para o sua aplicação. O foco principal destas
+especificações e padrões é descrever restrições não
+funcionais sobre os serviços, mas não definem
+cláusulas para descrição semântica de serviços. 
+
+
+%*********************************************************************************************************
+\subsection{PEWS - \textit{Path Expression for Web
+Services}~\cite{BaCAM05}}
+\label{sec:BC-pews}  
+%*********************************************************************************************************
+  
+ 
+PEWS \cite{BaCAM05,BaF08}, acrônomo de \textit{Path Expressions
+for Web Services} é uma linguagem para definição de composição de serviços web \cite{BaAM06}. A
+linguagem foi concebida para ajudar na concepção de serviços web, especificando
+o seu comportamento, isto é, a ordem em que as operações dos serviços
+podem ser executadas.  
+ 
+Em um típico cenário de desenvolvimento de serviços web, temos: \textit{(i)}\/
+um documento WSDL (definindo as operações dos serviços), \textit{(ii)}\/ a
+especificação da semântica do serviço (escrito em linguagem natural) e
+\textit{(iii)}\/ um conjunto de programas para implementar cada operação. 
+
+Usando esses três elementos, as atividades do projetista ou desenvolvedor do
+serviço consiste em produzir alguns programas para implementar a semântica
+usando um conjunto de programas. O objetivo de PEWS é ser uma linguagem de
+programação na qual o programador pode combinar operações que implementam as
+operações dos serviços, afim de alcançar uma semântica desejada. Um programa
+PEWS atua como uma camada superior para um conjunto de programas. Um programa
+PEWS também pode ser visto como uma extensão para uma interface de serviços web
+como um documento WSDL. 
+
+PEWS traz expressões de \textit{predicate path-expressions} para o contexto de
+serviços web. \textit{Predicate path-expressions}~\cite{And79} foi introduzido
+como uma maneira para expressar a sincronização de operações. Por exemplo,
+dada as operações $a$, $b$ e $c$, a expressão $a*.(b || c)$  define que a
+execução em paralelo da operação $b$ e $c$ deve ser executada precedida de zero
+ou mais execuções de $a$.
+
+Como observado em~\cite{And79}, o uso de predicados em \textit{path expressions}
+permite um melhor controle do acesso ao objeto que está sendo manipulado. Por
+exemplo, o predicado $a*.([P] b + [not P] c)$  indica que tanto $b$ ou $c$
+deveria ser executado de acordo com a valor de verdade do predicado $P$ (a
+expressão de $b$ ou de $c$ será precedida por zero ou mais execuções de $a$).
+ 
+A estrutura de um programa PEWS é definida como \cite{BaF08}:
+  
+\begin{alignat*}{6}
+P ::=\ & (\mathbf{var}\ X = \mathit{ArithExp} )^*
+\ (\mathbf{service}\ Y = S)^*
+\ S
+\\
+S ::=\ & O \ \mid\ S.S \ \mid\  S+S
+\ \mid\  S\|S \ \mid\  S^* \nonumber
+\mid \ [C] S \ \mid\  Y
+\end{alignat*}
+ 
+De acordo com a gramática acima, um programa PEWS $P$ é composto por uma
+sequência de:
+
+\begin{trivlist}
+\item $\bullet$ Definições Macro: Uma variável $X$ é definida para conter uma
+expressão aritmética (\textit{ArithExp}). O valor da variável irá ser computado
+cada vez que for necessário durante a execução do programa;
+
+\item $\bullet$ Y é a definição de um serviço na expressão
+\textit{service Y = S};
+
+\item $\bullet$ Uma \textit{path expression}: Esta expressão representa o
+serviço sendo definido pelo programa. Note que $O$ denota operações de serviço
+(Como definido no documento WSDL) e $C$ são predicados PEWS (uma condição
+booleana ou uma atribuição que pode conter contadores PEWS e identificadores
+de variáveis). Os operadores para construção de \textit{path expressions} são
+similares a expressões regulares. A gramática para $S$, define que uma
+expressão pode ser uma operação definida em WSDL ($O$), uma composição de
+serviços sequencial ($\
+. \ $) ou paralela ($\ \| \ $), repetições sequenciais ($*$), uma execução
+condicional de um serviço ($[C]S$) ou um serviço $Y$.
+\end{trivlist} 
+
+PEWS também define contadores de predicados (\textit{predicates on counters}):
+Para cada operação $O$ no programa, o sistema runtime de PEWS implementa 3
+contadores, correspondendo respectivamente, ao número de vezes que a operação
+foi chamada (\texttt{req(O)}), iniciada (\texttt{req(O)}) e finalizada
+(\texttt{term(O)}). Cada um destes contadores é composto por um par: um número
+natural (o próprio contador), e um \textit{timestamp}, correspondendo a última
+vez que o contador foi modificado. O componente \texttt{val} de cada contador
+representa o valor do contador enquanto que o componente \texttt{time} indica o
+momento em que o contador foi modificado pela última vez. 
+
+\textbf{\texttt{req(O):}}  O componente \textit{\texttt{req(O).val}} descreve o
+número de vezes que o orquestrador tentou executar a operação
+\textit{\texttt{O}}. O componente de tempo \textit{\texttt{req(O).time}} indica
+o momento da última solicitação da operação. 
+
+\textbf{\texttt{act(O):}}  O componente \textit{\texttt{act(O).val}} descreve o
+número de vezes que o orquestrador começou a executar a operação
+\textit{\texttt{O}}. O componente de tempo \textit{\texttt{act(O).time}} indica
+o momento da última ativação do serviço.
+
+\textbf{\texttt{term(O):}}  O componente \textit{\texttt{term(O).val}} descreve
+o número de vezes que o orquestrador terminou de executar a operação
+\textit{\texttt{O}}. O componente de tempo \textit{\texttt{term(O).time}} indica
+o momento da última conclusão de execução do serviço.
+
+\bigskip 
+
+%\subsubsection{Expressando Composições de Serviços em PEWS}  
+ 
+%Begin CaseStudy----------------------------------------------------------
+
+ 
+\textbf{Exemplo:} Neste exemplo é descrita uma aplicação sensível ao contexto:
+Serviços disponíveis em um \textit{shopping center}, que podem ser usados de acordo com a
+necessidade de cada usuário. Ao entrar no estabelecimento, o usuário está habilitado a
+escolher entre os diversos tipos de serviços disponíveis, por exemplo, comida,
+roupas, livros e etc. Após a escolha, os serviços relacionados àquele tipo
+estarão disponíveis para uso. Por exemplo, se um usuário escolher serviços
+relacionados à comida, haverá uma pesquisa por restaurantes, em seguida os
+detalhes para cada restaurante serão apresentados para o usuário, e o mesmo
+poderá finalizar sua compra. Os usuários dos serviços poderão escolher produtos
+de diferentes restaurantes, se assim for desejado. Após esta operação, será
+disponibilizado o valor a ser pago pelo pedido e por fim haverá a realização do
+pagamento. Se produtos de locais distintos foram escolhidos, a transação
+ocorrerá como segue: o valor total da compra será debitado da conta do cliente
+e será creditado na conta dos respectivos restaurantes. Por fim, o usurário
+receberá os números dos tickets para cada local onde a compra foi realizada. Com
+os números em mãos e os dados de identificação definidos no momento do
+pagamento, o cliente poderá pegar os produtos nos locais de compra.
+
+\begin{figure} 
+\centering
+\includegraphics[width=.7\textwidth]{figs/ContextService.png}
+\caption{Processo de Negócio - Serviço de Compras.}
+\label{fig:casestudy-context}
+\end{figure} 
+ 
+%%% CODE
+ \begin{figure}
+ \lstinputlisting{codigo/shopping.pews}
+\caption{Especificação em PEWS - Definição de Serviços.}
+\label{fig:pews}
+ \end{figure}
+ 
+A figura \ref{fig:casestudy-context} apresenta a representação do fluxo de
+atividades e operações. A figura \ref{fig:pews} mostra a representação em PEWS
+do estudo de caso, isto é, as interfaces de serviços em PEWS, no qual
+cada \textit{namesapace} faz referência as interfaces WSDL, as operações e as composições de serviço
+definida através da cláusula \texttt{service}. 
+
+A especificação PEWS descrita na figura \ref{fig:pews} mostra a representação da
+composição de serviço apresentado no diagrama de fluxo de atividades que define
+o processo de negócio. Inicialmente são 3 namespaces (linhas 1-3), os quais
+fazem referência a distintas interfaces para que os serviços possam ser executados. Os namespaces são:
+\textit{nsContext, nsRestaurant} e
+\textit{nsPatment}, que representam, respectivamente, \textit{(i)} um
+serviço de algum local, por exemplo shopping, para busca de serviços prestados
+naquele ambiente, \textit{(ii)} serviço disponibilizado por
+\textit{Restaurantes} daquele shopping e por fim um
+\textit{(v)} serviço de pagamento disponibilizado pelo \textit{Amazon Service}
+que abstrai o pagamento via cartão de crétido ou débito bancário.
+
+Logo após são descritas as 11 operações (linhas 5-16) que estão disponíveis
+para acesso através dos diferentes namespaces descritos. Estas operações são descritas
+pela cláusula \texttt{alias} que fazem referência a cada operação existento da
+representação dos \texttt{portType} de cada WSDL.
+
+A cláusula \texttt{service} (linhas 17-25) representa as composições de serviços
+em PEWS. Cada uma das 3 composições da figura \ref{fig:pews} faz referência as composições do
+diagrama de atividades da figura \ref{fig:casestudy-context}, representadas pelas
+diferentes cores, respectivamente. 
+
+A composição descrita abaixo é a descrição principal de uma especificação PEWS.
+Nela é possível descrever a sequencia de execução das operações ou dos serviços
+compostos. Primeiramente \textit{(i)} é feita a seleção
+do tipo de serviço que o usuário gostaria de ver (\textit{contextProcess}),
+\textit{(ii)} logo após é a pesquisa por produtos em diferentes
+restaurantes (\textit{restaurantProcess}), após a escolha dos produtos a serem
+comprados,\textit{(iii)}  é realisado o processo de pagamento
+(\textit{paymentProcess}) e por fim \textit{(iv)} o processo é finalizado
+(\textit{checkOut}). A operação (\textit{cancelPayment})  não foi utilizada no
+exemplo, no entanto pode ser usada em um outro processo de negócio que o
+projetista queira definir.
+
+   
+\textbf{
+\centering
+\begin{alignat*}{1}
+    contextProcess \ .  \ restaurantProcess \ . \ paymentProcess \ . \ checkOut	
+\end{alignat*}
+}
+
+A definição do completa do processo de negócio em PEWS é a representação
+principal da composição dos serviços. Nesta composição pode ser feito referência tanto a
+operações (representada pelas \textit{operations}), como aos processos de
+négocio menores representado pelos \textit{services}. É impotante notar que para
+ambos os casos são usados os operadores de composisção definidos na sintaxe de
+PEWS. Mais detalhes sobre a sintaxe de PEWS pode ser encontrado em \cite{}.
+
+A seguir apresentaremos a representação de composição de PEWS através de XPEWS.
+XPEWS é uma extensão WSDL para descrição de composições de serviços feitas na
+linguagem PEWS.
+ 
+%\subsubsection{Representação XML de PEWS - XPEWS}
+
+O sistema de PEWS é formado por um \textit{front-end} e um \textit{back-end}
+\cite{BaF08}. O \textit{front-end} é implementado como um plugin para a
+plataforma Eclipse. O \textit{back-end} é constituído de um type-checker e um
+gerador de programas XPEWS. A tradução de PEWS para XPEWS segue a definição de um
+XMLSchema para XPEWS~\cite{BaF08}.   
+
+O elemento principal do documento XPEWS~\cite{BaCAM05} é o \texttt{<envelope>}.
+Ele contém a definição dos comportamentos possíveis do serviço web. Por exemplo, quando
+se define o acesso a um dado objeto, podemos especificar diferentes ordens
+em que as instâncias desse objeto pode ser acessado. 
+ 
+O construtor \texttt{<behaviour>} especifica a maneira que o cliente pode
+interagir com o serviço web. Isso é feito por meio de uma expressão envolvendo
+os operadores do serviço da interface. Note que o elemento
+\texttt{<behaviour>} tem dois atributos. O atributo \textbf{\textit{name}}
+identifica o elemento.  O atributo \textbf{\textit{target}} se refere ao
+\textit{portType} (em um arquivo WSDL) cujas operações estão envolvidas no
+comportamento a ser definido.
+
+O arquivo XPEWS gerado a partir da representação de PEWS apresentado na figura
+\ref{fig:pews} é mostrado na figura \ref{fig:xpews}.
+
+ 
+\begin{figure}
+\lstinputlisting{codigo/shopping.xml}
+\caption{Representação XPEWS.}
+\label{fig:xpews}
+\end{figure} 
+
+O modelo formal das \textit{path expressions} faz de PEWS uma
+linguagem para descrição comportamental de serviços.
+No entanto, para se ter o armazenamento da descrição do serviço para
+publicação, pesquisa e composição, é preciso traduzir PEWS para uma
+representação intermediária, que seja concreta e padronizada. Para este fim,
+Dessa forma, XPEWS é uma versão XML de PEWS \cite{MPC08}.
+
+ A implementação de PEWS é baseada em um plugin Eclipse, chamado Editor PEWS,
+ que provê suporte computacional para a linguagem ~\cite{MPC08,sac2008}. Essa 
+ ferramenta ajuda o usuário a escrever composições, verificar a estrutura
+  sintática da composição e criar os documentos XPEWS. Os documentos
+ são usados para coordenar os serviços web. O parser LL(1) foi criado a partir
+ do gerador de parser JavaCC, e isto é usado pelo
+ plugin. O parser cria uma árvore DOM para representar as composições em PEWS, e a partir desta árvore de
+ objetos DOM o documento XPEWS pode ser gerado (figura \ref{fig:backxpews}).
+
+ 
+ \begin{figure}       
+\centering   
+%\fbox{
+%\epsfig{file=soa.png, height=1.5in, width=2.1in}
+\includegraphics[width=.8\textwidth]{figs/XPEWS.png}
+%height=2in, width=2in
+%}   
+\caption{Back-end XPEWS. \textit{Fonte} \cite{BaCAM05}.}
+\label{fig:backxpews} 
+\end{figure}   
+
+Em relação as questões levantadas no início da seção \ref{sec:linguagens},
+PEWS apresenta uma representação por XML chamada XPEWS, o que torna mais
+fácil a sua manipulação das composições dos serviços. 
+É possível descrever em PEWS composições de
+serviços. PEWS também tem suporte de ferramente, um plugin, onde é possível
+especificar as composições dos serviços. No entanto não é possível descrever
+restrições não funcionais sobre os serviços e nem
+cláusulas para descrição semântica.   
+ 
+%*********************************************************************************************************
+\subsection{WS-CDL - \textit{Web Services Choreography Description Language}
+\cite{wscdl}}
+%*********************************************************************************************************
+
+WS-CDL (\textit{Web Services Choreography Description Language}) descreve
+colaborações entre serviços. A fim de facilitar estas colaborações, serviços
+comprometem-se a responsabilidades mútuas, estabelecendo relações. Sua
+colaboração obedece a um conjunto acordado de regras de
+restrições. A partir destas restrições as informações/mensagens são trocadas
+entre os serviços. A coreografia se diferencia da orquestração pelo fato do
+serviço saber com quem está se relacionando e como deve ser a troca das
+mensagens. A principal desvantagem deste tipo de composição é a dependencia
+entre os serviços. Pelo fato do serviço saber com que vai se relacionar e
+existir regras para esse relacionamento, o acoplamento é maior. Pelo fato do
+acoplamento entre os serviços serem maior, a manutenção das aplicações se torna
+mais custosa.
+
+O modelo WS-CDL consiste das seguintes entidades: \textit{(i) Tipos de
+participantes e relacionamentosl; (ii) tipos de informações, variáveis e
+tokens; (iii) descrição de coreografias; (iv) canais; (v) unidades de trabalho;
+(vi) atividades; (vii) interações entre atividades; e (viii) semânticas}. 
+
+Todas estas entidades são descritas através de tags XML para que a coreografia
+entre os serviços seja representada. O WS-CDL é descrito como uma ``extensão''
+WSDL para descrever as iterações entre os serviços.
+
+Apesar da maneira fácil que a descrição do arquivo XML é feita e da existência
+de ferramentas que auxiliam o desenvolvimento de aplicações baseadas em WS-CDL,
+a principal desvantagem é o alto acoplamento entre os serviços que tem como
+consequência um baixo reuso. 
+
+Em relação aos itens descritos no ínicio desta seção que servem de base para
+análise das linguagens, WS-CDL tem sim uma representação XML, onde é possível
+especificar composições entre serviços e também como ocorre a interação entre
+eles. A linguagem também tem suposte a ferramenta e apresenta uma documentação
+razoável que pode ser facilmente encontrada. No entanto, não é possível
+descrever restrições não funcionais e a descrição semântica é limitada.
+
+%*********************************************************************************************************
+\subsection{CDL - Contract Definition Language \cite{cdl2006}}
+%*********************************************************************************************************
+
+CDL (\textit{Contract Definition Language}) \cite{cdl2006} é uma linguagem de
+descrição baseado em XML, cujo propósito é descrever contratos para serviços.
+O elemento raiz \textit{contract} inclui os elementos filhos
+\textit{organization, types, location, method} e \textit{event}. Ele também tem
+vários atributos como: \textit{ServiceUri, serviceName, ServiceDescription,
+price, state, version} e\textit{port}. Os nomes dos atributos são
+auto-descritivo. Os elementos filhos descrevem a estrutura do contrato e os
+métodos dos serviços a que cada contrato está associado.
+
+Está linguagem está ligada a uma metodologia de desenvolvimento baseada no
+método B, onde após toda a especificação da composição dos serviços em
+B\cite{AbrialLNSS91}, usando regras de composição estabelecidas
+\cite{cdl2006} e após alguns
+refinamentos, o código Java e CDL podem ser gerados e a composição dos serviços executada.
+
+O desenvolvimento baseado em CDL oferece uma estrutura de arquitetura, padrões
+de projeto e
+metodologia~\cite{MilanovicM05,Milanovic05,Milanovic06,MilanovicM06} que podem
+ser entendidos e aplicados ao desenvolvimento real de aplicações. A maior
+dificuldade encontrada no uso de CDL é que esta apenas representa os contratos
+dos serviços. Sua especificação é gerada após vários refinamentos de máquinas
+B que descrevem os serviços e suas composições. Após isso a representação dos
+contratos e o motor de execução são gerados.
+
+De acordo com os itens de análise descritos no ínicio desta seção, CDL apresenta
+uma representação XML, on é possível especificar composição entre serviços. Não
+existe uma ferramenta de suporte, no entanto toda a sua especificação pode ser
+gerada a partir de máquidas B. Dessa forma existem várias ferramentas para o
+método B. CDL não apresenta uma boa documentação e não apresenta uma forma para
+especificar semântica de serviços. 
+  
+%*********************************************************************************************************
+\subsection{\textit{Análise das Linguagens}}
+%*********************************************************************************************************
+ 
+Esta seção apresentou algumas linguagens para especificação de serviços e
+composição entre serviços. Esta análise não é exaustiva devido ao fato de
+existir outros trabalhos que fazem análises entre linguagens de composição de
+serviços \cite{OkikaR08,Peltz03}. Está seção tentou apresentar trabalhos que não
+estão presentes nestas análises, com excessão de BPEL. Linguagens como SysML~\cite{sysml}, e
+WebML~\cite{Brambilla06} não foram apresentadas nesta seção por não serem o foco
+da nossa análise e não estar no escopo desta tese. Apesar de ambas poderem ser
+usadas para especificar serviços, como assim UML, não foram criadas para este
+fim.
+
+A tabela \ref{tab:linguagens} apresenta a análise das linguagens de acordo com
+os questionamentos apresentados no início desta seção. A linguagem mais
+utilizada e conhecida para o desenvolvimento de serviços web é BPEL, no entanto,
+para que descrição de propriedades não funcionais possam ser garantidas, BPEL
+deve ser associado com liguagens para esse fim, como por exemplo os padrões
+WS-*. Com isso o desenvolvimento de aplicações se torna bastante
+custoso. É possível assossiar também BPEL a WSLA para que propriedades não funcionais sejam
+descritas para os serviços e suas composições. 
+
+WS-CDL tem por objetivo especificar composição entre serviços. A abordagem
+utilizada é a coreografia, onde não é necessário um motor de execução para a
+composição. Cada serviço tem conhecimento de quais os demais serviços compostos.
+Esta linguagem não apresenta uma boa documentação, nem fornece cláusulas para a
+descrição de requisitos não funcionais. Os demais itens análisados estão
+contemplados.
+
+
+ \begin{table}          
+\centering   
+%\fbox{
+%\epsfig{file=soa.png, height=1.5in, width=2.1in}
+\includegraphics[width=.7\textwidth]{figs/tabelaLinguagens.png}
+%height=2in, width=2in
+%}   
+\caption{Análise das Linguagens para o Desenvolvimento orientado a Serviços.}
+\label{tab:linguagens} 
+\end{table} 
+
+
+PEWS e CDL são linguagens mais acadêmicas e oferecem características
+semelhantes. No entanto, PEWS não pode especificar restrições não funcionais
+para serviços, enquanto que com CDL, através do método B, é possível especificar
+contratos entre serviços.
+
+É possível verificar que cada linguagem apresenta características 
+positivas e algumas restrições, que são tratadas
+por outras linguagens. Cada linguagem tem sua função específica e pode ser usada
+de acordo com a necessidade do desenvolvedor. 
+
+
+A seção \ref{sec:abordagens} fará uma análise de algumas propostas que auxiliam
+o desenvolvimento de composição de serviços web. Nesta seção será levado em
+consideração também a linguagem PEWS que está no escopo deste trabalho.
+
+%% 
+%%  FERRAMENTAS e ABORDAGENS PARA COMPOSIÇÃO DE SERVIÇOS
+%% 
+\section{Arquiteturas, Ferramentas e Abordagens para Serviços Web}
+\label{sec:abordagens}
+
+ 
+Apesar da variedade de arquiteturas, ferramentas e abordagens, não há ainda um
+consenso sobre uma abordagem unificada que leve em consideração diferentes aspectos de
+desenvolvimento. Pensando nisso, analisamos uma série de abordagens e
+plataformas para desenvolvimento de serviços web, a fim de comparar as suas
+capacidades. Esta comparação é motivada pela necessidade de entender as
+diferentes abordagens, com o objetivo de ter conhecimento do que está sendo
+proposto para o desenvolvimento de serviços web.
+
+Identificamos uma série de recursos que pode ser útil para
+compreender melhor cada abordagem. Esses recursos descrevem diferentes aspectos do apoio ao
+desenvolvimento e execução de serviços web. Os itens utilizados como
+base da análise estão descritos a seguir.
+ 
+\begin{itemize} 
+  \item \textbf{Estratégia de Composição:} Esta propriedade trata da
+  natureza da composição de serviço, com base no tempo em que a composição é
+  realizada, bem como a classe de informação utilizada para construir a composição.
+  As estratégias possíveis incluem \textit{composição estática, dinâmica,
+  baseada em contexto, semântica} e \textit{composição declarativa}.
+  \item \textbf{Monitor de Execução:} Indica a existência de um serviço que
+  gerencia a composição, após a especificação da composição.
+  \item \textbf{Conversão Dinâmica:} Permite que o usuário selecione
+  (em tempo de execução) o serviço. Essa capacidade
+  pode ser útil quando os serviços são descobertos (também em tempo de execução)
+  e a interface do serviço são desconhecidas.
+  \item \textbf{Qualidade de Serviço:} Indica se a abordagem usa alguns modelo
+  de QoS para garantir requisitos de qualidade.
+  \item \textbf{Extensão WSDL:} Indica se a composição pode ser descrita como
+  uma extensão WSDL.
+  \item \textbf{Suporte a Transação:} A ferramenta define o suporte a transações
+  para os serviços web?
+  \item \textbf{Representação através de Grafo:} Indica a existência de uma
+  representação gráfica para a composição.
+  \item \textbf{Especificação de Restrição Temporal:} Indica a existência de um
+  modelo para garantir os requisitos de restrição temporal. Esse modelo é
+  utilizado durante o projeto e desenvolvimento? A modelagem temporal é
+  executada durante a execução do composição?
+  \item \textbf{Validação da Composição:} Existem alguma ferramenta para
+  verificar se uma composição descrita pela linguagem é válida? Pode ser
+  executada com segurança?
+\end{itemize}
+ 
+Analisamos uma série de abordagens para a definição de serviços web,
+em função das capacidades acima definidas. Cada uma delas será descrita a
+seguir e será finalizada com uma uma análise comparativa de
+cada abordagem.
+  
+%*********************************************************************************************************
+\subsection{Modelo A-Policy~\cite{Espinosa-OviedoVZC09,Espinosa-OviedoVZC11}}
+%*********************************************************************************************************
+  
+O modelo \textit{A-Policy}~\cite{Espinosa-OviedoVZC11,Espinosa-OviedoVZC09}
+fornece uma estrutura para expressar políticas para coordenação de serviços. Um
+política aplica-se a um escopo que pode ser tanto uma atividade, um operador ou
+um fluxo de atividades. Uma política agrupa um conjunto de regras com um conjunto de
+condições para cada regra. As regras são associadas a um evento. Se a condição
+verificada for verdadeira a ação correspondente é executada. Este modelo é
+bastante semelhante a proposta de projeto por contrato (Design by Contract)
+\cite{Meyer98a}, onde contratos são associados a funções. Caso o contrato seja
+obedecido as funções podem ser executadas.
+
+As políticas são executadas de acordo com um modelo de execução
+que avalia o estado de execução da ação
+ através de uma coordenação de serviços. Esta proposta separa o motor de
+ coordenação de serviços do gerenciador de políticas para diminuir o acoplamento
+ e para poder aplicar a mesma política a serviços distintos.
+ 
+O mecanismo de política dispara e executa reações assíncrona para eventos de
+acordo com as condições estabelecidas. A estratégia usada por este modelo é de
+composição dinâmica de serviços. Esta abordagens também propõe um motor de
+execução para coordenar as políticas. No entanto não proporciona uma extensão
+WSDL ou XML para expressar as políticas e não apresenta também uma representação
+de grafo para as composições. O modelo também não avalia se as composições são
+válidas ou não. O objetivo principal desta proposta é poder especificar
+propriedades não funcionais a execução de serviços e avaliar as condições
+estabelecidas em tempo de execução. 
+
+O modelo proposto é razoável pois faz uma reparação clara da estrutura das
+políticas com os eventos a que estas estão associadas. Cada política pode conter
+regras que são avaliadas durante a execução das atividades, e dependendo de
+tererminados estados, ações assíncronas são executadas. 
+   
+%*********************************************************************************************************
+\subsection{Design by Contract para Serviços Web \cite{HL05TACoS}}
+%*********************************************************************************************************
+
+Design by Contract para Serviços Web \cite{HL05TACoS} significa especificar
+contratos para serviços web e descrever diferentes níveis de representação de
+contratos. É possível descrever 3 níveis para especificação de contratos, sendo
+eles: \textit{nível de implementação, nível de XML} e \textit{nível de
+modelo}.
+
+\textbf{Nível de implementação:} Este nível de contrato é descrito na forma de
+comentário em cada componente que representa o serviço web que será usado. Para
+isso são usadas expressões booleanas sob forma de predicados. Como serviços são baseados em programação orientada a objetos,
+várias linguagens de  especificação de contratos podem ser utilizadas, tais
+como: Eiffel~\cite{Meyer98a}, JML~\cite{burdy:05}, JCML~\cite{daCosta2010} e
+IContract~\cite{LacknerKP02}..
+
+
+\textbf{Nível de XML:} Este nível tem como foco a definição da interface WSDL.
+O XML WSDL descreve a interface oferecida por um serviço como um conjunto de
+operações e suas respectivas assinaturas. Este nível leva em consideração
+apenas a descrição dos serviços através da especificação WSDL. No entanto, WSDL
+não fornece informações comportamentais sobre as operações. Para isso uma
+extensão WSDL para operações com contratos resolveria este problema.
+
+\textbf{Nível de modelo:} É melhor para a
+especificação e execução de contrato trabalhar
+em um nível modelo \cite{HL05TACoS}, ao invés de trabalhar nos níveis de
+implementação e XML. Os 2 primeiros
+níveis (implementação e XML) são difíceis de serem entendidos por serem humanos
+e o tempo gasto na sua implementação é alto. Deste modo, usando o modelo facilita tanto a
+leitura, como o desenvolvimento e implementação das aplicações. Dessa forma os serviços web
+baseados em contratos são de fácil aplicação, poupando tempo no entendimento
+dos padrões de desenvolvimento WS-* (como descrito na seção \ref{sec:wsla}).
+
+Design by Contract aplicado a serviços web permitem verificação de serviços
+web através do uso verificadores runtime como o \textit{jmlrac}
+\cite{LeavensCCRC02}, adicionando informações comportamentais às especificação dos serviços. Estas informações comportamentais
+são descritas através de JML.
+
+
+% \begin{figure}
+% \centering
+% \scriptsize
+% \lstinputlisting{codigo/bookOrder.jml}
+% \caption{Representação JML para o Contrato de um Serviço (nível de
+% implementação).}
+% \label{fig:exampleInDbC} 
+% \end{figure} 
+
+Usando DbC para especificar restrições em composição de serviço pode facilitar
+atividades de teste de serviços web. Isto é feito
+adicionando informações comportamentais para a especificação de um serviço.
+
+Usar uma linguagem de especificação de comportamento para serviços web é uma boa
+forma de garantir a qualidade e propriedades do contrato. Depois de especificar
+e compilar o serviço usando uma linguagem de especificação como JML, o provedor
+do servidor pode garantir as propriedades definidas pelo contrato durante a
+execução do serviço.
+  
+%*********************************************************************************************************
+\subsection{ROSE \cite{Hernandez-BaruchPZ07}}
+%*********************************************************************************************************
+
+Rose \cite{Hernandez-BaruchPZ07} é um software de coordenação de serviços
+transacionais adaptáveis, sendo uma extensão de uma máquina de coordenação,
+chamada Bonita \cite{bonita10}. Este trabalho é inspirado no conceito de
+abordagens que usam separação de interesses (separation of concerns) e usa a
+notação de contrato para expressar propriedades transacionais separada da
+especificação de composição. Para maiores detalhes deste framework, consultar
+\cite{Hernandez-BaruchPZ07}.
+
+% \begin{figure}[ht]  
+% \centering 
+% %\fbox{
+% \includegraphics[width=.6\textwidth]{figs/rese.png}
+% %}
+% \caption{Arquitetura Rose. \textit{Fonte} \cite{Hernandez-BaruchPZ07}.}
+% \label{fig:rose}
+% \end{figure} 
+
+A arquitetura do Rose é formada por 3 níveis. Os
+níveis são \textit{(i) o nível de definição}, onde são especificados
+tanto o fluxo de execução como os requisitos transacionais desejados para a aplicação;
+\textit{(ii) o nível conceitual}, onde as definições feitas no nível anterior
+são traduzidos baseado em um modelo de coordenação e um modelo transacional; e
+o \textit{(iii) nível de execução}, na qual os modelos descritos e refinados nos
+2 níveis anteriores são executados.  
+
+O projeto da ferramenta Rose não descreve, ou especifica nenhum estrutura de
+representação dos modelos de coordenação e de transação como uma extensão WSDL,
+sendo toda a coordenação da execução realizada seguindo uma representação
+própria. Esta coordenação é baseada nos modelos descritos no \textit{nível
+conceitual}. 
+
+
+ 
+
+
+%*********************************************************************************************************
+\subsection{WebTransact \cite{PiresBM02}}
+%*********************************************************************************************************
+
+\textit{WebTransact} \cite{PiresBM02} é um framework que provê uma
+infraestrutura necessária para a construção de serviços web compostos
+confiáveis. O framework é composto de uma arquitetura multicamadas, de uma
+liguagem baseada em XML chamada de \textit{WSTL (Web Services Transaction
+Language)}, e é composto ainda de um modelo transacional.
+
+% \begin{figure}[ht]  
+% \centering
+% %\fbox{
+% \includegraphics[width=0.8\textwidth]{figs/webTransact.png}
+% %}
+% \caption{Arquitetura WebTransact. \textit{Fonte} \cite{PiresBM02}.}
+% \label{fig:webtransact}
+% \end{figure}
+ 
+A arquitetura WebTransact encapsula o formato das mensagens, o conteúdo e
+o suporte a transações dos serviços web. WebTransact integra serviços web
+através de \textit{WSDL} e \textit{WSTL}: Web Service Description Language
+(WSDL) descreve as interfaces dos serviços e, Web Service Transaction Language
+(WSTL) é descrito sob uma extensão WSDL com
+funcionalidades para composição de serviços.
+
+% 
+% \begin{figure}
+% \centering
+% \scriptsize  
+% \lstinputlisting{codigo/wstl.wstl}
+% \caption{Exemplo de uma Especificação WSTL.} 
+% \label{fig:exampleInWSTL} 
+% \end{figure}  
+
+
+O framework define uma arquitetura de quatro níveis: \textit{Composition Layer, Mediator Service Layer,  Remote Service Layer} e
+\textit{Web Service Provider Layer}. 
+
+\textbf{Composition Layer:} Em WebTransact, uma composição é especificada usando
+elementos WSTL. A composição é realizada através de tarefas e é
+representada por um grafo onde os nós representam os passos de
+execução e as arestas representam o fluxo de controle e dados entre as
+diferentes etapas. Uma tarefa de composição pode ser: (1) uma composição
+atômica ou (2) outra tarefa de composição, sendo identificado  por um nome e uma
+assinatura, (3) um conjunto de execuções, (4) um conjunto de dados, e
+opcionalmente, (5) um conjunto de regras.
+
+\textbf{Mediator Service Layer:} O mediador de serviço agrega equivalência
+semântica aos serviços remotos. Serviços remotos semanticamente equivalentes
+são serviços que integram serviços com diferentes interfaces WSDL propondo uma
+visão homogeneizada de serviços heterogêneos.
+
+\textbf{Remote Service Layer:} É a unidade lógica de trabalho que executa um
+conjunto de operações remotas em um determinado site. Uma operação remota tem um
+comportamento bem definido. Este comportamento define o nível de suporte a
+transação de um dado serviço web.
+
+
+\textbf{Web Service Provider Layer:} Nesta camada estão todas as descrições dos
+serviços web utilizados. Da mesma forma a descrição transacional de
+cada serviço (WSTL). A partir dos dados contidos nessa camada, os diferentes
+serviços podem ser usados. As descrições são expressas em WSTL e diferentes
+provedores de serviços são invocados quando necessário para usar cada serviço e
+sua respectiva descrição transacional.
+ 
+ 
+
+\subsection{Modelo WIED \cite{TongrungrojanaL04}}
+
+ 
+O modelo WIED \cite{TongrungrojanaL04} permite que os desenvolvedores possam
+expressar as características principais de um sistema de informação em um nível
+maior de abstração, sem se comprometer com detalhados de arquitetura ou
+tecnologia. Pode ser considerado como um método auxíliar para WebML
+\cite{CeriFB00}, que é uma notação adotada para especificação visual de sistemas
+Web complexos.  O objetivo da modelagem WIED é definir fluxos de informações do
+sistema Web (internos e externos) a nível de processos de negócios para apoiar o intercâmbio
+de dados de valor entre as partes interessadas nos domínios dos negócios (que é
+representado através de um modelo de negócios).
+ 
+Tal como acontece com WebML, é possível definir tanto uma notação gráfica como
+uma notação baseada em XML para a representação de modelos formais WIED. A
+notação gráfica é projetada para permitir que ele seja efetivamente entendida
+por pessoas que não são técnicas mas são membros da equipe de desenvolvimento.
+
+Apesar do WIED também ser um modelo de negócio, este modelo pode corresponder ao
+nível PIM da arquitetura MDA, para descrever e representar características e
+funcionalidades do sistema que será construído. WIED também tem uma notação
+própria para definir seus modelos de negócio e a representação de fluxo de valor
+estre os componentes.
+
+Um desvantagem deste método é o uso de WebML como linguagem utilizada pra
+modelagem de baixo nível. Dessa forma o modelo WIED em outras metodologias de
+desenvolvimento, considerando que WebML não utiliza uma notação padrão, mas uma
+notação própria.
+
+\subsection{\textit{Análise das Abordagens}}
+ 
+
+Comparar diferentes abordagens ajudará a identificar quais as necessidades
+no desenvolvimento de aplicações web. Diferentes trabalhos propõem modelos
+interessantes que resolvem problemas específicos, tais como requisitos
+transacionais e equivalência semântica. No entanto, quando estas abordagens
+decidem resolver em um problema específico, acabam não tratando de outros
+problemas. Analisaremos estes trabalhos levando em consideração as propriedades
+citadas no início desta seção. 
+
+ \begin{table}          
+\centering   
+%\fbox{
+%\epsfig{file=soa.png, height=1.5in, width=2.1in}
+\includegraphics[width=.8\textwidth]{figs/abordagens.png}
+%height=2in, width=2in
+%}   
+\caption{Abordagens para o Desenvolvimento orientado a Serviços.}
+\label{tab:abordagens} 
+\end{table} 
+
+A linguagem PEWS foi analisada junto com as demais abordagens pelo fato de estar
+no escopo desta tese como linguagem para descrição de serviços. Com isso
+esta também será comparada com as demais abordagens.
+
+A tabela \ref{tab:abordagens} ilustra as
+características analisadas. As abordagens
+\textit{WebTransact} e \textit{Rose} não suportam modelos
+de qualidade de requisitos. Estas abordagens visam o desenvolvimento de
+aplicações baseadas em arquiteturas pré-definidas e não propõe um modelo que
+tratar requisitos de restrição temporal para serviços web. 
+
+Para três das propriedades apresentadas na Tabela \ref{tab:abordagens},
+apenas \textit{PEWS} oferece validação de composição de serviços, representação
+em XML e representação em grafo, todavia, só a abordagem que faz uso de projeto
+por contrato (DbC), mas não define avaliação de serviços. O ambiente
+\textit{WIED} não define suporte a transações.
+
+Cada modelo analisado apresenta características
+positivas e a apresentam algumas algumas restrições, que normalmente são
+tratadas por outras propostas. Todas as abordagens tem um
+desenvolvimento \textit{ad-hoc} para aplicações web. Seria importante se ter
+sempre uma metodologia de desenvolvimento aliada as novas propostas para
+desenvolvimento de serviços. Com o objetivo de superar essa problematica,
+esta tese apresentará modelos de qualidade e execução temporal,
+além de um validador de composição, aliado a uma metodologia de baseado em
+modelos, de acordo com a proposta MDE/MDA. Considerando esses problemas, a
+metodologia que será apresentada nesta tese tem por objetivo contribuir 
+para o desenvolvimento de aplicações web. A utilização da linguagem PEWS, que é
+resultado de projetos de pesquisa, ajudará na implementação das atividades da
+metodologia. Assim, temos por objetivo assegurar um desenvolvimento ordenado,
+gerando aplicações web confiáveis e de qualidade.
+
+A seção \ref{sec:metodologias} apresentará uma analise de
+metodologia para o desenvolvimento de aplicações baseadas em serviços para que possamos ter um mapeamento dos
+trabalhos e o que esta sendo proposto. O objetivo desta análise é verificar
+fatores que ainda não são abordados para que nossa proposta não seja redundante,
+levando em consideração os trabalhos existentes.
+
+%% 
+%%  METODOLOGIAS PARA COMPOSIÇÃO DE SERVIÇOS
+%% 
+\section{Metodologias para o Desenvolvimento de Aplicações Baseadas em Serviços
+Web}
+\label{sec:metodologias}  
+
+Nesta seção, apresentamos uma análise das metodologias para desenvolvimento
+orientado a serviços, que será descrito destacando suas principais
+características, bem como suas contribuições e limitações quando usadas em um
+processo de desenvolvimento. Os critérios a serem utilizados para a avaliação e
+comparação são:
+
+\begin{enumerate}
+  \item \textbf{\textit{Abrangencia da metodologia:}} Este item analisará o
+  escopo proposto por cada metodologia, quais as fases princípais de cada uma delas e
+  qual o objetivo de determinada fase no contexto do projeto e desenvolvimento
+  orientado a serviços. 
+  \item \textbf{\textit{Modelos propostos:}} Cada uma das metodologias de
+  desenvolvimento discutidas nesta seção definem um conjunto de modelos
+  necessários para o projeto de sistema de informação. Este item analisa as modelos propostos
+por cada uma das metodologias para especificação do comportamento do sistema e
+modelagem de negócio de alto nível. 
+  \item \textbf{\textit{Notação utilizada na modelagem:}} Existem várias
+  notações e diagramas que podem ser usadas para descrever as aplicações. Este
+  item descrve qual a notação, ou as notações, utilizadas pela metodologia para
+  a construção de seus modelos, por exemplo, UML, SysML, etc.
+  \item \textbf{\textit{Formalismo usado para especificação:}} Neste item é
+  analisado se a metodologia propõe o uso de algum formalismo
+  para especificar os serviços, suas composições e iterações.
+  \item \textbf{\textit{Qual a abordagem para descrição de serviços:}} Neste
+  momento será analisado como as várias metodologias que se propõem a descrever, construir e implantar os serviços e suas
+  composições. Assim, o objetivo é destacar as diferenças nos processos de
+  desenvolvimento de sistemas em cada uma das metodologias analisadas.
+\end{enumerate}
+ 
+Aliado a estas propriedades que serão analisadas, faremos também uma comparação
+com os tipos de modelos MDA propostos pelas diferentes metodologias para o 
+desenvolvimento de aplicações para serviços. Dessa forma pode-se ter uma visão
+mais clara dos níveis de modelagem que são propostos por cada método. 
+ 
+\subsection{SOD-M \cite{CastroMV11}}
+
+SOD-M (Service-Oriented Development Method)~\cite{CastroMV11} propõe uma
+abordagem orientada a serviços e baseada em modelos para o desenvolvimento de
+sistemas web. O método se baseia em conceitos que são necessários para a modelagem orientada a serviços. A principal característica de SOD-M é 
+fornecr modelos e padrões para a construção de sistemas de informação com base
+exclusivamente em serviços. SOD-M tem como foco principal o desenvolvimento de
+características comportamentais de sistemas, definindo padrões para a construção de modelos de
+négocio de alto nível. A abordagem descreve e apresenta modelos nos 3 diferentes
+níveis da arquitetura MDA (\textit{Model Driven Architecture})~\cite{mda}: CIM
+(\textit{Computational Independent Models}), PIM (\textit{Platform Independent Models}) e PSM (\textit{Platform Specific Models}). 
+
+No nível CIM são definidos 2 modelos, sendo eles: \textit{modelo de
+valor}~\cite{Gordijn02valuebased} e um
+\textit{modelo BPMN}~\cite{DeckerS08}; Nos níveis PIM e PSM são usados modelos
+DSL para orientação a serviços. Os modelos no nível PIM são: \textit{modelo de
+caso de uso, modelo de caso de uso extendido, modelo de processo de serviço} e
+\textit{modelo de composição de serviço}; e para o nível PSM, os modelo são:
+\textit{modelo de interface de serviço web}, \textit{modelo de composição de
+serviço extendido} e \textit{modelo de lógica de negócio da aplicação}. A figura
+\ref{fig:sodm} apresenta uma visão geral das transformações nos diferentes
+níveis.
+
+\begin{figure}[ht]  
+\centering
+
+\includegraphics[width=0.8\textwidth]{figs/sodm.png}
+
+\caption{Processo de Desenvolvimento SOD-M \cite{CastroMV11}.}
+\label{fig:sodm}
+\end{figure}
+
+
+
+O \textit{modelo de valor} é um modelo de negócio que descreve um caso negócio
+como um conjunto de valores e atividades de valor compartilhado por atores
+de negócios. \textit{O modelo BPMN, ou modelo de processo de negócio} é usado
+para entender e descrever o processo de negócio relacionado com o ambiente
+emque o sistema será usado. Estes 2 modelos são descritos no nível mais abstrato onde
+são representados os aspectos independentes de computação (CIM). 
+
+O \textit{modelo de caso de uso} é usado para representar os serviços de negócio
+a serem implementados pelo sistema, enquando o \textit{modelo de caso de uso
+extendido} é também um modelo comportamental, mas para modelar as
+funcionalidades do sistema como forma de implementar os serviços de negócio. O
+\textit{modelo de processo do serviço} descreve o conjunto de 
+atividades que precisam ser executadas no sistema para implementar um serviço de
+negócio. Por fim, no nível independente de plataforma, tem-se o \textit{modelo
+de composição de serviços} que representa o fluxo de négócio completo do
+sistema. Este modelo é uma extenção do modelo de processo de serviço, no
+entanto, de maneira mais detalhada.
+
+Até o nível PIM, toda a estrutura do fluxo de execução da aplicação é modelada.
+A partir deste momento o SOD-M prevê uma transformação para modelos mais
+específicos de plataforma.
+ 
+O processo prevê transformações de modelos em todos os níveis, sendo eles:
+\textit{CIM-to-PIM, PIM-to-PIM} e \textit{PIM-to-PSM}. Dessa forma, a partir de
+uma representação de modelo abstrata no nível CIM, é possível realizar
+transformação até um nível mais baixo, como o PSM. Para isso, é necessário
+seguir as atividades do processo descritas na metodologia. As transformação em
+nível de modelo para modelo são feitas usando ATL \cite{JouaultABK08}.
+
+SOD-M define um conjunto conceitos de acordo com dois pontos de vista:
+\textit{(i) negócios}, com foco nas características e nos requisitos do negócio e
+\textit{(ii) requisitos do sistema}, concentrando-se nas funcionalidades e
+processos que precisam ser implementadas, a fim de satisfazer os requisitos de
+negócio. SOD-M facilita o desenvolvimento de aplicações orientadas a serviços,
+bem como sua implementação usando as tecnologias atuais (figura \ref{fig:sodm}).
+
+
+\begin{figure}[ht]  
+\centering
+
+\includegraphics[width=0.8\textwidth]{figs/sodmConcepts.png}
+
+\caption{Metamodelo SOD-M \cite{CastroMV11}.}
+\label{fig:sodmConcepts}
+\end{figure}
+
+A base de todo o SOD-M é um metamodelo de conceitos que orienta todo o
+desenvolvimento, incluindo a transformações do modelo. Este metamodelo é
+descrito na figura \ref{fig:sodmConcepts} \cite{CastroMV11}. Este metamodelo
+descreve conceitos tanto da visão de negócio como da visão do sistema. Este
+metamodelo está diretamente ligado com todos os modelos descritos anteriormente,
+inclusive as suas transformações.
+
+Esta metodologia apresenta uma estrutura rasoável para o desenvolvimento de
+aplicações orientadas a serviços com modelos que podem expressar de maneira
+clara todo o processo de construção de aplicações que usam composição de
+serviços. No entanto, este modelo não apresenta suporte a desenvolvimento com
+foco em requisitos não funcionais. Não existem componente nem modelos que possam
+expressar propriedade de requisitos não funcionais que o usuário deseja, como
+por exemplo segurança, tempo de execução ou disponibilidade de serviços.
+
+\subsection{S-Cube Framework \cite{scube2010book}}
+
+S-Cube Framework \cite{scube2010book} é uma proposta europeia, na qual vários
+grupos de pesquisa integrados propuseram uma estrutura para o desenvolvimento de
+aplicações para serviços de software e sistemas. S-Cube  estabeleceu
+uma abordagem integrada e multidisciplinar para o desenvolvimento de aplicações.
+
+S-Cube propõe 3 áreas centrais para o desenvolvimento de serviços:
+\textit{Gerenciamento de processo de negócio; Composição e coordenação de
+serviços; e Infraestrutura}. Estas áreas são a espinha dorsal da proposta
+do framework que estão diretamente ligadas a outras 3 áreas de suporte ao
+desenvolvimento de sistemas, são elas: \textit{Engenharia e projeto de
+software; Monitoramento; e Segurança e qualidade de software}.
+
+Esta iniciativa propõe uma metodologia para a concepção e desenvolvimento de
+aplicações baseadas em serviços. Esta metodologia tem por objetivo guiar o
+desenvolvimento das aplicações. A metodologia do S-Cube descreve algumas
+atividades indispensáveis, como: \textit{(i) descrição dos objetivos de négócio}
+do sistem; \textit{(ii) definição dos pressupostos de domínio}, que são
+pré condições que devem ser respeitadas para um determinado domínio da
+aplicação; \textit{(iii) descrição dos domínios}; e por fim \textit{(iv)
+descrição dos cenários de cada domínio}.
+
+O objetivo da metodologia é fornecer uma lista não exaustiva de regras
+simples que permita entender quando se pode decidir que a descrição de uma
+determinada aplicação está de uma forma razoavelmente boa. Além dos atividades
+descritas, alguns passos devem ser seguidos para que seja feita um bom
+detalhamento dos requisitos da aplicação. Os passos sugeridos são:
+
+\begin{enumerate}
+  \item Os termos usados na descrição dos cenários, na identificação dos
+  objetivos de negócio e dos pressupostos de domínio devem estar
+   descritos em um glossário e eles devem ser relacionados com os outros termos
+   no modelo de domínio;
+   \item As entidades identificadas no modelo de domínio são usadas em algum
+   cenário ou, em alguns objetivos de negócio ou descrição dos pressupostos de
+   domínio;
+   \item Todos os atores que foram identificados nos cenários aparecem também na
+   descrição de cada contexto;
+   \item Para cada cenário deve existir, pelo menos, um objetivo de negócio
+   relacionado e vice-versa;
+   \item Cenários e objetivos de negócio não são sobrepostos. No entanto, é
+   possível estabelecer relacionamentos, desde que sejam bem identificados
+   identificados quais são os relacionamentos.
+\end{enumerate}
+ 
+O S-Cube framework prevê atividades nas diversas áreas do desenvolvimento de
+aplicações orientadas a serviços, no entanto, ainda é necessário a aplicação de
+seus conceitos em estudos de caso reais para que se tenha uma ideia de sua
+aplicação, haja visto que a sua estrutura é muito complexa e multidisciplinar. 
+
+A aplicação dos conceitos individuias do S-Cube de maneira, como composição,
+definição de cenários e workflow, engenharia de serviços e qualidade de serviços
+é mais viável do que a integração de todos eles pela sua complexidade.
+
+Em consideração as questões levantadas no inico da seção, o S-Cube usa modelos
+UML para representas os modelos nos projetos, abrange o ciclo de vida completo
+do desenvolvimento, descrevendo cada serviço e suas composições, no entanto a
+sua estrutura é bastante extensa e completa. S-Cube também não apresenta
+formalismo para a especificação de software. 
+
+ 
+\subsection{SOMA \cite{soma}}
+ 
+SOMA (\textit{Service-Oriented Modeling and Architecture}) \cite{soma}  é uma
+metodologia descrita pela IBM para soluções SOA. SOMA define um ciclo de vida de
+sete fases: \textit{modelagem de negócios e transformaçãl; solução de
+gerenciamento; identificação; especificação; realização; implementação;} e
+\textit{acompanhamento de implantação e gestão}. 
+
+Em cada fase, as diferentes tarefas são cuidadosamente definidas,
+tais como a definição da arquitetura de negócios, elaboração de modelo de serviço,
+especificação dos serviços, etc. SOMA é talvez hoje a metodologia mais completa
+para implementação de uma SOA.
+
+
+\begin{figure}[ht]  
+\centering
+
+\includegraphics[width=0.8\textwidth]{figs/soma.png}
+
+\caption{Estrutura da Metodologia SOMA \cite{soma}.}
+\label{fig:soma} 
+\end{figure}
+
+O modelo conceitual de SOMA é baseado em um estilo de arquitetura SOA que define
+um modelo de interação em três partes principais: \textit{o prestador de serviços},
+que publica uma descrição de serviço e fornece a implementação para o serviço;
+\textit{o consumidor de serviços}, que pode usar a URI para a descrição do
+serviço diretamente ou pode encontrar a descrição do serviço em um registro de
+serviço para o chamar; e o \textit{service broker} que fornece e mantém o
+registro dos serviçoa, embora hoje em dia os registros públicos não estão tão em
+moda e não são normalmente usados. A figura \ref{fig:soma} apresenta da
+metodologia SOMA, o qual é difidida em 3 níveis: \textit{identificação,
+especificação} e \textit{realização}. 
+
+A IBM propõe o uso da plataforma IBM Rational para o desenvolvimento SOA, além
+de outras diferentes ferramentas que a IBM coloca à disposição dos
+analistas, software arquitetos e desenvolvedores de aplicações. Essa gama
+de ferramentas é, talvez, a maior desvantagem de aplicar a proposta da IBM, por causa da
+necessidade de usar tiferentes tipos de ferramentas, como o IBM WebSphere e
+IBM Rational Software, todos eles muito complexos, a fim de desenvolver
+aplicações. Além disso são ferramentas de um elevado custo.
+
+%*********************************************************************************************************
+\subsection{SOMF \cite{somf}} 
+%*********************************************************************************************************
+
+SOMF (\textit{Service-Oriented Modeling Framework})  \cite{somf} é uma
+metodologia dirigida a modelos cuja disciplina específica é a modelagem de software com as boas
+práticas de projeto de software e diferentes atividades de definição
+arquitetural que empregadas durante as etapas do desenvolvimento de software.
+SOMF pode ser empregada para descrever arquiteturas corporativa, arquitetura
+orientada a serviços (SOA) e computação em nuvem. SOMF oferece uma série de
+práticas de modelagem e disciplinas que podem contribuir para um desenvolvimento
+bem-sucedido de aplicações orientada a serviços.
+
+A estrutura de SOMF oferece uma notação independente da tecnologia, tento como
+foco o desenvolvimento baseado em serviços. O lema de SOMF é \textit{``Model
+first, build later!''}, que significa \textit{``Modele primeiro, implemente
+depois!''}.  Modelar diz respeito à construção de uma representação virtual de
+um produto de software, uma aplicação, um componente de software, um sistema, ou
+qualquer outro ativo de software. 
+
+As principais características de SOMF são:
+
+\begin{enumerate}
+  \item Nenhum conhecimento prévio da linguagem de programação ou plataformas de
+  modelagem são necessários;
+  \item Atividades de modelagem são rápidas. Os modelos e diagramas podem ser
+  desenvolvidos em minutos;
+  \item Dirigido por uma metodologia. Uma metodologias descreve
+  atividades de modelagem SOMF e as transformações de cada modelo;
+  \item Orientado a modelos. SOFM descreve 8 transformações de modelos para o
+  desenvolvimento das aplicações;
+  \item Projeto flexível para proporcionar um fácil desenvolvimento dos modelos;
+  \item Orientantado a padrões. Os diagramas são criados obedecendo padrões de
+  projeto.
+\end{enumerate}
+
+As transformações de modelos descritas pela metodologia tem por objetivo
+descrever os aspectos das diferentes disciplinas do processo de desenvolvimento.
+Os modelos descritos são: \textit{Modelo de descoberta, modelo de análise,
+modelo de projeto, modelo de arquitetura, modelo de construção, modelo de qualidade, modelo de operações,
+modelo de negócio, modelo de governança}. Estes modelos se integram a cada
+atividade da metodologia e em suas respectivas fases, e também de acordo com as
+suas transformações.
+
+As atividades da metodologia SOMF usam estilos de modelagem de acordo com a
+necessidade da aplicação. No entando, os objetivos propostos são garantir o bom
+desenvolcimento e integração dos serviços para a aplicação. Para a modelagem dos
+serviços SOFM destaca que é necessário:
+
+\begin{enumerate}
+\item Identificar relações de serviço;
+\item  Estabelecer rotas de mensagens entre consumidores e provedores de
+serviços;
+\item  Fornecer orquestração de serviços eficientes e métodos de coreografia;
+\item  Criar transação de serviço e padrões de comportamento;
+\item Oferecer soluções de implantação de serviços.
+\end{enumerate}
+
+A principal desvantagem de SOMF é o uso de uma notação propria diferente dos
+padrões de modelagem de serviços existentes. A metodologia apresenta vários
+conceitos e notações novas para a modelagem dos serviços e composições durante
+as fases do desenvolvimento. Apesar de abranger todo o ciclo de cida do
+desenvolvimento e ter atividades específicas para requisitos de qualidade, o seu
+uso se torna complexo pelo fato de não seguir padrões já conhecidos, e haver uma
+ferramenta para auxiliar o seu desenvolvimento. Junto com SOMA, SOMF tem o foco
+principal em modelos que podem representar todos os aspectos da aplicação.
+ 
+%*********************************************************************************************************
+\subsection{DEVISE \cite{DhyaneshVR03}}
+%*********************************************************************************************************
+
+DEVISE \cite{DhyaneshVR03} é uma metodologia para a construção
+de serviços web baseado na infra-estrutura de sistemas colaborativos, abrangendo
+aplicações que compreendem um conjunto de serviços em um ambiente distribuído e
+colaborativo. Esta metodologia visa identificar as peincipais questões a serem
+consideradas no projeto de aplicações de serviços, e procura definir um guia
+genérico de diretrizes para uso destes serviços, ajudando assim na concepção
+de novas aplicações a partir de um conjunto de serviços web.
+
+DEVISE tem como base para construção de
+sua estrutura metodologica duas fases principais \cite{Wirth71,StevensMC74},
+sendo elas: \textit{Web Services Agnostic Phase} e \textit{Web Services
+Cognizant Phase}. A lógica nesta divisão é isolar os aspectos do projeto do
+aplicativo, que em sua natureza são abstratos e  independentes das propriedades
+de implementação.
+
+A fase \textbf{Web Services Agnostic Phase} não leva em consideração
+qualquer propriedade específica dos serviços web, pois neste momento do projeto não se
+tem conhecimento do nível de implementação e qual o conjunto de serviço a ser
+utilizado ou reutilizado. Esta fase descreve duas questões (``issues'')
+principais, sendo elas: (\textit{issue i}) \textit{Decomposição da Aplicação em
+Módulos} e; (\textit{issue ii}) \textit{Projeto de Módulo} e \textit{Projeto de
+Interfaces}.
+
+Para a primeira fase são definidos os seguintes guias para que as
+``\textit{issues i e ii}'' sejam resolvidas.
+
+\begin{itemize}
+  \item \textit{G1} - Com base na natureza do módulo a ser decomposto alguma
+  técnicas pode ser realizada, e.g., decomposição baseada em transação ou decomposição baseada em
+  requisitos funcionais;
+  \item \textit{G2} - Um novo módulo deve ser adicionado somente se sua função
+  não pode ser alcançado como composição dos módulos já identificados;
+  \item \textit{G3} - Identificação de unidades de funcionalidade independente
+  para que sejam agrupadas em módulos independentes;
+  \item \textit{G4} - Operações que ocorrem durante o início da aplicação, e.g.
+  autenticação, podem ser implementadas em módulos independentes;
+  \item \textit{G5} - Operações que se repetem durante a execução do aplicativo,
+  mas não necessariamente da mesma maneira, podem ser agrupadas em módulos
+  parametrizados;
+  \item \textit{G6} -  Um módulo eficaz deve ter por objectivo proporcionar uma
+  nível adicional de abstração, reduzindo a complexidade da aplicação;
+  \item \textit{G7} - Os módulos devem ser projetados para possuir um elevado
+  grau de coesão, com as operações internas estreitamente relacionadas uma a
+  outra;
+  \item \textit{G8} - Cada módulo deve ser robusto em termos funcional, fazendo
+  apenas uma tarefa e fazendo-a bem;
+  \item \textit{G9} - As interfaces que definem a interação entre os módulos
+  devem ser simples e serem visíveis entre eles. 
+\end{itemize}
+
+A fase \textbf{Web Services Cognizant Phase} leva em consideração
+propriedades específica dos serviços web.  Assume-se como entrada, uma
+especificação de nível de módulo. Esta fase descreve duas \textit{issues}
+principais, sendo elas: 
+
+\begin{itemize}
+  \item \textit{issue iii} - \textit{Que módulo deve ser escrito como um
+  serviço web};
+  \item \textit{issue iv} - \textit{Projeto para composição de serviço web};
+  \item \textit{issue v} - \textit{Projeto para a confiabilidade da
+  aplicação};
+  \item \textit{issue vi} - \textit{Projeto de disponibilidade};
+  \item \textit{issue vii} - \textit{Projeto de garantia de resposta};
+  \item \textit{issue viii} - \textit{Projeto de balanceamento de carga e
+  tolerância a falhas}.
+\end{itemize}
+
+Para a segunda fase são definidos os seguintes guias:
+
+\begin{itemize}
+  \item \textit{G10} - O uso se serviços web consomem uma quantidade rasoável
+  de largura de banda devido ao uso documentos baseados em XML e a interação
+  endas mensagens através de SOAP. Dessa forma, tarefas críticas devem ser
+  avaliadas no que diz respeito a performace ou operações que exigem uma
+  quantidade de dados maior e com mais frequência de execução;
+  \item \textit{G11} - Módulos que requerem interoperabilidade de plataformas
+e necessidade de expor sua funcionalidade a um conjunto distribuído 
+de clientes heterogêneos são candidatos ideais para ser um serviço web;
+  \item \textit{G12} - Se um módulo está previsto para ser implantado sub uma
+  estrutura de rede que tenha um firewall, e não se é desejável ter as
+  portas aberta, que não a porta HTTP (80), então o módulo pode
+ser disponibilizada como um serviço web. Isso ocorre pelo fato de
+SOAP ser usado sob HTTP (embora outros protocolos também podem ser utilizados),
+este tipo de dado pode potencialmente passar através de firewalls.;
+  \item \textit{G13} - Os módulos que oferecem serviços genéricos que e serão
+  potencialmente reutilizados, estes podem ser implementados como serviços;
+  \item \textit{G14} - Uma composição de serviço web para atingir
+uma nova funcionalidade deve ser semanticamente analisada, e não ser projetada
+apenas porque tal composição é sintaticamente possível;
+  \item \textit{G15} - Um composto serviço web deve incidir sobre o
+domínio de um problema, resolvendo um problema específico;
+  \item \textit{G16} - A composição não deve ser muito complexa, uma vez que o
+confiabilidade da composição pode pode ser posta em dúvida e o desempenho do
+novo serviço pode ser inaceitável;
+  \item \textit{G17} - É importante identificar os serviços no domínio da
+  aplicação que executem tarefas essenciais para se prover serviços redundante,
+  de modo que se um falhar, o outro serviço web pode ser acionado,
+  proporcionando assim um serviço ininterrupto;
+  \item \textit{G18} - Identificar os serviços que podem se tornar
+gargalos de desempenho e fornecer uma cópia deste serviço operando em paralelo;
+  \item \textit{G19} - É necessário projetar os serviços que executam
+  operações complexas, e.g. transações, para assegurar integridade da
+  funcionalidade; 
+  \item \textit{G20} - Propagar exceções e erros de maneira consistente em
+serviços web compostos. Isso não só ajuda na identificação do erro, mas também
+ajuda em um rápida acompanhamento do problema causando.  
+\end{itemize}
+
+Os  \textit{guidelines} \textit{G10, G11, G12} e \textit{G13} são referentes ao
+\textit{issue iii}; os \textit{G14, G15} e \textit{G16} são referentes ao
+\textit{issue iv} e os demais  \textit{guidelines} \textit{G17, G18, G19} e
+\textit{G20} são referentes aos \textit{issues v, vi, vii} e \textit{viii}.
+
+
+DEVISE fornece uma metodologia interessante para
+construção de infra-estrutura para serviços web com base em
+desenvolvimento colaborativo. Esta metodologia divide a estrutura do processo em
+duas fases principais, identifica questões a serem abordadas em cada fase e
+fornece guias genéricos de desenvolvimento para estas fases.
+
+A metodologia não fornece nenhuma ferramenta para o auxílio no desenvolvimento
+dos serviços e suas composições por considerar que as ferramentas existentes
+proveem um suporte para tal desenvolvimento. A metodologia não apresenta nenhum
+formalismo ou notação para descrição dos serviços. Da mesma forma não apresenta
+modelos base para serem seguidos durante o processo. O foco principal da
+metodologia é apresentar guias que devem ser rigorosamente seguindo para a
+concepção, implementação e implantação dos serviços web.
+
+
+\subsection{Extended SOA \cite{PapazoglouH06}}
+
+Como existem especificidades no desenvolvimento orientado a serviços, as
+metodologias aplicadas para o aplicações orientadas a objetos ou componentes
+não podem ser aplicados a serviços. Isso ocorre pelo fato do desenvolvimento
+baseado em SOA ter princípios e técnicas diferentes das abordagens tradicionais 
+orientadas a objetos e componentes.
+
+Uma metodologia específica para desenvolvimento baseada em serviços é importante
+para especificar, construir, aperfeiçoar e personalizar os processos de negócios
+disponíveis na Web. 
+ 
+Extended SOA tem o ciclo de vida de desenvolvimento de serviços web com foco nas
+fases de \textit{analise, projeto} e \textit{desenvolvimento}, com uma
+abordagens centrada tanto nos requisitos funcionais.
+
+Extended SOA tem uma estrutura hierarquica do ciclo de desenvolvimento para
+serviços web, onde são definidas as seguintes camadas: \textit{Business
+(Service) Domain, Business Processes, Business Services, Infrastructure
+Services, Component-based Service Realizations} e \textit{Operational Systems}.
+
+% \begin{figure}        
+% \centering
+% \fbox{
+% %\epsfig{file=soa.png, height=1.5in, width=2.1in}
+% \includegraphics[width=.5\textwidth]{figs/ciclodevida.png}
+% %height=2in, width=2in
+% }
+% \caption{Hierarquia do Ciclo de Vida de Desenvolvimento para Web Service
+% \cite{PapazoglouH06}.}
+% \label{fig:ciclovida} 
+% \end{figure} 
+
+A metodologia é parcialmente baseada em outros modelos bem sucedidos  e
+desenvolvimento relacionados, tais como o Rational Unified Process - RUP, Desenvolvimento
+baseado em Componentes e Modelagem de Processo de Negócio (BPM). A diferença é
+que este ciclo de vida se concentra nos níveis principais do desenvolvimento
+orientado a serviços.
+
+  
+% \begin{figure}        
+% \centering
+% \fbox{
+% %\epsfig{file=soa.png, height=1.5in, width=2.1in}
+% \includegraphics[width=.5\textwidth]{figs/ciclodevida2.png}
+% %height=2in, width=2in
+% }
+% \caption{Fases do Ciclo de Vida de Desenvolvimento para Web Service
+% \cite{PapazoglouH06}.}
+% \label{fig:ciclovida2}
+% \end{figure} 
+ 
+
+Extended SOA tem como base 3 princípios para o projeto e desenvolvimento
+orientado a serviços, são eles: \textit{Acoplamento de serviço, Coesão de serviço} e
+\textit{Granularidade de serviço}, sendo os 2 primeiros destacados. 
+
+Do ponto de vista do projeto orientado a serviços , é
+preferível criar interfaces de alto nível com alta granularidade para
+implementar um processo de negócio completo. Isso ocorre devido a necessidade de
+multiplas chamadas ao serviço, aumentando assim o tráfico. Como os serviços
+estão em um ambiente coorporativo, fica inviável criar serviços com
+granularidade baixa. É preferível criar funções com granularidade mais baixa em
+um ambiente local. 
+
+ O objetivo da metodologia é alcançar
+a integração de serviços, bem como a interoperabilidade deles. As fases são:
+\textit{Planejamento, Análise, Projeto, Construção, Teste,
+Provisionamento, Implantação, Execução} e \textit{Monitoramento}.
+
+\textbf{Planejamento:} A fase de planejamento determina a
+viabilidade, natureza e âmbito da solução de serviço no contexto de uma empresa.
+A fase de planejamento é muito semelhante ao de metodologias de desenvolvimento
+de software, incluindo o RUP. O requisito fundamental nesta fase é entender o
+ambiente de negócios e se certificar de que todos os controles necessários estão
+incorporados ao projeto, para uma solução orientada a serviços. 
+
+\textbf{Análise:} A fase de análise examina os serviços já
+existentes no lado do servidor de serviços para entender quais os
+processos/serviços já existentes e quais precisam ser criados e
+implementados. A fase de análise é composta por quatro atividades principais:
+\textit{identificação, escopo, análise de lacunas de negócios} e
+\textit{processo de realização}.
+
+\textbf{Projeto:} A especificação do serviço é um conjunto de três
+elementos da especificação, todos igualmente importantes: \textit{Especificação
+estrutural, Especificação comportamental} e \textit{Especificação de negócio}.
+
+ 
+\textbf{Construção:} A fase de construção da metodologia inclui o
+desenvolvimento da implementação de serviços Web, a definição da descrição da
+interface do serviço e a definição dos descriptio implementação do serviço. 
+
+Esta fase pode envolver novas abordagens de desenvolvimento de
+código, no entanto, na maioria dos casos que será composto de alteração de
+serviços existentes (\textit{J2EE ou .NET}) ou a construção de \textit{wrappers}
+em cima de aplicações legadas existentes.
+
+O autor não apresenta nada de novo para esta fase no desenvolvimento de serviços
+web.
+
+\textbf{Teste:} A metodologia propõe as abordagens de teste convencionais como,
+(\textit{teste funcional, teste de performace, teste dinâmico, teste de
+integração} e \textit{teste de stress}) e descreve que dependendo do caso, pode
+ser utilizada algumas delas. No entanto, a metodologia fala que \textit{teste
+dinâmico} é a abordagem de teste mais interessante a ser usado para teste de serviço web.
+   
+% 
+% %*********************************************************************************************************
+% \subsection{Metodologia ODAC \cite{Gervais02}}
+% %*********************************************************************************************************
+
+%*********************************************************************************************************
+\subsection{Engenharia de Software Centrada em Serviços Web
+\cite{sommerville08}}
+%*********************************************************************************************************
+
+Em \cite{sommerville08} é proposta uma abordagem geral para
+aplicações que usam serviços web. Sua estrutura segue as atividades de
+concepção, elaboração, construção e testes de serviços web e suas possíveis
+composições. Dessa forma a definição de um método deve ser baseada em um
+conjunto de princípios que devem ser seguidos para o desenvolvimento de
+aplicações que usam serviços web e suas respectivas composições.
+
+Os objetivos principais descritos tem como base os conceitos de
+engenharia de software, são estes:
+
+\begin{itemize}
+  \item Reuso de software, baseado nos padrões de serviços web, que provê um
+  mecanismo para computação inter-organizacional;
+  \item Uso de um processo de engenharia de serviços para produzir serviços web
+  reusáveis;
+  \item Realizar composição de serviços para facilitar e melhorar o
+  desenvolvimento de aplicações;
+  \item Mostrar como os modelos de processos de negócios podem ser usados como
+  base para o projeto de sistemas orientados a serviços.
+\end{itemize}
+
+Abordagens existentes para engenharia de software tem que envolver o conceito de 
+orientação a serviços para o desenvolvimento de software. A engenharia de
+serviços proporcionará o desenvolvimento de serviços confiáveis e
+reusáveis. Dessa forma todo o ciclo de desenvolvimento terá como foco principal o reuso de
+serviços independentes. Com isso temos o desenvolvimento \textit{para o reuso}
+de software.
+
+Por outro lado, temos o desenvolvimento com serviços. O desenvolvimento de
+software confiável, onde os serviços são os componentes fundamentais. Dessa
+forma temos o desenvolvimento de software \textit{com reuso}.
+
+Uma diferença fundamental entre um serviço e um componente é que os serviços são
+independentes. Os componentes sempre serão usados com um outro componente de
+software. Os serviços contam com uma comunicação baseada em mensagens, sendo
+essas mensagens expressas em XML, sendo estes independentes.
+
+Com isso, um serviço tem que ser projetado como uma
+abstração que pode ser reusada por diferentes sistemas. As atividades principais
+para a engenharia de serviços são:
+
+\begin{itemize}
+  \item Identificação de serviços candidatos;
+  \item Projeto do serviço;
+  \item Implementação do serviço.
+\end{itemize}
+
+%  \begin{figure}         
+% \centering   
+% %\fbox{
+% %\epsfig{file=soa.png, height=1.5in, width=2.1in}
+% \includegraphics[width=.8\textwidth]{figs/processoServico.png}
+% %height=2in, width=2in
+% %}   
+% \caption{Desenvolvimento de Serviço.}
+% \label{fig:serviceEng} 
+% \end{figure}   
+
+A partir da identificação dos requisitos do sistema, todo o projeto é baseado
+nos serviços que podem ser reusados, ou implementados. A partir dessa
+identificação o projeto é desenvolvido para que possam ser implementado os
+serviços necessários da aplicação. Caso o serviço já esteja disponível,
+adaptá-lo as necessidades atuais do sistema.
+
+\subsection{\textit{Análise das Metodologias}}
+
+
+A tabela \ref{tab:metodos} mostra um resumo das principais metodologias
+apresentadas nesta seção. A análise se baseia nos ítens descritos no início desta seção, os
+quais tentam abranger aspectos importantes no desenvolvimento de aplicações
+orientadas a serviços. Destaca-se para cada uma das abordagens, os
+aspectos de modelagem e modelos propostos, a abrangência da metodologia, qual a
+notação utilizada para a modelagem e qual o formalismo usado para a
+especificação dos serviços. À estes aspectos analisados, incluímos a análise do
+nível de abstração dos modelos utilizados em cada metodologia, de acordo com os
+níveis da arquitetura MDA. É feita também uma análise em relação aos principais
+modelos usados para a representação de processos de negócio e composição de
+serviços.
+
+Como mencionado anteriormente, na análise das metodologias
+relacionadas com o desenvolvimento de sistemas orientados a serviços,
+verificou-se que não existem propostas metodológicas que abordam os sistemas
+completos de desenvolvimento, considerando modelagem de aspectos não funcionais,
+mas sim, várias propostas para a modelagem de aspectos particulares de
+orientação a serviços. Algumas propostas contemplam o ciclo de vida completo, no
+entanto não levam em consideração importantes aspectos não funcionais que
+devem ser considerados no desenvolvimento de aplicações que disponibilizam e
+utilizam serviços através da Web. 
+
+Assim, como mostra a tabela \ref{tab:metodos}, há uma diferença fundamental
+entre a metodologia proposta neste trabalho de doutorado e as demais propostas
+discutidas nesta seção. Este trabalho apresenta uma metodologia, chamada
+\textit{$\pi$SOD-M}, que tem por objetivo auxiliar o desenvolvimento de aplicações
+orientadas a serviços e baseadas em propriedades não funcionais. \textit{A
+metodologia $\pi$SOD-M é uma metodologia de desenvolvimento de sistemas orientados a
+serviços completa com foco na modelagem de aspectos não funcionais, portanto,
+inclui o modelagem de todos os elementos relacionados ao desenvolvimento de
+sistemas orientados a serviços}. A metodologia \textit{$\pi$SOD-M} propõe a
+utilização de modelos UML a partir dos esterióticos de cada caso. Os modelos
+utilizados pela metodologia proposta neste trabalho inclui: \textit{Modelo de
+composição de serviços, modelo de serviço de negócio, modelo de caso de uso,
+modelo de negócio} e um metamodelo com os conceitos de modelagem de negócio e
+propriedades não funcionais. Esta metodologia estende conceitos da metodologia
+\textit{SOD-M} que foi a metodologia mais completa analisada, mas no entanto não
+engloba modelagem de propriedades não funcionais.
+ 
+ 
+ \begin{table}         
+\centering   
+%\fbox{
+%\epsfig{file=soa.png, height=1.5in, width=2.1in}
+\includegraphics[width=.9\textwidth]{figs/tabela.png}
+%height=2in, width=2in
+%}   
+\caption{Análise das Metodologias para o Desenvolvimento orientado a Serviços.}
+\label{tab:metodos} 
+\end{table}   
+ 
+A metodologia que será descrita nesta tese tem como objetivo principal
+proporcional alternativas para o desenvolvimento orientado a serviços, com a
+vantagem de poder modelar e representar propriedades não funcionais. As
+propriedades não funcionais são representadas através de contratos (políticas),
+para a execução dos serviços. Poderão ser definidas regras para que os serviços,
+ou um workflow específico possa ser executado. Essas regras serão representadas
+como pré condições,  pós condições ou restrições temporais. As pré e pós
+condições são condições sobre serviços e as restrições temporais são restrições
+sobre operadores de composição de serviços. Este enfoque proporciona uma
+vantagem adicional, pelo fato da maioria das metodologias analisadas não
+proporcionarem meios ou modelos para representarem pripriedades de qualidades.
+
+As metodologias S-Cube e SOMF oferecem meios para modelagem de propriedade ou
+requisitos não funcionais, no entanto apresentam particularidades que dificuldam
+o desenvolvimento. O SOMF tem uma notação própria para modelagem e não apresenta
+uma ferramenta para auxiliar o desenvolvimento, dificultando assim a elaboração
+dos modelos e suas transformações. O S-Cube é um framework complexo que ainda
+está sendo consolidado, não sendo ainda viável o seu uso pelo fato de ainda
+estar em desenvolvimento. No entanto, dentre as metodologias analisadas, merece
+destaque a metodologia SOD-M. 
+
+As proposta de extensão de SOA e uso de processo tradicionais para o
+desenvolvimento de aplicações de serviços parece interessante, pois fazem com
+que o desenvolvedor tenha uma visão de toda estrutura de desenvolvimento. A
+sua desvantagem é que não fornecem meios, como representação WSDL ou formalismo
+para especificação de serviços, para tornar a modelagem mais clara e rápida.
+Estas também não fornecem uma ferramenta que auxilie o desenvolvimento. Outra
+desvantagem das metodologias tradicionais é o fato de ter que adapta-las ao
+desenvolvimento de serviços. 
+
+Aliada ao S-Cube, as metodologias SOD-M e SOMA fornecem uma estrutura robusta
+para o desenvolvimento orientado a serviços. Ambas tem como foco principal o
+desenvolvimento dirigido a modelos, fazendo com que a modelagem dos processos,
+dos serviços e suas composições sejam realizadas de maneira a atingir o objetivo
+final. Ambas também não fornecem modelos para representar propriedades não
+funcionais, desdo o nível mais aastrato ao nível de representação de código. Por
+este fato estamos propondo a metodologia $\pi$SOD-M que tem por objetivo principal
+fornecer meios para que o desenvolvedor ou projetista possa representar suas
+necessidades de qualidade com modelos específicos. 
+
+A metodologia $\pi$SOD-M proposta nesta tese tem como base os conceitos de MDE
+(\textit{Model Driven Engineering}), utilizando modelos de nível mais abstrato e independentes de
+computação (modelos CIM) até modelos específicos de plataforma (modelos PSM)
+para proporcionar, através de suas transformações, todas os requisitos do
+sistema. A metodologia $\pi$SOD-M propõe o uso de UML para o desenvolvimento dos
+modelos nos níveis PIM e PSM, definindo também uma representação UML para o
+desenvolvimento orientado a serviços que são baseados em requisitos não
+funcionais. 
+
+Algumas metodologias importante de desenvolvimento de software em geral tem
+se baseado no desenvolvimento MDA, com definição de modelos para os diferentes
+níveis de abstração e arquitetura. Pelo fato de MDE e MDA proporcionarem uma
+estrutura consolidada para o desenvolvimento de aplicações, a metodologia $\pi$SOD-M faz uso desta
+ estrutura para o proporcionar também uma forma robusta de desenvolvimento.
+  
+Como a metodologia $\pi$SOD-M faz parte de um quadro metodológico baseado em MDA,
+define portanto,  modelos dos níveis CIM, PIM e PSM da arquitetura proposta
+para o MDA, propondo transformações entre eles.
+
+Para concluir esta seção, podemos destacar as
+principais contribuições da metodologia que será proposta nesta tese, no que
+diz respeito às metodologias atuais de desenvolvimento: (\textit{(i)}) a
+definição de uma abordagem orientada a serviços e orientada a modelos para
+o desenvolvimento de aplicações; \textit{(ii)} a definição de modelos
+específicos para a representação de propriedades não funcionais e o uso de UML
+para isso; \textit{(iii)} a integração do método proposto no contexto da
+arquitetura MDA, proporcionando a representação das aplicações nos diferentes
+níveis, CIM, PIM e PSM; e \textit{(iv)} a transformação entre os modelos MDA com
+forco nos requisitos de qualidade. 
+
+
+\section{\textit{Conclusões do Capítulo}}
+
+Neste capítulo apresentamos uma revisão das abordagens relacionadas com o
+desenvolvimento orientado a serviços de aplicações. Os trabalhos foram agrupados
+de acordo com as suas características, sendo analisados trabalhos no contexto de
+(i) linguagens para especificação de serviços e composições de serviços; (ii)
+arquiteturas, ferramentas e abordagens em geral para o desenvolvimento de
+serviços; e por fim (iii) metodologia que auxiliam o processo de
+desenvolvimento, proporcionando uma melhor visão de aspectos importantes para
+ser modelado ou implementado.
+
+É importante destacar que esta tese de doutorado tem por objetivo propor uma
+abordagens de desenvolvimento baseado em MDA para aplicações que usam composição
+de serviços e tem por objetivo garantir aspectos não funcionais. Dessa forma,
+foi feita uma análise dos trabalhos que se aproximavam do tema abordado para
+comparar suas similaridades e principalmente aspectos não abordados e ainda não
+propostos para que o tema desta tese possa ser, de uma maneira geral, inédito.
+Os aspectos não funcionais são tratados de maneira particular por algumas abordagens, no
+entanto não são muitas vezes levados em consideração na descrição de métodos
+para orientação a serviços.
+
+
+Concluímos que, apesar do grande número de soluções para serviços web, não
+existe uma metodologia que garanta que propriedades não funcionais serão modeladas e
+implementadas desde o início ao fim do desenvolvimento. Percebemos também que
+aspectos de restrições temporais entre serviços não são abordados nas propostas
+de soluções para composição de serviços. A partir do ano de 2006 é que
+metodologias específicas para o desenvolvimento distribuído que envolve
+composição de serviços foram sendo propostas. Cada metodologia tem seus aspectos
+específicos e solucionam o que propõem. Podemos
+destacar as metodologias SOD-M e SOMA. Ambas propõem soluções baseadas em
+modelos e apresentam uma perspectiva robusta e razoável no que diz respeito a
+modelagem de serviços e processos de negócio. No entanto, ambas não apresentam
+modelos para o desenvolvimento de propriedades de qualidade das aplicações.
+
+Dentre as abordagens para serviços, destacamos a proposta do modelo de
+políticas, onde é possível especificar diferentes tipos de regras através da
+descrição de políticas e as suas associações a serviços. Algumas propostas
+apresentadas não se estabeleceram como soluções eficazes e acabaram em desuso, é
+o caso da arquitetura WebTransact. 
+
+Destre as linguagens, além da linguagem BPEL, as propostas CDL e PEWS apresentam
+aspectos importantes para a descrição de fluxos de negócio e composção entre
+serviços. Estas linguagens apresentam-se como soluções que podem auxiliar o
+desenvolvimento de serviços.
+
+Dessa forma, a proposta desta tese integrará conceitos das propostas SOD-M,
+A-Policy e PEWS com o objetivo de utilizar os melhores aspectos de cada
+abordagem para que o desenvolvimento de aplicações de serviços se tornem mais
+fáceis, rapidas e confiáveis. A metodologia $\pi$SOD-M que será apresentada neste
+trabalho tem como base o desenvolvimento orientado a modelos e estende a
+estrutura, aspectos e modelos da metodologia SOD-M \cite{CastroMV11}, os associando com
+o modelo de contratos e políticas propostos plo modelo A-Policy
+~\cite{Espinosa-OviedoVZC09,Espinosa-OviedoVZC11}. Como linguagem, utilizaremos
+PEWS~\cite{BaCAM05} e apresentaremos uma extensão desta linguagem, chamada
+PEWS-CT~\cite{Placido2010LTPD} que engloba construções e cláusulas para
+especificação de contratos para serviços. Com isso estaremos contribuindo com
+uma alternativa de desenvolvimento de aplicações baseadas em serviços com
+aspectos não funcionais.
